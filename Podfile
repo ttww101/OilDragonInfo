@@ -4,16 +4,15 @@
 target 'MotorHelper' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  pod 'AVOSCloud'
+  pod 'AVOSCloudIM'
+  pod 'JPush'
+  pod 'JAnalytics'
   #for xml analysis
   pod 'Alamofire'
   pod 'SWXMLHash'
   pod 'AEXML'
   pod 'StringExtensionHTML'
-  #for firebase
-#  pod 'Firebase/Core'
-#  pod 'Firebase/Auth'
-#  pod 'Firebase/Database'
-#  pod 'Firebase/Crash'
   #for keyboard
   pod 'IQKeyboardManagerSwift'
   #for rating

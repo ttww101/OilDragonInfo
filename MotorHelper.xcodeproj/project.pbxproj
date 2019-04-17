@@ -44,9 +44,11 @@
 		9BB08BCA1E8228E000982CF1 /* Petroleum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB08BC91E8228E000982CF1 /* Petroleum.swift */; };
 		9BCCE50E1EA7B09900371AAD /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCE50D1EA7B09900371AAD /* AddRecordViewController.swift */; };
 		9BFA1FF11E8A634B0045CA0F /* ConsumptionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA1FF01E8A634B0045CA0F /* ConsumptionRecord.swift */; };
+		F3EFFCCABF44524A429C2F26 /* Pods_MotorHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B000F201E84F280002BB4EC /* OilConsumptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OilConsumptionViewController.swift; sourceTree = "<group>"; };
 		9B000F221E84F961002BB4EC /* AddOilRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOilRecordViewController.swift; sourceTree = "<group>"; };
 		9B000F4C1E850F21002BB4EC /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8AF5FF1EB86F8E00AEE0A8 /* MessageUI.framework in Frameworks */,
+				F3EFFCCABF44524A429C2F26 /* Pods_MotorHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				9B8AF5FE1EB86F8E00AEE0A8 /* MessageUI.framework */,
+				10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -350,6 +354,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MotorHelper/Pods-MotorHelper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${BUILT_PRODUCTS_DIR}/AVOSCloud/AVOSCloud.framework",
+				"${BUILT_PRODUCTS_DIR}/AVOSCloudIM/AVOSCloudIM.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -360,6 +366,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloud.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloudIM.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",

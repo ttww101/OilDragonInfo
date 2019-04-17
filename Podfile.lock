@@ -1,8 +1,23 @@
 PODS:
   - AEXML (4.3.3)
   - Alamofire (4.8.1)
+  - AVOSCloud (11.5.2)
+  - AVOSCloudIM (11.5.2):
+    - AVOSCloud (= 11.5.2)
+    - AVOSCloudIM/_ARC (= 11.5.2)
+    - AVOSCloudIM/_NOARC (= 11.5.2)
+  - AVOSCloudIM/_ARC (11.5.2):
+    - AVOSCloud (= 11.5.2)
+    - AVOSCloudIM/_NOARC (= 11.5.2)
+  - AVOSCloudIM/_NOARC (11.5.2):
+    - AVOSCloud (= 11.5.2)
   - Cosmos (8.0.2)
   - IQKeyboardManagerSwift (6.2.0)
+  - JAnalytics (1.2.1):
+    - JCore (~> 1.2.0)
+  - JCore (1.2.6)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
   - NVActivityIndicatorView (4.6.1):
     - NVActivityIndicatorView/Presenter (= 4.6.1)
   - NVActivityIndicatorView/Presenter (4.6.1)
@@ -12,8 +27,12 @@ PODS:
 DEPENDENCIES:
   - AEXML
   - Alamofire
+  - AVOSCloud
+  - AVOSCloudIM
   - Cosmos (~> 8.0)
   - IQKeyboardManagerSwift
+  - JAnalytics
+  - JPush
   - NVActivityIndicatorView
   - StringExtensionHTML
   - SWXMLHash
@@ -22,8 +41,13 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AEXML
     - Alamofire
+    - AVOSCloud
+    - AVOSCloudIM
     - Cosmos
     - IQKeyboardManagerSwift
+    - JAnalytics
+    - JCore
+    - JPush
     - NVActivityIndicatorView
     - StringExtensionHTML
     - SWXMLHash
@@ -31,12 +55,17 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AVOSCloud: b3cb1ed20d46c0d55083363522cb2ea593d51ac7
+  AVOSCloudIM: ede93dc6155c3e73524469f5098a1ec2422915ae
   Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  JAnalytics: a65f716b383ad470aacd63a7af1984746cc3e06f
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   StringExtensionHTML: 856dcc0c705012ae2f9c29c7413b015b82133e52
   SWXMLHash: 6d0ab74fef35f99156945c8bfe86dd7ead0822aa
 
-PODFILE CHECKSUM: 40ba9d36d19b6d183559eb10f7afe8ac84432d18
+PODFILE CHECKSUM: d06b0531de8012455f8b683d29afd916a422fe84
 
 COCOAPODS: 1.5.3
