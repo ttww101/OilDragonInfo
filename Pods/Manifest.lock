@@ -1,0 +1,42 @@
+PODS:
+  - AEXML (4.3.3)
+  - Alamofire (4.8.1)
+  - Cosmos (8.0.2)
+  - IQKeyboardManagerSwift (6.2.0)
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
+  - StringExtensionHTML (1.0.2)
+  - SWXMLHash (4.8.0)
+
+DEPENDENCIES:
+  - AEXML
+  - Alamofire
+  - Cosmos (~> 8.0)
+  - IQKeyboardManagerSwift
+  - NVActivityIndicatorView
+  - StringExtensionHTML
+  - SWXMLHash
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AEXML
+    - Alamofire
+    - Cosmos
+    - IQKeyboardManagerSwift
+    - NVActivityIndicatorView
+    - StringExtensionHTML
+    - SWXMLHash
+
+SPEC CHECKSUMS:
+  AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  StringExtensionHTML: 856dcc0c705012ae2f9c29c7413b015b82133e52
+  SWXMLHash: 6d0ab74fef35f99156945c8bfe86dd7ead0822aa
+
+PODFILE CHECKSUM: 40ba9d36d19b6d183559eb10f7afe8ac84432d18
+
+COCOAPODS: 1.5.3
