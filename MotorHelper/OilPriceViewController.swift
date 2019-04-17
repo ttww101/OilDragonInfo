@@ -26,17 +26,17 @@ class OilPriceViewController: UIViewController {
     @IBOutlet weak var productNameSuper: UILabel!
     @IBOutlet weak var productPriceSuper: UILabel!
     @IBOutlet weak var reloadBtn: UIButton!
-    @IBOutlet weak var oilPriceTime: UILabel!
+    @IBOutlet weak var oilPriceTimeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let today = Date()
-        reloadBtn.layer.cornerRadius = 15
+        reloadBtn.layer.cornerRadius = 22
         productName92.text = "無鉛汽油 92"
         productName95.text = "無鉛汽油 95"
         productName98.text = "無鉛汽油 98"
         productNameSuper.text = "柴油"
-        oilPriceTime.text = "有效期限"
+        oilPriceTimeLabel.text = "更新時間"
 //        if isInternetAvailable() {
 //            let activityData = ActivityData()
 //            NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
@@ -91,7 +91,7 @@ class OilPriceViewController: UIViewController {
 //            self.productPrice95.text = "\(oil95) 元／公升"
 //            self.productPrice98.text = "\(oil98) 元／公升"
 //            self.productPriceSuper.text = "\(oilSuper) 元／公升"
-//            self.oilPriceTime.text  = "\(time)"
+//            self.oilPriceTimeLabel.text  = "\(time)"
 //        })
     }
     func getMonday(myDate: Date) -> String {
@@ -105,7 +105,7 @@ class OilPriceViewController: UIViewController {
         return monStr
     }
     @IBAction func reload(_ sender: Any) {
-        if oilPriceTime.text == "有效期限000" {
+        if oilPriceTimeLabel.text == "有效期限000" {
             getOilInfo(date: Date())
             print("我有跑更新可是沒顯示")
         } else {

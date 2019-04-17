@@ -165,10 +165,10 @@
 		9B124A601E7FC77400393658 /* MotorHelper */ = {
 			isa = PBXGroup;
 			children = (
-				9B35DD4E1E9615110093C11E /* Store */,
 				9B9582E41E88E1F9003F699C /* LogIn */,
-				9B000F251E84FF10002BB4EC /* OilPrcie */,
 				9B000F241E84FE92002BB4EC /* AddOilRecord */,
+				9B35DD4E1E9615110093C11E /* Store */,
+				9B000F251E84FF10002BB4EC /* OilPrcie */,
 				9B9582E71E88F09D003F699C /* OilConsumptionList */,
 				9B35DD471E94E6300093C11E /* Comment */,
 				9B8AF5FD1EB8621600AEE0A8 /* Setting */,
@@ -532,7 +532,7 @@
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = MotorHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.msxiao.MotorHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = acc.na.oildragon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -548,7 +548,7 @@
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = MotorHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.msxiao.MotorHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = acc.na.oildragon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
