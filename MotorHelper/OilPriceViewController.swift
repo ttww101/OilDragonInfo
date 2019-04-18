@@ -1,118 +1,62 @@
-//
-//  OilPriceViewController.swift
-//  MotorHelper
-//
-//  Created by 孟軒蕭 on 20/03/2017.
-//  Copyright © 2017 MichaelXiao. All rights reserved.
-//
 
 import UIKit
 import SystemConfiguration
 import NVActivityIndicatorView
-//import FirebaseDatabase
 
-class OilPriceViewController: UIViewController {
+class OilPriceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let oilInfo = GetSOAPInfo()
-//    var ref: FIRDatabaseReference?
-    var product: [Petroleum] = []
-
-    @IBOutlet weak var productName92: UILabel!
-    @IBOutlet weak var productPrice92: UILabel!
-    @IBOutlet weak var productName95: UILabel!
-    @IBOutlet weak var productPrice95: UILabel!
-    @IBOutlet weak var productName98: UILabel!
-    @IBOutlet weak var productPrice98: UILabel!
-    @IBOutlet weak var productNameSuper: UILabel!
-    @IBOutlet weak var productPriceSuper: UILabel!
+    var products: [Petroleum] = []
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var reloadBtn: UIButton!
-    @IBOutlet weak var oilPriceTimeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let today = Date()
-        reloadBtn.layer.cornerRadius = 22
-        productName92.text = "無鉛汽油 92"
-        productName95.text = "無鉛汽油 95"
-        productName98.text = "無鉛汽油 98"
-        productNameSuper.text = "柴油"
-        oilPriceTimeLabel.text = "更新時間"
-//        if isInternetAvailable() {
-//            let activityData = ActivityData()
-//            NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
-//            getOilInfo(date: today)
-//            NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
-//        } else {
-//            let alertController = UIAlertController(title: "Error", message: "目前未連接網路", preferredStyle: .alert)
-//            let jumpAction = UIAlertAction(title: "ＯＫ", style: .default, handler: { ( _ ) -> Void in
-//                self.tabBarController?.selectedIndex = 0
-//                self.productName92.text = ""
-//                self.productPrice92.text = ""
-//                self.productName95.text = ""
-//                self.productPrice95.text = ""
-//                self.productName98.text = "請檢查您的網路是否有連線"
-//                self.productPrice98.text = ""
-//                self.productNameSuper.text = ""
-//                self.productPriceSuper.text = ""
-//            })
-//            alertController.addAction(jumpAction)
-//            self.present(alertController, animated: true, completion: nil)
-//        }
+        
+        reloadBtn.layer.cornerRadius = 8
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "OilPriceTableViewCell", bundle: nil), forCellReuseIdentifier: "OilPriceTableViewCell")
+        self.tableView.backgroundColor = UIColor(displayP3Red: 57/255, green: 58/255, blue: 58/255, alpha: 1.0)
+        self.tableView.estimatedRowHeight = 77
+        self.tableView.rowHeight = UITableView.automaticDimension
+        getOilInfo()
     }
-    func isInternetAvailable() -> Bool {
-        var zeroAddress = sockaddr_in()
-        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
-        zeroAddress.sin_family = sa_family_t(AF_INET)
-        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
-            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
-                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
-            }
+    
+    func getOilInfo() {
+        
+        let petroleumProvider = PetroleumProvider(dataLoader: DataLoader())
+        petroleumProvider.getPetroleum { [unowned self] (products, error) in
+            guard let products = products else { return }
+            self.products = products
+            DispatchQueue.main.async(execute: {
+                self.tableView.reloadData()
+            })
         }
-        var flags = SCNetworkReachabilityFlags()
-        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
-            return false
-        }
-        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
-        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
-        return (isReachable && !needsConnection)
     }
-    func getOilInfo(date: Date) {
-        let monstr = getMonday(myDate: date)
-//        ref = FIRDatabase.database().reference()
-//        ref?.keepSynced(true)
-//        ref?.child("oilprice").child(monstr).observeSingleEvent(of: .value, with: { (snapshot) in
-//            let value = snapshot.value as? NSDictionary
-//            let oil92 = value?["gasoline92"] as? String ?? "no data"
-//            let oil95 = value?["gasoline95"] as? String ?? "no data"
-//            let oil98 = value?["gasoline98"] as? String ?? "no data"
-//            let oilSuper = value?["diesel"] as? String ?? "no data"
-//            let time = value?["time"] as? String ?? "有效期限000"
-//            self.productPrice92.text = "\(oil92) 元／公升"
-//            self.productPrice95.text = "\(oil95) 元／公升"
-//            self.productPrice98.text = "\(oil98) 元／公升"
-//            self.productPriceSuper.text = "\(oilSuper) 元／公升"
-//            self.oilPriceTimeLabel.text  = "\(time)"
-//        })
-    }
-    func getMonday(myDate: Date) -> String {
-        let df = DateFormatter()
-        df.dateFormat = "YYYY-MM-dd"
-        var cal = Calendar.current
-        cal.firstWeekday = 2
-        let comps = cal.dateComponents([.weekOfYear, .yearForWeekOfYear], from: myDate)
-        let beginningOfWeek = cal.date(from: comps)!
-        let monStr = df.string(from: beginningOfWeek)
-        return monStr
-    }
+    
     @IBAction func reload(_ sender: Any) {
-        if oilPriceTimeLabel.text == "有效期限000" {
-            getOilInfo(date: Date())
-            print("我有跑更新可是沒顯示")
-        } else {
-            let alertController = UIAlertController(title: "已更新", message: "目前為最新油價", preferredStyle: .alert)
-            let jumpAction = UIAlertAction(title: "ＯＫ", style: .default)
-            alertController.addAction(jumpAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
+        getOilInfo()
     }
+}
+
+extension OilPriceViewController {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OilPriceTableViewCell", for: indexPath) as? OilPriceTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.nameLabel.text = self.products[indexPath.row].name
+        cell.priceLabel.text = "\(self.products[indexPath.row].price)  TWD/l"
+        
+        return cell
+    }
+    
 }

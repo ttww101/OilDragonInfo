@@ -113,8 +113,7 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
         let query = AVQuery(className: AVOSKey.storeClassName)
         
         query.findObjectsInBackground { (dataObjects, error) in
-            
-            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+             NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
             
             if let _ = error { return }
             
@@ -144,23 +143,10 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
 
     @IBAction func addStore(_ sender: Any) {
         searchController.dismiss(animated: true, completion: nil)
-        if userID != nil {
-            guard
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddStoreViewController") as? AddStoreViewController
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddStoreViewController") as? AddStoreViewController
                 else { return }
             vc.delegate = self
             self.show(vc, sender: nil)
-        } else {
-            let alertController = UIAlertController(title: "Error", message: "您尚未註冊無法使用此功能", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            let jumpAction = UIAlertAction(title: "去註冊", style: .default, handler: { ( _ ) -> Void in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
-                self.present(vc!, animated: true, completion: nil)
-            })
-            alertController.addAction(defaultAction)
-            alertController.addAction(jumpAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
     }
 }
 
