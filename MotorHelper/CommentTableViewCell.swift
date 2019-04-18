@@ -10,7 +10,6 @@ import UIKit
 
 class CommentTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var userID: UILabel!
     @IBOutlet weak var userComment: UILabel!
     @IBOutlet weak var commentView: UIView!
     static let identifier = "CommentTableViewCell"

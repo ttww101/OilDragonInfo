@@ -18,6 +18,17 @@ PODS:
   - JCore (1.2.6)
   - JPush (3.1.2):
     - JCore (~> 1.2.6)
+  - LeanCloud (15.0.0):
+    - LeanCloud/Foundation (= 15.0.0)
+    - LeanCloud/LocalStorage (= 15.0.0)
+    - LeanCloud/Storage (= 15.0.0)
+  - LeanCloud/Foundation (15.0.0)
+  - LeanCloud/LocalStorage (15.0.0):
+    - LeanCloud/Foundation
+  - LeanCloud/Storage (15.0.0):
+    - Alamofire (~> 4.8.0)
+    - LeanCloud/Foundation
+    - LeanCloud/LocalStorage
   - NVActivityIndicatorView (4.6.1):
     - NVActivityIndicatorView/Presenter (= 4.6.1)
   - NVActivityIndicatorView/Presenter (4.6.1)
@@ -33,6 +44,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - JAnalytics
   - JPush
+  - LeanCloud
   - NVActivityIndicatorView
   - StringExtensionHTML
   - SWXMLHash
@@ -48,6 +60,7 @@ SPEC REPOS:
     - JAnalytics
     - JCore
     - JPush
+    - LeanCloud
     - NVActivityIndicatorView
     - StringExtensionHTML
     - SWXMLHash
@@ -62,10 +75,11 @@ SPEC CHECKSUMS:
   JAnalytics: a65f716b383ad470aacd63a7af1984746cc3e06f
   JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
   JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
+  LeanCloud: 62fe4e615494425081fd719c0d56fae130f764ea
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   StringExtensionHTML: 856dcc0c705012ae2f9c29c7413b015b82133e52
   SWXMLHash: 6d0ab74fef35f99156945c8bfe86dd7ead0822aa
 
-PODFILE CHECKSUM: d06b0531de8012455f8b683d29afd916a422fe84
+PODFILE CHECKSUM: bdcadd368391f586e342ad50cb02612ea1262b24
 
 COCOAPODS: 1.5.3

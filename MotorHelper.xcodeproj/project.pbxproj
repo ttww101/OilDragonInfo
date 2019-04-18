@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		946ECAC52268328800539B41 /* AVOSKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECAC42268328800539B41 /* AVOSKey.swift */; };
 		9B000F211E84F280002BB4EC /* OilConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B000F201E84F280002BB4EC /* OilConsumptionViewController.swift */; };
 		9B000F231E84F961002BB4EC /* AddOilRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B000F221E84F961002BB4EC /* AddOilRecordViewController.swift */; };
 		9B000F4E1E850F21002BB4EC /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B000F4C1E850F21002BB4EC /* TextTableViewCell.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		946ECAC42268328800539B41 /* AVOSKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVOSKey.swift; sourceTree = "<group>"; };
 		9B000F201E84F280002BB4EC /* OilConsumptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OilConsumptionViewController.swift; sourceTree = "<group>"; };
 		9B000F221E84F961002BB4EC /* AddOilRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOilRecordViewController.swift; sourceTree = "<group>"; };
 		9B000F4C1E850F21002BB4EC /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		946ECAC32268325D00539B41 /* ODKey */ = {
+			isa = PBXGroup;
+			children = (
+				946ECAC42268328800539B41 /* AVOSKey.swift */,
+			);
+			name = ODKey;
+			sourceTree = "<group>";
+		};
 		9B000F241E84FE92002BB4EC /* AddOilRecord */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 		9B124A601E7FC77400393658 /* MotorHelper */ = {
 			isa = PBXGroup;
 			children = (
+				946ECAC32268325D00539B41 /* ODKey */,
 				9B9582E41E88E1F9003F699C /* LogIn */,
 				9B000F241E84FE92002BB4EC /* AddOilRecord */,
 				9B35DD4E1E9615110093C11E /* Store */,
@@ -279,7 +290,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = MichaelXiao;
+				ORGANIZATIONNAME = na;
 				TargetAttributes = {
 					9B124A5D1E7FC77300393658 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -359,6 +370,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/LeanCloud/LeanCloud.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 				"${BUILT_PRODUCTS_DIR}/StringExtensionHTML/StringExtensionHTML.framework",
@@ -371,6 +383,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanCloud.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StringExtensionHTML.framework",
@@ -411,6 +424,7 @@
 				9B9582E31E88E1ED003F699C /* LogInViewController.swift in Sources */,
 				9B2239661EA5C05A0050ABA9 /* ResetPWDViewController.swift in Sources */,
 				9B000F581E853478002BB4EC /* DateTableViewCell.swift in Sources */,
+				946ECAC52268328800539B41 /* AVOSKey.swift in Sources */,
 				9B124A791E7FD56500393658 /* GetSOAPInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

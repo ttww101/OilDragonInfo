@@ -6,6 +6,7 @@ target 'MotorHelper' do
   use_frameworks!
   pod 'AVOSCloud'
   pod 'AVOSCloudIM'
+  pod 'LeanCloud'
   pod 'JPush'
   pod 'JAnalytics'
   #for xml analysis
