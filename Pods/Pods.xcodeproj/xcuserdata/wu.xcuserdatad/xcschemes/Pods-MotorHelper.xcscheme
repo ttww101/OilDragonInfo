@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "60B296F30E7E3F64EF66B74C39EADE9E"
+               BlueprintIdentifier = "85C35DB4D15A5CB2A9506E97C752678A"
                BuildableName = "Pods_MotorHelper.framework"
                BlueprintName = "Pods-MotorHelper"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "60B296F30E7E3F64EF66B74C39EADE9E"
+            BlueprintIdentifier = "85C35DB4D15A5CB2A9506E97C752678A"
             BuildableName = "Pods_MotorHelper.framework"
             BlueprintName = "Pods-MotorHelper"
             ReferencedContainer = "container:Pods.xcodeproj">

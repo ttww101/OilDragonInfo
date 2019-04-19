@@ -7,36 +7,20 @@
 //
 
 class Store {
-    let storeName: String
-    let storeAddress: String
-    let storePhoneNum: String
-    let storeID: String
-    var storeRate: String?
-    var scoreTimes: String?
+    let name: String
+    let address: String
+    let phone: String
+    let objectID: String
+    var rate: String?
+    var comments: [String]?
 
-    init(storeName: String, storeAddress: String, storePhoneNum: String, storeRate: String, scoreTimes: String, storeID: String) {
-        self.storeName = storeName
-        self.storeAddress = storeAddress
-        self.storePhoneNum = storePhoneNum
-        self.storeRate = storeRate
-        self.scoreTimes = scoreTimes
-        self.storeID = storeID
-    }
-
-    init(storeName: String, storeAddress: String, storePhoneNum: String, storeID: String) {
-        self.storeID = storeID
-        self.storeName = storeName
-        self.storeAddress = storeAddress
-        self.storePhoneNum = storePhoneNum
+    init(name: String, address: String, phone: String, objectID: String, rate: String? = nil, comments: [String]? = nil) {
+        self.objectID = objectID
+        self.name = name
+        self.address = address
+        self.phone = phone
+        self.rate = rate
+        self.comments = comments
     }
 }
 
-class Comment {
-    let userID: String
-    let commentContent: String
-
-    init(userID: String, commentContent: String) {
-        self.userID = userID
-        self.commentContent = commentContent
-    }
-}

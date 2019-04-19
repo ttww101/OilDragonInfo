@@ -1,20 +1,11 @@
-//
-//  MotorStoreTableViewController.swift
-//  MotorHelper
-//
-//  Created by 孟軒蕭 on 06/04/2017.
-//  Copyright © 2017 MichaelXiao. All rights reserved.
-//
 
 import UIKit
-//import FirebaseAuth
-//import FirebaseDatabase
 import NVActivityIndicatorView
+import AVOSCloud
 
 class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
 
     var stores: [Store] = []
-//    var ref: FIRDatabaseReference?
     let userID = "FIRAuth.auth()?.currentUser?.uid"
     var scores = [String: Double]()
 
@@ -26,6 +17,9 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
         }
     }
     var shouldShowSearchResults = false
+    
+    //MARK: vc life cycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
@@ -33,7 +27,11 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getStoreData()
+        
+        AVOSCloud.setApplicationId(AVOSKey.appID, clientKey: AVOSKey.appKey)
+        AVOSCloud.setAllLogsEnabled(true)
+        
+        requestStoreData()
         setUp()
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,6 +39,7 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
 
         searchBarSetup()
     }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -62,10 +61,10 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
                 else { return UITableViewCell()}
             cell.view.layer.cornerRadius = 15
 
-            cell.storeName.text = "\(filteredStores[indexPath.row].storeName)"
-            cell.address.text = "\(filteredStores[indexPath.row].storeAddress)"
-            cell.phone.text = "\(filteredStores[indexPath.row].storePhoneNum)"
-            let id  = filteredStores[indexPath.row].storeID
+            cell.storeName.text = "\(filteredStores[indexPath.row].name)"
+            cell.address.text = "\(filteredStores[indexPath.row].address)"
+            cell.phone.text = "\(filteredStores[indexPath.row].phone)"
+            let id  = filteredStores[indexPath.row].objectID
             cell.score.settings.fillMode = .precise
             if scores[id] == nil {
                 cell.score.rating = 0
@@ -80,10 +79,10 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
                 else { return UITableViewCell()}
             cell.view.layer.cornerRadius = 15
 
-            cell.storeName.text = "\(stores[indexPath.row].storeName)"
-            cell.address.text = "\(stores[indexPath.row].storeAddress)"
-            cell.phone.text = "\(stores[indexPath.row].storePhoneNum)"
-            let id  = stores[indexPath.row].storeID
+            cell.storeName.text = "\(stores[indexPath.row].name)"
+            cell.address.text = "\(stores[indexPath.row].address)"
+            cell.phone.text = "\(stores[indexPath.row].phone)"
+            let id  = stores[indexPath.row].objectID
             cell.score.settings.fillMode = .precise
             if scores[id] == nil {
                 cell.score.rating = 0
@@ -98,70 +97,55 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
         return StoreListInfoTableViewCell.height
     }
 
+    //MARK: Private
+    
     func setUp() {
         let storeDetailNib = UINib(nibName: StoreListInfoTableViewCell.identifier, bundle: nil)
         tableView.register(storeDetailNib, forCellReuseIdentifier: StoreListInfoTableViewCell.identifier)
     }
 
-    func getStoreData() {
-//        let activityData = ActivityData()
-//        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
-//        ref = FIRDatabase.database().reference()
-//        ref?.child("stores").observeSingleEvent(of: .value, with: { (snapshot) in
-//            for childSnap in snapshot.children.allObjects {
-//                guard
-//                    let snap = childSnap as? FIRDataSnapshot
-//                    else { return }
-//                if let snapshotValue = snapshot.value as? NSDictionary,
-//                    let snapVal = snapshotValue[snap.key] as? [String:String] {
-//                    let storeName = snapVal["storeName"]
-//                    let phoneNumber = snapVal["phoneNumber"]
-//                    let address = snapVal["address"]
-//                    let storeID = snap.key
-//                    let store = Store(storeName: storeName!, storeAddress: address!, storePhoneNum: phoneNumber!, storeID: storeID)
-//                    self.stores.append(store)
-//                }
-//            }
-//            self.tableView.reloadData()
-//            NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
-//        })
-//        ref?.child("rateing").observeSingleEvent(of: .value, with: { (snapshot) in
-//            for childSnap in snapshot.children.allObjects {
-//                guard let snap = childSnap as? FIRDataSnapshot else { return }
-//                if let snapshotValue = snapshot.value as? NSDictionary,
-//                    let snapVal = snapshotValue[snap.key] as? [String:String] {
-//                    var sum = 0.0
-//                    var count = 0.0
-//                    for scoreValue in snapVal.values {
-//                        sum += Double(scoreValue)!
-//                        count += 1.0
-//                    }
-//                    self.scores["\(snap.key)"] = sum/count
-//                }
-//            }
-//            self.tableView.reloadData()
-//        })
+    func requestStoreData() {
+        let activityData = ActivityData()
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData, nil)
+        
+        
+        let query = AVQuery(className: AVOSKey.storeClassName)
+        
+        query.findObjectsInBackground { (dataObjects, error) in
+             NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+            
+            if let _ = error { return }
+            
+            guard let objects = dataObjects else { return }
+            
+            if let avObjects = objects as? [AVObject] {
+                
+                var remoteStores: [Store] = []
+                
+                for avObject in avObjects {
+                    //stores
+                    let name = avObject["name"] as! String
+                    let phone = avObject["phone"] as! String
+                    let address = avObject["address"] as! String
+                    let objectID = avObject["objectId"] as! String
+                    let rate = avObject["rate"] as! String
+                    let comments = avObject["comments"]
+                    let store = Store(name: name, address: address, phone: phone, objectID: objectID, rate: rate, comments: comments as? [String])
+                    remoteStores.append(store)
+                    self.scores[objectID] = Double(rate)
+                }
+                self.stores = remoteStores
+                self.tableView.reloadData()
+            }
+        }
     }
 
     @IBAction func addStore(_ sender: Any) {
         searchController.dismiss(animated: true, completion: nil)
-        if userID != nil {
-            guard
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddStoreViewController") as? AddStoreViewController
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddStoreViewController") as? AddStoreViewController
                 else { return }
             vc.delegate = self
             self.show(vc, sender: nil)
-        } else {
-            let alertController = UIAlertController(title: "Error", message: "您尚未註冊無法使用此功能", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            let jumpAction = UIAlertAction(title: "去註冊", style: .default, handler: { ( _ ) -> Void in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
-                self.present(vc!, animated: true, completion: nil)
-            })
-            alertController.addAction(defaultAction)
-            alertController.addAction(jumpAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
     }
 }
 
@@ -169,26 +153,20 @@ extension MotorStoreTableViewController {
     //選到那個欄位
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if searchController.isActive {
-            print("\(stores[indexPath.row].storeID)")
+            print("\(stores[indexPath.row].objectID)")
             guard
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as? CommentViewController
                 else { return }
-            vc.storeID = filteredStores[indexPath.row].storeID
-            vc.sendName = filteredStores[indexPath.row].storeName
-            vc.sendPhone = filteredStores[indexPath.row].storePhoneNum
-            vc.sendAddress = filteredStores[indexPath.row].storeAddress
+            vc.store = filteredStores[indexPath.row]
             vc.delegate = self
             self.show(vc, sender: nil)
             searchController.dismiss(animated: true, completion: nil)
         } else {
-            print("\(stores[indexPath.row].storeID)")
+            print("\(stores[indexPath.row].objectID)")
             guard
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as? CommentViewController
                 else { return }
-            vc.storeID = stores[indexPath.row].storeID
-            vc.sendName = stores[indexPath.row].storeName
-            vc.sendPhone = stores[indexPath.row].storePhoneNum
-            vc.sendAddress = stores[indexPath.row].storeAddress
+            vc.store = stores[indexPath.row]
             vc.delegate = self
             self.show(vc, sender: nil)
         }
@@ -202,7 +180,7 @@ extension MotorStoreTableViewController {
             let searchText = searchController.searchBar.text
             else { return }
         filteredStores = stores.filter({ (store) -> Bool in
-            return store.storeName.contains(searchText) || store.storeAddress.contains(searchText)
+            return store.name.contains(searchText) || store.address.contains(searchText)
         })
     }
     func searchBarSetup() {
@@ -223,7 +201,7 @@ extension MotorStoreTableViewController: buttonIsClick {
     func detectIsClick() {
         self.stores.removeAll()
         self.scores.removeAll()
-        self.getStoreData()
+        self.requestStoreData()
         print("Click")
     }
 }

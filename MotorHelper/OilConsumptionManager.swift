@@ -1,13 +1,6 @@
-//
-//  OilConsumptionManager.swift
-//  MotorHelper
-//
-//  Created by 孟軒蕭 on 29/03/2017.
-//  Copyright © 2017 MichaelXiao. All rights reserved.
-//
+
 import UIKit
-//import FirebaseAuth
-//import FirebaseDatabase
+import LeanCloud
 
 protocol OilConsumptionManagerDelegate: class {
     func manager(_ manager: OilConsumptionManager, didGet records: [ConsumptionRecord])
@@ -15,7 +8,7 @@ protocol OilConsumptionManagerDelegate: class {
 }
 
 class OilConsumptionManager {
-//    var ref: FIRDatabaseReference?
+    
     let userID = "FIRAuth.auth()?.currentUser?.uid"
     weak var delegate: OilConsumptionManagerDelegate?
     static let shared = OilConsumptionManager()
