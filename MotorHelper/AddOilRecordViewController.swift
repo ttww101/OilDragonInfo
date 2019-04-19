@@ -7,12 +7,20 @@
 //
 
 import UIKit
-//import FirebaseAuth
-//import FirebaseDatabase
-//import FirebaseAnalytics
+import AVOSCloud
 
 protocol submitIsClick: class {
-    func detectSubmit()
+    func detectSubmit(oilRecord: ConsumptionRecord)
+}
+
+enum Component {
+    case date //日期
+    case oilprice //油價
+    case numOfOil //加油量
+    case totalPrice //總價
+    case totalKM //里程數
+    case addBtn //新增紀錄
+    case oilType //油品種類
 }
 
 class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -21,21 +29,14 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
     weak var delegate: submitIsClick?
     let datePicker = UIDatePicker()
     let dateFormatter = DateFormatter()
-    var record = ConsumptionRecord(date: "", oilType: "", oilPrice: "", numOfOil: "", totalPrice: "", totalKM: "", autoID: "")
-//    var ref: FIRDatabaseReference?
-    var oilPrice = [String: String]()
+    var record = ConsumptionRecord(date: "", oilType: "", oilPrice: "", numOfOil: "", totalPrice: "", totalKM: "")
+    var oilPrice: [String: String] =
+        ["oil92" : "92 無鉛汽油",
+         "oil95" : "95 無鉛汽油",
+         "oil98" : "98 無鉛汽油",
+         "oilSuper" : "柴油"]
     let currentdate = Date()
 
-    // MARK: enum for cell type
-    enum Component {
-        case date //日期
-        case oilprice //油價
-        case numOfOil //加油量
-        case totalPrice //總價
-        case totalKM //里程數
-        case addBtn //新增紀錄
-        case oilType //油品種類
-    }
     // MARK: Property
     let components: [Component] = [ Component.date, Component.oilType, Component.oilprice, Component.numOfOil, Component.totalPrice, Component.totalKM, Component.addBtn ] // index表示位置
 
@@ -65,7 +66,6 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
         let oilTypeNib = UINib(nibName: SegmentTableViewCell.identifier, bundle: nil)
         addConsumption.register(oilTypeNib, forCellReuseIdentifier: SegmentTableViewCell.identifier)
 
-        getOilInfo(date: currentdate)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return components.count
@@ -100,8 +100,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.identifier, for: indexPath) as? TextTableViewCell else { return UITableViewCell() }
             cell.contentTextName.text = "油價"
-            //輸入框內顯示清除的符號－－＞編輯時顯示
-            cell.contentTextField.text = oilPrice["oil92"]
+            cell.contentTextField.placeholder = "必填"
             cell.contentTextField.clearButtonMode = .whileEditing
             cell.contentTextField.keyboardType = .numbersAndPunctuation
             cell.contentTextField.returnKeyType = .done
@@ -163,7 +162,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
             datePicker.datePickerMode = .date
             datePicker.addTarget(self, action: #selector(AddOilRecordViewController.didSelectedDate), for: .valueChanged)
             let cal = Calendar.current
-            let minTime = cal.date(byAdding: .month, value: -1, to: Date())
+            let minTime = cal.date(byAdding: .month, value: -3, to: Date())
             datePicker.minimumDate = minTime
             datePicker.maximumDate = Date()
             //toolbar
@@ -180,7 +179,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 //            cell.contentTextField.text = dateFormatter.string(from: datePicker.date)
 
             record.date = DateFormatter.localizedString(from: datePicker.date, dateStyle: .long, timeStyle: .none)
-            cell.contentTextField.text = DateFormatter.localizedString(from: datePicker.date, dateStyle: .long, timeStyle: .none)
+            cell.contentTextField.text = DateFormatter.localizedString(from: datePicker.date, dateStyle: .short, timeStyle: .none)
 
             cell.index = TextFieldType.date
             cell.contentTextField.textAlignment = .center
@@ -222,20 +221,15 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
     @objc func onChange(_ sender: UISegmentedControl) {
         if let oilSection = components.index(of: .oilprice) {
             let indexPath = IndexPath(row: 0, section: oilSection)
-            let cell = addConsumption.cellForRow(at: indexPath) as? TextTableViewCell
             switch sender.selectedSegmentIndex {
             case 0:
-                cell?.contentTextField.text = oilPrice["oil92"]
-                record.oilPrice = oilPrice["oil92"]!
+                record.oilType = oilPrice["oil92"]!
             case 1:
-                cell?.contentTextField.text = oilPrice["oil95"]
-                record.oilPrice = oilPrice["oil95"]!
+                record.oilType = oilPrice["oil95"]!
             case 2:
-                cell?.contentTextField.text = oilPrice["oil98"]
-                record.oilPrice = oilPrice["oil98"]!
+                record.oilType = oilPrice["oil98"]!
             case 3:
-                cell?.contentTextField.text = oilPrice["oilSuper"]
-                record.oilPrice = oilPrice["oilSuper"]!
+                record.oilType = oilPrice["oilSuper"]!
             default:
                 print("default")
             }
@@ -287,16 +281,17 @@ extension AddOilRecordViewController: UITextFieldDelegate {
 // MARK: submit button
 extension AddOilRecordViewController {
     @objc func submitBtn() {
-        if record.totalKM == "" || record.totalPrice == "" || record.numOfOil == "" {
-            let alertController = UIAlertController(title: "Error", message: "請填入所需資訊", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        self.view.endEditing(true)
+        if record.oilPrice == "" || record.totalKM == "" || record.totalPrice == "" || record.numOfOil == "" {
+            let alertController = UIAlertController(title: "系統提示", message: "請填入所需資訊", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "確定", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
         } else {
-            sendData()
+            postOilRecordData()
         }
     }
-    func sendData() {
+    func postOilRecordData() {
         guard
             let oilTypeSection = components.index(of: .oilType)
             else { return }
@@ -310,42 +305,21 @@ extension AddOilRecordViewController {
         } else {
             record.oilType = "無鉛汽油 \(cell.oilTypeSegment.titleForSegment(at: (cell.oilTypeSegment.selectedSegmentIndex))!)"
         }
-        var sendData = ["date": "\(record.date)",
-            "oilType": "\(record.oilType)",
-            "oilPrice": "\(record.oilPrice)",
-            "numOfOil": "\(record.numOfOil)",
-            "totalPrice": "\(record.totalPrice)",
-            "totalKM": "\(record.totalKM)"]
-//        ref = FIRDatabase.database().reference()
-//        ref?.child((FIRAuth.auth()?.currentUser?.uid)!).childByAutoId().setValue(sendData, withCompletionBlock: { (_, getbackdata) in
-//            sendData["autoID"] = "\(getbackdata.key)"
-//            self.ref?.child((FIRAuth.auth()?.currentUser?.uid)!).child("\(getbackdata.key)").setValue(sendData)
-//            self.delegate?.detectSubmit()
-//            _ = self.navigationController?.popViewController(animated: true)
-//            FIRAnalytics.logEvent(withName: "add oil record", parameters: nil)
-//        })
+        
+        let object = AVObject(className: AVOSKey.consumptionRecordClassName)
+        object.setObject(record.date, forKey: "date")
+        object.setObject(record.oilType, forKey: "oilType")
+        object.setObject(record.oilPrice, forKey: "oilPrice")
+        object.setObject(record.numOfOil, forKey: "numOfOil")
+        object.setObject(record.totalPrice, forKey: "totalPrice")
+        object.setObject(record.totalKM, forKey: "totalKM")
+        
+        _ = object.save()
+
+        self.delegate?.detectSubmit(oilRecord: record)
+        self.navigationController?.popViewController(animated: true)
     }
-    func getOilInfo(date: Date) {
-        let monstr = getMonday(myDate: date)
-//        ref = FIRDatabase.database().reference()
-//        ref?.child("oilprice").child(monstr).observeSingleEvent(of: .value, with: { (snapshot) in
-//            let value = snapshot.value as? NSDictionary
-//            let oil92 = value?["gasoline92"] as? String ?? "no data"
-//            let oil95 = value?["gasoline95"] as? String ?? "no data"
-//            let oil98 = value?["gasoline98"] as? String ?? "no data"
-//            let oilSuper = value?["diesel"] as? String ?? "no data"
-//            self.oilPrice["oil92"] = oil92
-//            self.oilPrice["oil95"] = oil95
-//            self.oilPrice["oil98"] = oil98
-//            self.oilPrice["oilSuper"] = oilSuper
-//            if let oilSection = self.components.index(of: .oilprice) {
-//                let indexPath = IndexPath(row: 0, section: oilSection)
-//                let cell = self.addConsumption.cellForRow(at: indexPath) as? TextTableViewCell
-//                cell?.contentTextField.text = oil92
-//                self.record.oilPrice = oil92
-//            }
-//        })
-    }
+    
     func getMonday(myDate: Date) -> String {
         let df = DateFormatter()
         df.dateFormat = "YYYY-MM-dd"

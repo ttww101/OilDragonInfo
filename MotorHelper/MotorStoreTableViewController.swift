@@ -6,7 +6,6 @@ import AVOSCloud
 class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
 
     var stores: [Store] = []
-//    var ref: FIRDatabaseReference?
     let userID = "FIRAuth.auth()?.currentUser?.uid"
     var scores = [String: Double]()
 

@@ -1,11 +1,18 @@
+//
+//  ConsumptionProvider.swift
+//  MotorHelper
+//
+//  Created by Wu on 2019/4/18.
+//  Copyright © 2019 na. All rights reserved.
+//
 
 import Foundation
 
-protocol PetroleumProvidable {
-    func getPetroleum(completionHandler: @escaping ([Petroleum]?, Error?) -> Swift.Void)
+protocol ConsumptionRecordProvidable {
+    func getConsumptionRecord(completionHandler: @escaping ([ConsumptionRecord]?, Error?) -> Swift.Void)
 }
 
-class PetroleumProvider: PetroleumProvidable {
+class ConsumptionProvider: ConsumptionRecordProvidable {
     
     var dataLoader: NetworkService
     private var requestToken: RequestToken? = nil
@@ -15,8 +22,8 @@ class PetroleumProvider: PetroleumProvidable {
         self.dataLoader = dataLoader
     }
     
-    func getPetroleum(completionHandler: @escaping ([Petroleum]?, Error?) -> Swift.Void) {
-                
+    func getConsumptionRecord(completionHandler: @escaping ([ConsumptionRecord]?, Error?) -> Swift.Void) {
+        
         guard let url = URL(string: "http://47.75.131.189/gas_inform/?type=all") else {
             //handle wrong url error
             completionHandler(nil, NetworkError.formURLFail)
@@ -36,26 +43,26 @@ class PetroleumProvider: PetroleumProvidable {
                     let object = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject]
                     
                     //handle parse error
-                    guard let petroleumArray = object?["data"] as? [AnyObject] else {
-                            completionHandler(nil, NetworkError.parseError)
-                            return
+                    guard let consumptionRecordArray = object?["data"] as? [AnyObject] else {
+                        completionHandler(nil, NetworkError.parseError)
+                        return
                     }
                     
                     //parse json data
-                    let petroleumArrayData = try JSONSerialization.data(withJSONObject: petroleumArray, options: .prettyPrinted)
+                    let consumptionRecordArrayData = try JSONSerialization.data(withJSONObject: consumptionRecordArray, options: .prettyPrinted)
                     
                     //decode from data array
-                    let petroleums = try decoder.decode([Petroleum].self, from: petroleumArrayData)
+                    let consumptionRecords = try decoder.decode([ConsumptionRecord].self, from: consumptionRecordArrayData)
                     
                     //self offset + 10 per time
-//                    self.offset += 10
+                    //                    self.offset += 10
                     
-                    completionHandler(petroleums, nil)
+                    completionHandler(consumptionRecords, nil)
                     
                 } catch {
                     
                     completionHandler(nil, error)
-
+                    
                 }
                 
             case .error(let error):

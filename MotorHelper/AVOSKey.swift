@@ -12,4 +12,5 @@ struct AVOSKey {
     static let appID = "IsDkIby9Jnpu9Seds1I1Xyy0-gzGzoHsz"
     static let appKey = "YveFWt3T9vWet4A9nCxLELdQ"
     static let storeClassName = "OilStation"
+    static let consumptionRecordClassName = "ConsumptionRecord"
 }

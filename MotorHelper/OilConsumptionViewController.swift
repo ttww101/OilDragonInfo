@@ -1,19 +1,11 @@
-//
-//  OilConsumptionViewController.swift
-//  MotorHelper
-//
-//  Created by 孟軒蕭 on 24/03/2017.
-//  Copyright © 2017 MichaelXiao. All rights reserved.
-//
 
 import UIKit
-//import FirebaseDatabase
-//import FirebaseAuth
+import AVOSCloud
+import NVActivityIndicatorView
 
 class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, OilConsumptionManagerDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
-    let userID = "FIRAuth.auth()?.currentUser?.uid"
-//    var ref: FIRDatabaseReference?
 
     var records: [ConsumptionRecord] = []
 
@@ -26,23 +18,54 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        OilConsumptionManager.shared.delegate = self
-        if userID == nil {
-            let alertController = UIAlertController(title: "Error", message: "您尚未註冊無法使用此功能", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            let jumpAction = UIAlertAction(title: "去註冊", style: .default, handler: { ( _ ) -> Void in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
-                self.present(vc!, animated: true, completion: nil)
-            })
-            alertController.addAction(defaultAction)
-            alertController.addAction(jumpAction)
-            self.present(alertController, animated: true, completion: nil)
-        } else {
-            OilConsumptionManager.shared.getRecords()
-        }
         self.tableView.separatorStyle = .none
         setUp()
+        requestRecord()
     }
+    
+    func requestRecord() {
+        
+        let query = AVQuery(className: AVOSKey.consumptionRecordClassName)
+        
+        query.findObjectsInBackground { [unowned self] (dataObjects, error) in
+            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+            
+            if let _ = error { return }
+            
+            guard let objects = dataObjects else { return }
+            
+            if let avObjects = objects as? [AVObject] {
+                
+                var records: [ConsumptionRecord] = []
+                
+                for avObject in avObjects {
+                    //stores
+                    let date = avObject["date"] as! String
+                    let oilType = avObject["oilType"] as! String
+                    let oilPrice = avObject["oilPrice"] as! String
+                    let numOfOil = avObject["numOfOil"] as! String
+                    let totalPrice = avObject["totalPrice"] as! String
+                    let totalKM = avObject["totalKM"] as! String
+                    
+                    let record = ConsumptionRecord(date: date, oilType: oilType, oilPrice: oilPrice, numOfOil: numOfOil, totalPrice: totalPrice, totalKM: totalKM)
+                    records.append(record)
+                }
+                self.records = records
+                
+                self.records = records.sorted(by: { (obj1, obj2) -> Bool in
+                    if obj1.date == obj2.date {
+                        return obj1.totalKM < obj2.totalKM
+                    } else {
+                        return obj1.date < obj2.date
+                    }
+                })
+                
+                self.tableView.reloadData()
+            }
+        }
+
+    }
+    
     func setUp() {
         let detailNib = UINib(nibName: RecordTableViewCell.identifier, bundle: nil)
         tableView.register(detailNib, forCellReuseIdentifier: RecordTableViewCell.identifier)
@@ -105,23 +128,10 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     @IBAction func addRecord(_ sender: Any) {
-        if userID != nil {
-            guard
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddOilRecordViewController") as? AddOilRecordViewController
-                else { return }
-            vc.delegate = self
-            self.show(vc, sender: nil)
-        } else {
-            let alertController = UIAlertController(title: "Error", message: "您尚未註冊無法使用此功能", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            let jumpAction = UIAlertAction(title: "去註冊", style: .default, handler: { ( _ ) -> Void in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
-                self.present(vc!, animated: true, completion: nil)
-            })
-            alertController.addAction(defaultAction)
-            alertController.addAction(jumpAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddOilRecordViewController") as? AddOilRecordViewController
+            else { return }
+        vc.delegate = self
+        self.show(vc, sender: nil)
     }
     // move to last cell
     func moveToLastRecord() {
@@ -138,8 +148,8 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
     }
 }
 extension OilConsumptionViewController: submitIsClick {
-    func detectSubmit() {
-        OilConsumptionManager.shared.getRecords()
+    func detectSubmit(oilRecord: ConsumptionRecord) {
+        self.records.append(oilRecord)
         self.tableView.reloadData()
     }
 }

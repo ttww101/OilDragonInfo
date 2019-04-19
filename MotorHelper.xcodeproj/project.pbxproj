@@ -14,6 +14,7 @@
 		946ECADA22689B1800539B41 /* UIView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 946ECAD822689B1800539B41 /* UIView+Constraint.m */; };
 		946ECADF22689DFB00539B41 /* OilPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECADD22689DFB00539B41 /* OilPriceTableViewCell.swift */; };
 		946ECAE022689DFB00539B41 /* OilPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946ECADE22689DFB00539B41 /* OilPriceTableViewCell.xib */; };
+		946ECAE22268B9DB00539B41 /* ConsumptionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECAE12268B9DB00539B41 /* ConsumptionProvider.swift */; };
 		9B000F211E84F280002BB4EC /* OilConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B000F201E84F280002BB4EC /* OilConsumptionViewController.swift */; };
 		9B000F231E84F961002BB4EC /* AddOilRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B000F221E84F961002BB4EC /* AddOilRecordViewController.swift */; };
 		9B000F4E1E850F21002BB4EC /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B000F4C1E850F21002BB4EC /* TextTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		946ECAD922689B1800539B41 /* UIView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraint.h"; sourceTree = "<group>"; };
 		946ECADD22689DFB00539B41 /* OilPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilPriceTableViewCell.swift; sourceTree = "<group>"; };
 		946ECADE22689DFB00539B41 /* OilPriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OilPriceTableViewCell.xib; sourceTree = "<group>"; };
+		946ECAE12268B9DB00539B41 /* ConsumptionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionProvider.swift; sourceTree = "<group>"; };
 		9B000F201E84F280002BB4EC /* OilConsumptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OilConsumptionViewController.swift; sourceTree = "<group>"; };
 		9B000F221E84F961002BB4EC /* AddOilRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOilRecordViewController.swift; sourceTree = "<group>"; };
 		9B000F4C1E850F21002BB4EC /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -182,7 +184,6 @@
 				9B000F521E852988002BB4EC /* AddRecordBtnTableViewCell.swift */,
 				9B000F561E853478002BB4EC /* DateTableViewCell.swift */,
 				9B9582E81E890D90003F699C /* SegmentTableViewCell.swift */,
-				9BFA1FF01E8A634B0045CA0F /* ConsumptionRecord.swift */,
 				9B35DD101E8BB1F20093C11E /* Xib */,
 			);
 			name = AddOilRecord;
@@ -191,12 +192,12 @@
 		9B000F251E84FF10002BB4EC /* OilPrcie */ = {
 			isa = PBXGroup;
 			children = (
-				946ECACA22687E9100539B41 /* PetroleumProvider.swift */,
-				9BB08BC91E8228E000982CF1 /* Petroleum.swift */,
 				9B124A781E7FD56500393658 /* GetSOAPInfo.swift */,
 				9B124A631E7FC77400393658 /* OilPriceViewController.swift */,
 				946ECADD22689DFB00539B41 /* OilPriceTableViewCell.swift */,
 				946ECADE22689DFB00539B41 /* OilPriceTableViewCell.xib */,
+				946ECACA22687E9100539B41 /* PetroleumProvider.swift */,
+				9BB08BC91E8228E000982CF1 /* Petroleum.swift */,
 			);
 			name = OilPrcie;
 			sourceTree = "<group>";
@@ -226,10 +227,10 @@
 				946ECAC922687E7F00539B41 /* DataLoader */,
 				946ECAC32268325D00539B41 /* ODKey */,
 				9B9582E41E88E1F9003F699C /* LogIn */,
-				9B000F241E84FE92002BB4EC /* AddOilRecord */,
 				9B35DD4E1E9615110093C11E /* Store */,
 				9B000F251E84FF10002BB4EC /* OilPrcie */,
 				9B9582E71E88F09D003F699C /* OilConsumptionList */,
+				9B000F241E84FE92002BB4EC /* AddOilRecord */,
 				9B35DD471E94E6300093C11E /* Comment */,
 				9B8AF5FD1EB8621600AEE0A8 /* Setting */,
 				9B124A611E7FC77400393658 /* AppDelegate.swift */,
@@ -302,6 +303,8 @@
 				9B35DD151E8BC8C60093C11E /* OilConsumptionManager.swift */,
 				9B35DD111E8BB2B80093C11E /* RecordTableViewCell.swift */,
 				9B35DD121E8BB2B80093C11E /* RecordTableViewCell.xib */,
+				946ECAE12268B9DB00539B41 /* ConsumptionProvider.swift */,
+				9BFA1FF01E8A634B0045CA0F /* ConsumptionRecord.swift */,
 			);
 			name = OilConsumptionList;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				9B000F581E853478002BB4EC /* DateTableViewCell.swift in Sources */,
 				946ECACD22687E9100539B41 /* PetroleumProvider.swift in Sources */,
 				946ECAC52268328800539B41 /* AVOSKey.swift in Sources */,
+				946ECAE22268B9DB00539B41 /* ConsumptionProvider.swift in Sources */,
 				9B124A791E7FD56500393658 /* GetSOAPInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
