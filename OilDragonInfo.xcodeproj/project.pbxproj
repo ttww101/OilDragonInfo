@@ -25,7 +25,7 @@
 		9B124A621E7FC77400393658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B124A611E7FC77400393658 /* AppDelegate.swift */; };
 		9B124A641E7FC77400393658 /* PetroleumPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B124A631E7FC77400393658 /* PetroleumPriceViewController.swift */; };
 		9B124A671E7FC77400393658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B124A651E7FC77400393658 /* Main.storyboard */; };
-		9B124A6A1E7FC77400393658 /* MotorHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B124A681E7FC77400393658 /* MotorHelper.xcdatamodeld */; };
+		9B124A6A1E7FC77400393658 /* OilDragonInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B124A681E7FC77400393658 /* OilDragonInfo.xcdatamodeld */; };
 		9B124A6C1E7FC77400393658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B124A6B1E7FC77400393658 /* Assets.xcassets */; };
 		9B124A6F1E7FC77400393658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B124A6D1E7FC77400393658 /* LaunchScreen.storyboard */; };
 		9B35DD131E8BB2B80093C11E /* ConcumptionRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD111E8BB2B80093C11E /* ConcumptionRecordTableViewCell.swift */; };
@@ -35,7 +35,6 @@
 		9B35DD4C1E96150B0093C11E /* ShopListInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD4A1E96150B0093C11E /* ShopListInfoTableViewCell.swift */; };
 		9B35DD4D1E96150B0093C11E /* ShopListInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD4B1E96150B0093C11E /* ShopListInfoTableViewCell.xib */; };
 		9B8AF5FF1EB86F8E00AEE0A8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8AF5FE1EB86F8E00AEE0A8 /* MessageUI.framework */; };
-		9B9582E61E88E2E5003F699C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B9582E51E88E2E5003F699C /* GoogleService-Info.plist */; };
 		9B9582EA1E890D90003F699C /* ConsumptionSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9582E81E890D90003F699C /* ConsumptionSegmentTableViewCell.swift */; };
 		9B9582EB1E890D90003F699C /* ConsumptionSegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B9582E91E890D90003F699C /* ConsumptionSegmentTableViewCell.xib */; };
 		9BAFAE921E9BB3B6005E68F9 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAFAE911E9BB3B6005E68F9 /* Shop.swift */; };
@@ -44,17 +43,20 @@
 		9BAFAEB61E9F2AD0005E68F9 /* AddShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAFAEB51E9F2AD0005E68F9 /* AddShopViewController.swift */; };
 		9BB08BCA1E8228E000982CF1 /* Petroleum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB08BC91E8228E000982CF1 /* Petroleum.swift */; };
 		9BFA1FF11E8A634B0045CA0F /* ConsumptionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA1FF01E8A634B0045CA0F /* ConsumptionRecord.swift */; };
+		C4CDE3707C15AC15D6FA5471 /* Pods_OilDragonInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C18B563156647DE9620B684 /* Pods_OilDragonInfo.framework */; };
 		F3EFFCCABF44524A429C2F26 /* Pods_MotorHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C18B563156647DE9620B684 /* Pods_OilDragonInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OilDragonInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F8C2872E5A9C77FBA3270C /* Pods-OilDragonInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OilDragonInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OilDragonInfo/Pods-OilDragonInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		94529E6D226D7F6500F84468 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		946ECAC42268328800539B41 /* AVOSKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVOSKey.swift; sourceTree = "<group>"; };
 		946ECACA22687E9100539B41 /* PetroleumProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetroleumProvider.swift; sourceTree = "<group>"; };
 		946ECACB22687E9100539B41 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		946ECACC22687E9100539B41 /* RequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestToken.swift; sourceTree = "<group>"; };
-		946ECAD022688EA700539B41 /* MotorHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MotorHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		946ECAD022688EA700539B41 /* OilDragonInfo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OilDragonInfo-Bridging-Header.h"; sourceTree = "<group>"; };
 		946ECAD822689B1800539B41 /* UIView+Constraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Constraint.m"; sourceTree = "<group>"; };
 		946ECAD922689B1800539B41 /* UIView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraint.h"; sourceTree = "<group>"; };
 		946ECADD22689DFB00539B41 /* PetroleumPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetroleumPriceTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,7 +83,6 @@
 		9B35DD4A1E96150B0093C11E /* ShopListInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9B35DD4B1E96150B0093C11E /* ShopListInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopListInfoTableViewCell.xib; sourceTree = "<group>"; };
 		9B8AF5FE1EB86F8E00AEE0A8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		9B9582E51E88E2E5003F699C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9B9582E81E890D90003F699C /* ConsumptionSegmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumptionSegmentTableViewCell.swift; sourceTree = "<group>"; };
 		9B9582E91E890D90003F699C /* ConsumptionSegmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsumptionSegmentTableViewCell.xib; sourceTree = "<group>"; };
 		9BAFAE911E9BB3B6005E68F9 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		9BAFAEB51E9F2AD0005E68F9 /* AddShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddShopViewController.swift; sourceTree = "<group>"; };
 		9BB08BC91E8228E000982CF1 /* Petroleum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Petroleum.swift; sourceTree = "<group>"; };
 		9BFA1FF01E8A634B0045CA0F /* ConsumptionRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumptionRecord.swift; sourceTree = "<group>"; };
+		A6D5995BD5F22B0CB77BDCF1 /* Pods-OilDragonInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OilDragonInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OilDragonInfo/Pods-OilDragonInfo.release.xcconfig"; sourceTree = "<group>"; };
 		D9E65A01FE51FBA9DFDADAE8 /* Pods-MotorHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotorHelper/Pods-MotorHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		F2BBA2F1A8E887AED888DCD5 /* Pods-MotorHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotorHelper/Pods-MotorHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 			files = (
 				9B8AF5FF1EB86F8E00AEE0A8 /* MessageUI.framework in Frameworks */,
 				F3EFFCCABF44524A429C2F26 /* Pods_MotorHelper.framework in Frameworks */,
+				C4CDE3707C15AC15D6FA5471 /* Pods_OilDragonInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +115,8 @@
 			children = (
 				D9E65A01FE51FBA9DFDADAE8 /* Pods-MotorHelper.debug.xcconfig */,
 				F2BBA2F1A8E887AED888DCD5 /* Pods-MotorHelper.release.xcconfig */,
+				67F8C2872E5A9C77FBA3270C /* Pods-OilDragonInfo.debug.xcconfig */,
+				A6D5995BD5F22B0CB77BDCF1 /* Pods-OilDragonInfo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			children = (
 				9B8AF5FE1EB86F8E00AEE0A8 /* MessageUI.framework */,
 				10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */,
+				4C18B563156647DE9620B684 /* Pods_OilDragonInfo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,7 +191,7 @@
 		9B124A551E7FC77300393658 = {
 			isa = PBXGroup;
 			children = (
-				9B124A601E7FC77400393658 /* MotorHelper */,
+				9B124A601E7FC77400393658 /* OilDragonInfo */,
 				9B124A5F1E7FC77400393658 /* Products */,
 				05A6D4E588A8BFDBC8B1DB43 /* Pods */,
 				630908B6E109CDA277814195 /* Frameworks */,
@@ -200,7 +206,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B124A601E7FC77400393658 /* MotorHelper */ = {
+		9B124A601E7FC77400393658 /* OilDragonInfo */ = {
 			isa = PBXGroup;
 			children = (
 				946ECAD622689B0900539B41 /* Library */,
@@ -214,11 +220,10 @@
 				9B124A6B1E7FC77400393658 /* Assets.xcassets */,
 				9B124A6D1E7FC77400393658 /* LaunchScreen.storyboard */,
 				9B124A701E7FC77400393658 /* Info.plist */,
-				946ECAD022688EA700539B41 /* MotorHelper-Bridging-Header.h */,
-				9B9582E51E88E2E5003F699C /* GoogleService-Info.plist */,
-				9B124A681E7FC77400393658 /* MotorHelper.xcdatamodeld */,
+				946ECAD022688EA700539B41 /* OilDragonInfo-Bridging-Header.h */,
+				9B124A681E7FC77400393658 /* OilDragonInfo.xcdatamodeld */,
 			);
-			path = MotorHelper;
+			path = OilDragonInfo;
 			sourceTree = "<group>";
 		};
 		9B35DD101E8BB1F20093C11E /* Cell */ = {
@@ -341,7 +346,6 @@
 				9B35DD141E8BB2B80093C11E /* ConcumptionRecordTableViewCell.xib in Resources */,
 				946ECAE022689DFB00539B41 /* PetroleumPriceTableViewCell.xib in Resources */,
 				9B124A671E7FC77400393658 /* Main.storyboard in Resources */,
-				9B9582E61E88E2E5003F699C /* GoogleService-Info.plist in Resources */,
 				9B9582EB1E890D90003F699C /* ConsumptionSegmentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +364,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MotorHelper-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-OilDragonInfo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -373,8 +377,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MotorHelper/Pods-MotorHelper-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-OilDragonInfo/Pods-OilDragonInfo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AVOSCloud/AVOSCloud.framework",
 				"${BUILT_PRODUCTS_DIR}/AVOSCloudIM/AVOSCloudIM.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -382,12 +385,9 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/LeanCloud/LeanCloud.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
-				"${BUILT_PRODUCTS_DIR}/StringExtensionHTML/StringExtensionHTML.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloud.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloudIM.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
@@ -395,12 +395,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanCloud.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StringExtensionHTML.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotorHelper/Pods-MotorHelper-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OilDragonInfo/Pods-OilDragonInfo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -411,7 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B000F4E1E850F21002BB4EC /* ConsumptionTextTableViewCell.swift in Sources */,
-				9B124A6A1E7FC77400393658 /* MotorHelper.xcdatamodeld in Sources */,
+				9B124A6A1E7FC77400393658 /* OilDragonInfo.xcdatamodeld in Sources */,
 				9BFA1FF11E8A634B0045CA0F /* ConsumptionRecord.swift in Sources */,
 				9B9582EA1E890D90003F699C /* ConsumptionSegmentTableViewCell.swift in Sources */,
 				9BAFAEB61E9F2AD0005E68F9 /* AddShopViewController.swift in Sources */,
@@ -555,18 +553,18 @@
 		};
 		9B124A741E7FC77400393658 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9E65A01FE51FBA9DFDADAE8 /* Pods-MotorHelper.debug.xcconfig */;
+			baseConfigurationReference = 67F8C2872E5A9C77FBA3270C /* Pods-OilDragonInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 45HXTPS3WE;
 				ENABLE_BITCODE = YES;
-				INFOPLIST_FILE = MotorHelper/Info.plist;
+				INFOPLIST_FILE = OilDragonInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = acc.na.oildragon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MotorHelper/MotorHelper-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OilDragonInfo/OilDragonInfo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
@@ -574,18 +572,18 @@
 		};
 		9B124A751E7FC77400393658 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2BBA2F1A8E887AED888DCD5 /* Pods-MotorHelper.release.xcconfig */;
+			baseConfigurationReference = A6D5995BD5F22B0CB77BDCF1 /* Pods-OilDragonInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 45HXTPS3WE;
 				ENABLE_BITCODE = YES;
-				INFOPLIST_FILE = MotorHelper/Info.plist;
+				INFOPLIST_FILE = OilDragonInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = acc.na.oildragon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MotorHelper/MotorHelper-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OilDragonInfo/OilDragonInfo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -614,13 +612,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9B124A681E7FC77400393658 /* MotorHelper.xcdatamodeld */ = {
+		9B124A681E7FC77400393658 /* OilDragonInfo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				9B124A691E7FC77400393658 /* MotorHelper.xcdatamodel */,
 			);
 			currentVersion = 9B124A691E7FC77400393658 /* MotorHelper.xcdatamodel */;
-			path = MotorHelper.xcdatamodeld;
+			path = OilDragonInfo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
