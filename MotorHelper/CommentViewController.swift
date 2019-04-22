@@ -27,9 +27,6 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        AVOSCloud.setApplicationId(AVOSKey.appID, clientKey: AVOSKey.appKey)
-        AVOSCloud.setAllLogsEnabled(true)
-
         storeName.text = store?.name ?? "name"
         phone.text = store?.phone ?? "phone"
         address.text = store?.address ?? "address"

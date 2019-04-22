@@ -3,9 +3,20 @@ import UIKit
 import AVOSCloud
 import NVActivityIndicatorView
 
-class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, OilConsumptionManagerDelegate {
+class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    var noRecordMessageLabel = UILabel()
+    var noRecordMessageView: UIView {
+        let view = UIView()
+        noRecordMessageLabel.textAlignment = .center
+        noRecordMessageLabel.font = UIFont.systemFont(ofSize: 14)
+        noRecordMessageLabel.textColor = UIColor.lightGray
+        view.addSubview(noRecordMessageLabel)
+        noRecordMessageLabel.constraints(view, constant: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0))
+        view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width/5)
+        return view
+    }
 
     var records: [ConsumptionRecord] = []
 
@@ -26,6 +37,9 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
     func requestRecord() {
         
         let query = AVQuery(className: AVOSKey.consumptionRecordClassName)
+        if let uuid = UserDefaults.standard.value(forKey: UserDefaultKeys.uuid) as? String {
+            query.whereKey("uuid", equalTo: uuid)
+        }
         
         query.findObjectsInBackground { [unowned self] (dataObjects, error) in
             NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
@@ -39,7 +53,7 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
                 var records: [ConsumptionRecord] = []
                 
                 for avObject in avObjects {
-                    //stores
+                    //display consumption
                     let date = avObject["date"] as! String
                     let oilType = avObject["oilType"] as! String
                     let oilPrice = avObject["oilPrice"] as! String
@@ -79,6 +93,15 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return records.count
     }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if (records.count == 0) {
+            self.noRecordMessageLabel.text = "-尚未新增油耗紀錄-"
+        } else {
+            self.noRecordMessageLabel.text = "-沒有更多油耗紀錄-"
+        }
+        return self.noRecordMessageView
+    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
@@ -97,25 +120,6 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
         return RecordTableViewCell.height
     }
 
-    func manager(_ manager: OilConsumptionManager, didFailWith error: Error) {
-        print("error")
-    }
-    func manager(_ manager: OilConsumptionManager, didGet records: [ConsumptionRecord]) {
-//        self.records = records.reversed()
-        self.records = records.sorted(by: { (obj1, obj2) -> Bool in
-            if obj1.date == obj2.date {
-                return obj1.totalKM < obj2.totalKM
-            } else {
-                //目前比較的是String
-                print("\(obj1.date) < \(obj2.date)")
-                return obj1.date < obj2.date
-            }
-        })
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-            self.moveToLastRecord()
-        }
-    }
     private func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
 //            print("\(userID!) --- \(records[indexPath.row].autoID)")
@@ -132,19 +136,6 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
             else { return }
         vc.delegate = self
         self.show(vc, sender: nil)
-    }
-    // move to last cell
-    func moveToLastRecord() {
-        if tableView.contentSize.height > tableView.frame.height {
-            // First figure out how many sections there are
-            let lastSectionIndex = tableView.numberOfSections - 1
-            // Then grab the number of rows in the last section
-            let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
-            // Now just construct the index path
-            let pathToLastRow = NSIndexPath(row: lastRowIndex, section: lastSectionIndex)
-            // Make the last row visible
-            tableView.scrollToRow(at: pathToLastRow as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
-        }
     }
 }
 extension OilConsumptionViewController: submitIsClick {

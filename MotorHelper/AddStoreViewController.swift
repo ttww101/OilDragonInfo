@@ -29,7 +29,7 @@ class AddStoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AVOSCloud.setApplicationId("IsDkIby9Jnpu9Seds1I1Xyy0-gzGzoHsz", clientKey: "YveFWt3T9vWet4A9nCxLELdQ")
+//        AVOSCloud.setApplicationId("IsDkIby9Jnpu9Seds1I1Xyy0-gzGzoHsz", clientKey: "YveFWt3T9vWet4A9nCxLELdQ")
         
         storeNameTextfield.placeholder = "請輸入車行名稱(必填)"
         storeAddressTextfield.placeholder = "請輸入車行地址(必填)"

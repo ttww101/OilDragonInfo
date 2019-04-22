@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK2-xb-ggo">
-                                <rect key="frame" x="8" y="502" width="359" height="44"/>
+                                <rect key="frame" x="8" y="494.5" width="359" height="51.5"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="QBh-sc-QFD"/>
+                                    <constraint firstAttribute="width" secondItem="hK2-xb-ggo" secondAttribute="height" multiplier="7:1" id="rwS-3T-CNJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="重新整理">
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-D4-4mF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="494"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="486.5"/>
                                 <color key="backgroundColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.22745098039215686" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gbu-re-T80">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="613.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
                                 <connections>
@@ -128,22 +128,40 @@
                                     <outlet property="delegate" destination="5QR-IU-hSn" id="D5x-PO-QIW"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXA-5b-djl">
+                                <rect key="frame" x="0.0" y="613.5" width="375" height="53.5"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KXA-5b-djl" secondAttribute="height" multiplier="7:1" id="pao-nD-rgD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="新增紀錄">
+                                    <color key="titleColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Rh-hC-J1q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Gbu-re-T80" firstAttribute="top" secondItem="jMa-7f-PzZ" secondAttribute="top" id="4Gy-jx-egA"/>
+                            <constraint firstItem="Mbg-qv-GC2" firstAttribute="top" secondItem="KXA-5b-djl" secondAttribute="bottom" id="6aq-BY-AuT"/>
                             <constraint firstAttribute="trailing" secondItem="Gbu-re-T80" secondAttribute="trailing" id="D0N-Wi-2tx"/>
-                            <constraint firstItem="Mbg-qv-GC2" firstAttribute="top" secondItem="Gbu-re-T80" secondAttribute="bottom" id="Kwn-0z-2y2"/>
+                            <constraint firstAttribute="trailing" secondItem="KXA-5b-djl" secondAttribute="trailing" id="fPr-zw-f82"/>
                             <constraint firstItem="Gbu-re-T80" firstAttribute="leading" secondItem="jMa-7f-PzZ" secondAttribute="leading" id="hGe-ye-UZF"/>
+                            <constraint firstItem="KXA-5b-djl" firstAttribute="top" secondItem="Gbu-re-T80" secondAttribute="bottom" id="sl6-jp-NtV"/>
+                            <constraint firstItem="KXA-5b-djl" firstAttribute="leading" secondItem="jMa-7f-PzZ" secondAttribute="leading" id="waU-GV-gzT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addConsumption" destination="Gbu-re-T80" id="Xtu-Km-vCr"/>
+                        <outlet property="addRecordButton" destination="KXA-5b-djl" id="jtE-hy-cXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMx-fm-O5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3294" y="-241"/>
+            <point key="canvasLocation" x="3293.5999999999999" y="-241.52923538230885"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="nGN-sW-6Gz">
@@ -524,16 +542,16 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Gx-Uw-nhF">
-                                <rect key="frame" x="10" y="219.5" width="355" height="377.5"/>
+                                <rect key="frame" x="10" y="219.5" width="355" height="378.5"/>
                                 <color key="backgroundColor" red="0.92549019607843142" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Us-Za-wZH">
-                                <rect key="frame" x="16" y="607" width="343" height="50"/>
+                                <rect key="frame" x="16" y="608" width="343" height="49"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ytJ-DE-A2x"/>
+                                    <constraint firstAttribute="width" secondItem="2Us-Za-wZH" secondAttribute="height" multiplier="7:1" id="yKS-W3-BA5"/>
                                 </constraints>
                                 <state key="normal" title="送出">
                                     <color key="titleColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

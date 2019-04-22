@@ -28,8 +28,8 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AVOSCloud.setApplicationId(AVOSKey.appID, clientKey: AVOSKey.appKey)
-        AVOSCloud.setAllLogsEnabled(true)
+//        AVOSCloud.setApplicationId(AVOSKey.appID, clientKey: AVOSKey.appKey)
+//        AVOSCloud.setAllLogsEnabled(true)
         
         requestStoreData()
         setUp()

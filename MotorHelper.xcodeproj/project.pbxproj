@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94529E6E226D7F6500F84468 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94529E6D226D7F6500F84468 /* UserDefaultKeys.swift */; };
 		946ECAC52268328800539B41 /* AVOSKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECAC42268328800539B41 /* AVOSKey.swift */; };
 		946ECACD22687E9100539B41 /* PetroleumProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECACA22687E9100539B41 /* PetroleumProvider.swift */; };
 		946ECACE22687E9100539B41 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECACB22687E9100539B41 /* DataLoader.swift */; };
@@ -34,7 +35,6 @@
 		9B2239661EA5C05A0050ABA9 /* ResetPWDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2239651EA5C05A0050ABA9 /* ResetPWDViewController.swift */; };
 		9B35DD131E8BB2B80093C11E /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD111E8BB2B80093C11E /* RecordTableViewCell.swift */; };
 		9B35DD141E8BB2B80093C11E /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD121E8BB2B80093C11E /* RecordTableViewCell.xib */; };
-		9B35DD161E8BC8C60093C11E /* OilConsumptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD151E8BC8C60093C11E /* OilConsumptionManager.swift */; };
 		9B35DD461E94E62B0093C11E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD451E94E62B0093C11E /* CommentViewController.swift */; };
 		9B35DD491E96147A0093C11E /* MotorStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD481E96147A0093C11E /* MotorStoreTableViewController.swift */; };
 		9B35DD4C1E96150B0093C11E /* StoreListInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD4A1E96150B0093C11E /* StoreListInfoTableViewCell.swift */; };
@@ -50,13 +50,13 @@
 		9BAFAEB41E9CCD82005E68F9 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAFAEB21E9CCD82005E68F9 /* CommentTableViewCell.xib */; };
 		9BAFAEB61E9F2AD0005E68F9 /* AddStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAFAEB51E9F2AD0005E68F9 /* AddStoreViewController.swift */; };
 		9BB08BCA1E8228E000982CF1 /* Petroleum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB08BC91E8228E000982CF1 /* Petroleum.swift */; };
-		9BCCE50E1EA7B09900371AAD /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCE50D1EA7B09900371AAD /* AddRecordViewController.swift */; };
 		9BFA1FF11E8A634B0045CA0F /* ConsumptionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA1FF01E8A634B0045CA0F /* ConsumptionRecord.swift */; };
 		F3EFFCCABF44524A429C2F26 /* Pods_MotorHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94529E6D226D7F6500F84468 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		946ECAC42268328800539B41 /* AVOSKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVOSKey.swift; sourceTree = "<group>"; };
 		946ECACA22687E9100539B41 /* PetroleumProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetroleumProvider.swift; sourceTree = "<group>"; };
 		946ECACB22687E9100539B41 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
@@ -88,7 +88,6 @@
 		9B2239651EA5C05A0050ABA9 /* ResetPWDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPWDViewController.swift; sourceTree = "<group>"; };
 		9B35DD111E8BB2B80093C11E /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		9B35DD121E8BB2B80093C11E /* RecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
-		9B35DD151E8BC8C60093C11E /* OilConsumptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OilConsumptionManager.swift; sourceTree = "<group>"; };
 		9B35DD451E94E62B0093C11E /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		9B35DD481E96147A0093C11E /* MotorStoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorStoreTableViewController.swift; sourceTree = "<group>"; };
 		9B35DD4A1E96150B0093C11E /* StoreListInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreListInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -104,7 +103,6 @@
 		9BAFAEB21E9CCD82005E68F9 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		9BAFAEB51E9F2AD0005E68F9 /* AddStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStoreViewController.swift; sourceTree = "<group>"; };
 		9BB08BC91E8228E000982CF1 /* Petroleum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Petroleum.swift; sourceTree = "<group>"; };
-		9BCCE50D1EA7B09900371AAD /* AddRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
 		9BFA1FF01E8A634B0045CA0F /* ConsumptionRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumptionRecord.swift; sourceTree = "<group>"; };
 		D9E65A01FE51FBA9DFDADAE8 /* Pods-MotorHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotorHelper/Pods-MotorHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		F2BBA2F1A8E887AED888DCD5 /* Pods-MotorHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotorHelper/Pods-MotorHelper.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				946ECAC42268328800539B41 /* AVOSKey.swift */,
+				94529E6D226D7F6500F84468 /* UserDefaultKeys.swift */,
 			);
 			name = ODKey;
 			sourceTree = "<group>";
@@ -161,6 +160,7 @@
 		946ECAD622689B0900539B41 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				946ECAC922687E7F00539B41 /* DataLoader */,
 				946ECAD722689B1800539B41 /* UIView+Constraint */,
 			);
 			name = Library;
@@ -179,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				9B000F221E84F961002BB4EC /* AddOilRecordViewController.swift */,
-				9BCCE50D1EA7B09900371AAD /* AddRecordViewController.swift */,
 				9B000F4C1E850F21002BB4EC /* TextTableViewCell.swift */,
 				9B000F521E852988002BB4EC /* AddRecordBtnTableViewCell.swift */,
 				9B000F561E853478002BB4EC /* DateTableViewCell.swift */,
@@ -224,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				946ECAD622689B0900539B41 /* Library */,
-				946ECAC922687E7F00539B41 /* DataLoader */,
 				946ECAC32268325D00539B41 /* ODKey */,
 				9B9582E41E88E1F9003F699C /* LogIn */,
 				9B35DD4E1E9615110093C11E /* Store */,
@@ -300,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				9B000F201E84F280002BB4EC /* OilConsumptionViewController.swift */,
-				9B35DD151E8BC8C60093C11E /* OilConsumptionManager.swift */,
 				9B35DD111E8BB2B80093C11E /* RecordTableViewCell.swift */,
 				9B35DD121E8BB2B80093C11E /* RecordTableViewCell.xib */,
 				946ECAE12268B9DB00539B41 /* ConsumptionProvider.swift */,
@@ -456,11 +453,10 @@
 				9BFA1FF11E8A634B0045CA0F /* ConsumptionRecord.swift in Sources */,
 				9B9582EA1E890D90003F699C /* SegmentTableViewCell.swift in Sources */,
 				9BAFAEB61E9F2AD0005E68F9 /* AddStoreViewController.swift in Sources */,
+				94529E6E226D7F6500F84468 /* UserDefaultKeys.swift in Sources */,
 				946ECADA22689B1800539B41 /* UIView+Constraint.m in Sources */,
-				9B35DD161E8BC8C60093C11E /* OilConsumptionManager.swift in Sources */,
 				9B2239641EA5B95C0050ABA9 /* SignUpViewController.swift in Sources */,
 				9B35DD461E94E62B0093C11E /* CommentViewController.swift in Sources */,
-				9BCCE50E1EA7B09900371AAD /* AddRecordViewController.swift in Sources */,
 				9B000F211E84F280002BB4EC /* OilConsumptionViewController.swift in Sources */,
 				9B8AF5FC1EB8621000AEE0A8 /* SettingViewController.swift in Sources */,
 				9B124A641E7FC77400393658 /* OilPriceViewController.swift in Sources */,

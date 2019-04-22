@@ -19,13 +19,13 @@ enum Component {
     case numOfOil //加油量
     case totalPrice //總價
     case totalKM //里程數
-    case addBtn //新增紀錄
     case oilType //油品種類
 }
 
 class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var addConsumption: UITableView!
+    @IBOutlet weak var addRecordButton: UIButton!
     weak var delegate: submitIsClick?
     let datePicker = UIDatePicker()
     let dateFormatter = DateFormatter()
@@ -38,7 +38,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
     let currentdate = Date()
 
     // MARK: Property
-    let components: [Component] = [ Component.date, Component.oilType, Component.oilprice, Component.numOfOil, Component.totalPrice, Component.totalKM, Component.addBtn ] // index表示位置
+    let components: [Component] = [ Component.date, Component.oilType, Component.oilprice, Component.numOfOil, Component.totalPrice, Component.totalKM] // index表示位置
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,8 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        self.addRecordButton.addTarget(self, action: #selector(submitBtn), for: .touchUpInside)
 
         setUp()
     }
@@ -78,7 +80,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
         print("component:\(component) in section:\(section)")
 
         switch component {
-        case .numOfOil, .oilprice, .totalKM, .totalPrice, .addBtn, .date, .oilType:
+        case .numOfOil, .oilprice, .totalKM, .totalPrice, .date, .oilType:
             return 1
         }
     }
@@ -142,15 +144,6 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
             cell.contentTextField.returnKeyType = .done
             cell.contentTextField.delegate = self
             cell.index = TextFieldType.totalKM
-            return cell
-
-        case Component.addBtn:
-
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddRecordBtnTableViewCell.identifier, for: indexPath) as? AddRecordBtnTableViewCell else { return UITableViewCell() }
-
-            cell.addRecord.setTitle("新增紀錄", for: .normal)
-            cell.addRecord.addTarget(self, action: #selector(submitBtn), for: .touchUpInside)
-
             return cell
 
         case Component.date:
@@ -220,7 +213,6 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
     //segment
     @objc func onChange(_ sender: UISegmentedControl) {
         if let oilSection = components.index(of: .oilprice) {
-            let indexPath = IndexPath(row: 0, section: oilSection)
             switch sender.selectedSegmentIndex {
             case 0:
                 record.oilType = oilPrice["oil92"]!
@@ -303,7 +295,7 @@ extension AddOilRecordViewController {
         if cell.oilTypeSegment.selectedSegmentIndex == 3 {
             record.oilType = "超級柴油"
         } else {
-            record.oilType = "無鉛汽油 \(cell.oilTypeSegment.titleForSegment(at: (cell.oilTypeSegment.selectedSegmentIndex))!)"
+            record.oilType = "\(cell.oilTypeSegment.titleForSegment(at: (cell.oilTypeSegment.selectedSegmentIndex))!)無鉛汽油"
         }
         
         let object = AVObject(className: AVOSKey.consumptionRecordClassName)
@@ -313,6 +305,7 @@ extension AddOilRecordViewController {
         object.setObject(record.numOfOil, forKey: "numOfOil")
         object.setObject(record.totalPrice, forKey: "totalPrice")
         object.setObject(record.totalKM, forKey: "totalKM")
+        object.setObject(UserDefaults.standard.value(forKey: UserDefaultKeys.uuid), forKey: "uuid")
         
         _ = object.save()
 

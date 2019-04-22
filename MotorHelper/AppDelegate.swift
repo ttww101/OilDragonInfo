@@ -17,25 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         AVOSCloud.setApplicationId("IsDkIby9Jnpu9Seds1I1Xyy0-gzGzoHsz", clientKey: "YveFWt3T9vWet4A9nCxLELdQ")
         AVOSCloud.setAllLogsEnabled(true)
         
-//        LCApplication.default.set(
-//            id:  "IsDkIby9Jnpu9Seds1I1Xyy0-gzGzoHsz",
-//            key: "YveFWt3T9vWet4A9nCxLELdQ"
-//        )
+        if (UserDefaults.standard.value(forKey: UserDefaultKeys.uuid) == nil) {
+            let uuid = NSUUID().uuidString
+            UserDefaults.standard.setValue(uuid, forKey: UserDefaultKeys.uuid)
+        }
         
-//        FIRApp.configure()
-//        FIRDatabase.database().persistenceEnabled = true
-//        IQKeyboardManager.sharedManager().enable = true
-//        if FIRAuth.auth()?.currentUser == nil {
-//            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
-//        } else {
-//            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "MainTabBar")
-//        }
         return true
     }
 
