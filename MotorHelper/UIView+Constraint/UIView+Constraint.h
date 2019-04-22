@@ -1,9 +1,3 @@
-//
-//  UIView+Constraint.h
-//  SKBank
-//
-//  Created by Bomi on 2018/4/16.
-//
 
 #import <UIKit/UIKit.h>
 

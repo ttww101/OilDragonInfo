@@ -1,10 +1,3 @@
-//
-//  CommentViewController.swift
-//  MotorHelper
-//
-//  Created by 孟軒蕭 on 05/04/2017.
-//  Copyright © 2017 MichaelXiao. All rights reserved.
-//
 
 import UIKit
 import Cosmos
@@ -13,7 +6,7 @@ import AVOSCloud
 class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     weak var delegate: buttonIsClick?
     
-    var store: Store?
+    var shop: Shop?
 
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var storeName: UILabel!
@@ -27,10 +20,10 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        storeName.text = store?.name ?? "name"
-        phone.text = store?.phone ?? "phone"
-        address.text = store?.address ?? "address"
-        ratingView.rating = Double(store?.rate ?? "") ?? 0
+        storeName.text = shop?.name ?? "name"
+        phone.text = shop?.phone ?? "phone"
+        address.text = shop?.address ?? "address"
+        ratingView.rating = Double(shop?.rate ?? "") ?? 0
         commentsTextfield.placeholder = "請留下您的評論"
         submitBtn.layer.cornerRadius = 10
 
@@ -46,7 +39,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.store?.comments?.count ?? 0
+        return self.shop?.comments?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,7 +47,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.identifier, for: indexPath) as? CommentTableViewCell
         else { return UITableViewCell() }
 
-        cell.userComment.text = self.store?.comments?[indexPath.row]
+        cell.userComment.text = self.shop?.comments?[indexPath.row]
         cell.commentView.layer.cornerRadius = 10
         return cell
     }
@@ -84,7 +77,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
             return
         }
         
-        guard let store = store else { return }
+        guard let store = shop else { return }
         
         let object = AVObject(className: AVOSKey.storeClassName, objectId: store.objectID)
         
@@ -96,7 +89,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         updateComments += [addText]
             
         object.setObject(updateComments, forKey: "comments")
-        self.store?.comments = updateComments
+        self.shop?.comments = updateComments
         self.commentsTextfield.text = ""
             
         _ = object.save()
@@ -125,13 +118,13 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private func didTouchCosmos(_ rating: Double) {
         
-        self.store?.rate = "\(rating)"
+        self.shop?.rate = "\(rating)"
         
-        guard let store = store else { return }
+        guard let store = shop else { return }
         
         let object = AVObject(className: AVOSKey.storeClassName, objectId: store.objectID)
         
-        object.setObject(self.store?.rate, forKey: "rate")
+        object.setObject(self.shop?.rate, forKey: "rate")
         
         _ = object.save()
         

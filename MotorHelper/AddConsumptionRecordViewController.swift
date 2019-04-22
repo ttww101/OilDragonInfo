@@ -1,10 +1,3 @@
-//
-//  AddOilRecordViewController.swift
-//  MotorHelper
-//
-//  Created by 孟軒蕭 on 24/03/2017.
-//  Copyright © 2017 MichaelXiao. All rights reserved.
-//
 
 import UIKit
 import AVOSCloud
@@ -22,7 +15,7 @@ enum Component {
     case oilType //油品種類
 }
 
-class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var addConsumption: UITableView!
     @IBOutlet weak var addRecordButton: UIButton!
@@ -56,17 +49,14 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
     // MARK: Set up
     func setUp() {
-        let textNib = UINib(nibName: TextTableViewCell.identifier, bundle: nil)
-        addConsumption.register(textNib, forCellReuseIdentifier: TextTableViewCell.identifier)
+        let textNib = UINib(nibName: ConsumptionTextTableViewCell.identifier, bundle: nil)
+        addConsumption.register(textNib, forCellReuseIdentifier: ConsumptionTextTableViewCell.identifier)
 
-        let btnNib = UINib(nibName: AddRecordBtnTableViewCell.identifier, bundle: nil)
-        addConsumption.register(btnNib, forCellReuseIdentifier: AddRecordBtnTableViewCell.identifier)
+        let dateNib = UINib(nibName: ConsumptionDateTableViewCell.identifier, bundle: nil)
+        addConsumption.register(dateNib, forCellReuseIdentifier: ConsumptionDateTableViewCell.identifier)
 
-        let dateNib = UINib(nibName: DateTableViewCell.identifier, bundle: nil)
-        addConsumption.register(dateNib, forCellReuseIdentifier: DateTableViewCell.identifier)
-
-        let oilTypeNib = UINib(nibName: SegmentTableViewCell.identifier, bundle: nil)
-        addConsumption.register(oilTypeNib, forCellReuseIdentifier: SegmentTableViewCell.identifier)
+        let oilTypeNib = UINib(nibName: ConsumptionSegmentTableViewCell.identifier, bundle: nil)
+        addConsumption.register(oilTypeNib, forCellReuseIdentifier: ConsumptionSegmentTableViewCell.identifier)
 
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,7 +77,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
     //行高
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let screenHeight = self.view.frame.height
-        let cellHeight: CGFloat = 7.0
+        let cellHeight: CGFloat = 6.0
         return screenHeight/cellHeight
     }
     //內容
@@ -100,7 +90,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
         switch component {
         case Component.oilprice:
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.identifier, for: indexPath) as? TextTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConsumptionTextTableViewCell.identifier, for: indexPath) as? ConsumptionTextTableViewCell else { return UITableViewCell() }
             cell.contentTextName.text = "油價"
             cell.contentTextField.placeholder = "必填"
             cell.contentTextField.clearButtonMode = .whileEditing
@@ -112,7 +102,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
         case Component.numOfOil:
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.identifier, for: indexPath) as? TextTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConsumptionTextTableViewCell.identifier, for: indexPath) as? ConsumptionTextTableViewCell else { return UITableViewCell() }
             cell.contentTextName.text = "油量"
             cell.contentTextField.placeholder = "必填"
             cell.contentTextField.clearButtonMode = .whileEditing
@@ -124,7 +114,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
         case Component.totalPrice:
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.identifier, for: indexPath) as? TextTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConsumptionTextTableViewCell.identifier, for: indexPath) as? ConsumptionTextTableViewCell else { return UITableViewCell() }
             cell.contentTextName.text = "總價"
             cell.contentTextField.placeholder = "必填"
             cell.contentTextField.clearButtonMode = .whileEditing
@@ -136,7 +126,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
         case Component.totalKM:
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.identifier, for: indexPath) as? TextTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConsumptionTextTableViewCell.identifier, for: indexPath) as? ConsumptionTextTableViewCell else { return UITableViewCell() }
             cell.contentTextName.text = "里程"
             cell.contentTextField.placeholder = "必填"
             cell.contentTextField.clearButtonMode = .whileEditing
@@ -148,12 +138,12 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
         case Component.date:
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.identifier, for: indexPath) as? TextTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConsumptionTextTableViewCell.identifier, for: indexPath) as? ConsumptionTextTableViewCell else { return UITableViewCell() }
 
             cell.contentTextName.text = "日期"
             //datepicker
             datePicker.datePickerMode = .date
-            datePicker.addTarget(self, action: #selector(AddOilRecordViewController.didSelectedDate), for: .valueChanged)
+            datePicker.addTarget(self, action: #selector(AddConsumptionRecordViewController.didSelectedDate), for: .valueChanged)
             let cal = Calendar.current
             let minTime = cal.date(byAdding: .month, value: -3, to: Date())
             datePicker.minimumDate = minTime
@@ -181,8 +171,8 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
         case Component.oilType:
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: SegmentTableViewCell.identifier, for: indexPath) as? SegmentTableViewCell else { return UITableViewCell() }
-            cell.oilTypeSegment.addTarget(self, action: #selector(AddOilRecordViewController.onChange), for: .valueChanged)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConsumptionSegmentTableViewCell.identifier, for: indexPath) as? ConsumptionSegmentTableViewCell else { return UITableViewCell() }
+            cell.oilTypeSegment.addTarget(self, action: #selector(AddConsumptionRecordViewController.onChange), for: .valueChanged)
             return cell
 
         }
@@ -203,7 +193,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
                 dateFormatter.dateStyle = .long //formatter樣式
                 dateFormatter.timeStyle = .none //不要時間
 
-                let cell = addConsumption.cellForRow(at: indexPath) as? TextTableViewCell
+                let cell = addConsumption.cellForRow(at: indexPath) as? ConsumptionTextTableViewCell
 
                 cell?.contentTextField.text = dateFormatter.string(from: picker.date)
                 record.date = dateFormatter.string(from: picker.date)
@@ -212,7 +202,7 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
     }
     //segment
     @objc func onChange(_ sender: UISegmentedControl) {
-        if let oilSection = components.index(of: .oilprice) {
+        if let _ = components.index(of: .oilprice) {
             switch sender.selectedSegmentIndex {
             case 0:
                 record.oilType = oilPrice["oil92"]!
@@ -230,12 +220,12 @@ class AddOilRecordViewController: UIViewController, UITableViewDelegate, UITable
 
 }
 
-extension AddOilRecordViewController: UITextFieldDelegate {
+extension AddConsumptionRecordViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
 
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let cell = textField.superview?.superview as? TextTableViewCell else {return }
+        guard let cell = textField.superview?.superview as? ConsumptionTextTableViewCell else {return }
         switch cell.index! {
             case .oilPrice:
                 record.oilPrice = cell.contentTextField.text!
@@ -243,7 +233,7 @@ extension AddOilRecordViewController: UITextFieldDelegate {
                 record.numOfOil = cell.contentTextField.text!
                 if let oilSection = components.index(of: .totalPrice) {
                     let indexPath = IndexPath(row: 0, section: oilSection)
-                    let cell = addConsumption.cellForRow(at: indexPath) as? TextTableViewCell
+                    let cell = addConsumption.cellForRow(at: indexPath) as? ConsumptionTextTableViewCell
                     let oilPriceDouble = Double(record.oilPrice)
                     var calc = 0.0
                     if let numOfOilDouble = Double(record.numOfOil) {
@@ -271,7 +261,7 @@ extension AddOilRecordViewController: UITextFieldDelegate {
     }
 }
 // MARK: submit button
-extension AddOilRecordViewController {
+extension AddConsumptionRecordViewController {
     @objc func submitBtn() {
         self.view.endEditing(true)
         if record.oilPrice == "" || record.totalKM == "" || record.totalPrice == "" || record.numOfOil == "" {
@@ -289,7 +279,7 @@ extension AddOilRecordViewController {
             else { return }
         let indexPath = IndexPath(row: 0, section: oilTypeSection)
         guard
-            let cell = addConsumption.cellForRow(at: indexPath) as? SegmentTableViewCell
+            let cell = addConsumption.cellForRow(at: indexPath) as? ConsumptionSegmentTableViewCell
             else { return }
         //判斷選擇的油品
         if cell.oilTypeSegment.selectedSegmentIndex == 3 {

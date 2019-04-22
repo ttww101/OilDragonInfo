@@ -3,7 +3,7 @@ import UIKit
 import AVOSCloud
 import NVActivityIndicatorView
 
-class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ConsumptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var noRecordMessageLabel = UILabel()
@@ -81,8 +81,8 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func setUp() {
-        let detailNib = UINib(nibName: RecordTableViewCell.identifier, bundle: nil)
-        tableView.register(detailNib, forCellReuseIdentifier: RecordTableViewCell.identifier)
+        let detailNib = UINib(nibName: ConcumptionRecordTableViewCell.identifier, bundle: nil)
+        tableView.register(detailNib, forCellReuseIdentifier: ConcumptionRecordTableViewCell.identifier)
         self.tableView.allowsSelection = false
     }
 
@@ -105,7 +105,7 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: RecordTableViewCell.identifier, for: indexPath) as? RecordTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: ConcumptionRecordTableViewCell.identifier, for: indexPath) as? ConcumptionRecordTableViewCell
             else { return UITableViewCell() }
         cell.grayview.layer.cornerRadius = 15
         cell.dateOfAddRecord.text = "\(records[indexPath.row].date)"
@@ -117,7 +117,7 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return RecordTableViewCell.height
+        return ConcumptionRecordTableViewCell.height
     }
 
     private func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -132,13 +132,13 @@ class OilConsumptionViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     @IBAction func addRecord(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddOilRecordViewController") as? AddOilRecordViewController
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddOilRecordViewController") as? AddConsumptionRecordViewController
             else { return }
         vc.delegate = self
         self.show(vc, sender: nil)
     }
 }
-extension OilConsumptionViewController: submitIsClick {
+extension ConsumptionViewController: submitIsClick {
     func detectSubmit(oilRecord: ConsumptionRecord) {
         self.records.append(oilRecord)
         self.tableView.reloadData()

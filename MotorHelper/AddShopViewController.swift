@@ -1,10 +1,3 @@
-//
-//  AddStoreViewController.swift
-//  MotorHelper
-//
-//  Created by 孟軒蕭 on 13/04/2017.
-//  Copyright © 2017 MichaelXiao. All rights reserved.
-//
 
 import UIKit
 import Cosmos
@@ -14,7 +7,7 @@ protocol buttonIsClick: class {
     func detectIsClick()
 }
 
-class AddStoreViewController: UIViewController {
+class AddShopViewController: UIViewController {
 
     weak var delegate: buttonIsClick?
     let userID = ""
@@ -29,8 +22,7 @@ class AddStoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        AVOSCloud.setApplicationId("IsDkIby9Jnpu9Seds1I1Xyy0-gzGzoHsz", clientKey: "YveFWt3T9vWet4A9nCxLELdQ")
-        
+
         storeNameTextfield.placeholder = "請輸入車行名稱(必填)"
         storeAddressTextfield.placeholder = "請輸入車行地址(必填)"
         storePhoneNumber.keyboardType = .numberPad

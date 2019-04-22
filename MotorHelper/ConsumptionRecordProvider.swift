@@ -1,10 +1,3 @@
-//
-//  ConsumptionProvider.swift
-//  MotorHelper
-//
-//  Created by Wu on 2019/4/18.
-//  Copyright © 2019 na. All rights reserved.
-//
 
 import Foundation
 
@@ -12,7 +5,7 @@ protocol ConsumptionRecordProvidable {
     func getConsumptionRecord(completionHandler: @escaping ([ConsumptionRecord]?, Error?) -> Swift.Void)
 }
 
-class ConsumptionProvider: ConsumptionRecordProvidable {
+class ConsumptionRecordProvider: ConsumptionRecordProvidable {
     
     var dataLoader: NetworkService
     private var requestToken: RequestToken? = nil

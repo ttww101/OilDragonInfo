@@ -3,15 +3,14 @@ import UIKit
 import NVActivityIndicatorView
 import AVOSCloud
 
-class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
+class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
 
-    var stores: [Store] = []
-    let userID = "FIRAuth.auth()?.currentUser?.uid"
+    var stores: [Shop] = []
     var scores = [String: Double]()
 
     let searchController = UISearchController(searchResultsController: nil)
     var searchTableView: UITableView!
-    var filteredStores = [Store]() {
+    var filteredStores = [Shop]() {
         didSet {
             self.tableView.reloadData()
         }
@@ -27,9 +26,6 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        AVOSCloud.setApplicationId(AVOSKey.appID, clientKey: AVOSKey.appKey)
-//        AVOSCloud.setAllLogsEnabled(true)
         
         requestStoreData()
         setUp()
@@ -57,14 +53,14 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchController.isActive {
             guard
-                let cell = tableView.dequeueReusableCell(withIdentifier: StoreListInfoTableViewCell.identifier, for: indexPath) as? StoreListInfoTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: ShopListInfoTableViewCell.identifier, for: indexPath) as? ShopListInfoTableViewCell
                 else { return UITableViewCell()}
             cell.view.layer.cornerRadius = 15
 
             cell.storeName.text = "\(filteredStores[indexPath.row].name)"
             cell.address.text = "\(filteredStores[indexPath.row].address)"
             cell.phone.text = "\(filteredStores[indexPath.row].phone)"
-            let id  = filteredStores[indexPath.row].objectID
+            let id = filteredStores[indexPath.row].objectID
             cell.score.settings.fillMode = .precise
             if scores[id] == nil {
                 cell.score.rating = 0
@@ -75,14 +71,14 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
             return cell
         } else {
             guard
-                let cell = tableView.dequeueReusableCell(withIdentifier: StoreListInfoTableViewCell.identifier, for: indexPath) as? StoreListInfoTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: ShopListInfoTableViewCell.identifier, for: indexPath) as? ShopListInfoTableViewCell
                 else { return UITableViewCell()}
             cell.view.layer.cornerRadius = 15
 
             cell.storeName.text = "\(stores[indexPath.row].name)"
             cell.address.text = "\(stores[indexPath.row].address)"
             cell.phone.text = "\(stores[indexPath.row].phone)"
-            let id  = stores[indexPath.row].objectID
+            let id = stores[indexPath.row].objectID
             cell.score.settings.fillMode = .precise
             if scores[id] == nil {
                 cell.score.rating = 0
@@ -94,14 +90,14 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
         }
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return StoreListInfoTableViewCell.height
+        return ShopListInfoTableViewCell.height
     }
 
     //MARK: Private
     
     func setUp() {
-        let storeDetailNib = UINib(nibName: StoreListInfoTableViewCell.identifier, bundle: nil)
-        tableView.register(storeDetailNib, forCellReuseIdentifier: StoreListInfoTableViewCell.identifier)
+        let storeDetailNib = UINib(nibName: ShopListInfoTableViewCell.identifier, bundle: nil)
+        tableView.register(storeDetailNib, forCellReuseIdentifier: ShopListInfoTableViewCell.identifier)
     }
 
     func requestStoreData() {
@@ -120,7 +116,7 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
             
             if let avObjects = objects as? [AVObject] {
                 
-                var remoteStores: [Store] = []
+                var remoteStores: [Shop] = []
                 
                 for avObject in avObjects {
                     //stores
@@ -130,7 +126,7 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
                     let objectID = avObject["objectId"] as! String
                     let rate = avObject["rate"] as! String
                     let comments = avObject["comments"]
-                    let store = Store(name: name, address: address, phone: phone, objectID: objectID, rate: rate, comments: comments as? [String])
+                    let store = Shop(name: name, address: address, phone: phone, objectID: objectID, rate: rate, comments: comments as? [String])
                     remoteStores.append(store)
                     self.scores[objectID] = Double(rate)
                 }
@@ -142,14 +138,14 @@ class MotorStoreTableViewController: UITableViewController, UISearchBarDelegate,
 
     @IBAction func addStore(_ sender: Any) {
         searchController.dismiss(animated: true, completion: nil)
-            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddStoreViewController") as? AddStoreViewController
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddStoreViewController") as? AddShopViewController
                 else { return }
             vc.delegate = self
             self.show(vc, sender: nil)
     }
 }
 
-extension MotorStoreTableViewController {
+extension ShopTableViewController {
     //選到那個欄位
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if searchController.isActive {
@@ -157,7 +153,7 @@ extension MotorStoreTableViewController {
             guard
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as? CommentViewController
                 else { return }
-            vc.store = filteredStores[indexPath.row]
+            vc.shop = filteredStores[indexPath.row]
             vc.delegate = self
             self.show(vc, sender: nil)
             searchController.dismiss(animated: true, completion: nil)
@@ -166,14 +162,14 @@ extension MotorStoreTableViewController {
             guard
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as? CommentViewController
                 else { return }
-            vc.store = stores[indexPath.row]
+            vc.shop = stores[indexPath.row]
             vc.delegate = self
             self.show(vc, sender: nil)
         }
     }
 }
 
-extension MotorStoreTableViewController {
+extension ShopTableViewController {
     func updateSearchResults(for searchController: UISearchController) {
         // 取得搜尋文字
         guard
@@ -197,7 +193,7 @@ extension MotorStoreTableViewController {
     }
 }
 
-extension MotorStoreTableViewController: buttonIsClick {
+extension ShopTableViewController: buttonIsClick {
     func detectIsClick() {
         self.stores.removeAll()
         self.scores.removeAll()

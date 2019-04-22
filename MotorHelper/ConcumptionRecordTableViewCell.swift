@@ -1,14 +1,7 @@
-//
-//  RecordTableViewCell.swift
-//  MotorHelper
-//
-//  Created by 孟軒蕭 on 29/03/2017.
-//  Copyright © 2017 MichaelXiao. All rights reserved.
-//
 
 import UIKit
 
-class RecordTableViewCell: UITableViewCell {
+class ConcumptionRecordTableViewCell: UITableViewCell {
 
     @IBOutlet weak var oilType: UILabel!
     @IBOutlet weak var numOfOil: UILabel!
@@ -17,6 +10,6 @@ class RecordTableViewCell: UITableViewCell {
     @IBOutlet weak var totalKM: UILabel!
     @IBOutlet weak var grayview: UIView!
 
-    static let identifier = "RecordTableViewCell"
+    static let identifier = "ConcumptionRecordTableViewCell"
     static let height: CGFloat = 80.0
 }

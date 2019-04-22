@@ -3,9 +3,8 @@ import UIKit
 import SystemConfiguration
 import NVActivityIndicatorView
 
-class OilPriceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PetroleumPriceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let oilInfo = GetSOAPInfo()
     var products: [Petroleum] = []
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var reloadBtn: UIButton!
@@ -17,7 +16,7 @@ class OilPriceViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UINib(nibName: "OilPriceTableViewCell", bundle: nil), forCellReuseIdentifier: "OilPriceTableViewCell")
+        self.tableView.register(UINib(nibName: "PetroleumPriceTableViewCell", bundle: nil), forCellReuseIdentifier: "PetroleumPriceTableViewCell")
         self.tableView.backgroundColor = UIColor(displayP3Red: 57/255, green: 58/255, blue: 58/255, alpha: 1.0)
         self.tableView.estimatedRowHeight = 77
         self.tableView.rowHeight = UITableView.automaticDimension
@@ -41,7 +40,7 @@ class OilPriceViewController: UIViewController, UITableViewDelegate, UITableView
     }
 }
 
-extension OilPriceViewController {
+extension PetroleumPriceViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.products.count
@@ -49,7 +48,7 @@ extension OilPriceViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OilPriceTableViewCell", for: indexPath) as? OilPriceTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PetroleumPriceTableViewCell", for: indexPath) as? PetroleumPriceTableViewCell else {
             return UITableViewCell()
         }
         
