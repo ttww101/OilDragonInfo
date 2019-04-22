@@ -28,7 +28,7 @@ class AddShopViewController: UIViewController {
         storePhoneNumber.keyboardType = .numberPad
         storePhoneNumber.clearButtonMode = .whileEditing
         storePhoneNumber.placeholder = "請輸入車行電話"
-        submitStore.layer.cornerRadius = 25
+        submitStore.layer.cornerRadius = 10
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)

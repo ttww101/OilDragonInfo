@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--油價-->
+        <!--今日油價-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PetroleumPriceViewController" customModule="MotorHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PetroleumPriceViewController" customModule="OilDragonInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,13 +23,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK2-xb-ggo">
                                 <rect key="frame" x="8" y="494.5" width="359" height="51.5"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.18232471450000001" green="0.18232471450000001" blue="0.18232471450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hK2-xb-ggo" secondAttribute="height" multiplier="7:1" id="rwS-3T-CNJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="重新整理">
-                                    <color key="titleColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pS-Eb-wkQ"/>
@@ -51,7 +51,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hK2-xb-ggo" secondAttribute="bottom" constant="8" id="wvw-GU-PKN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="油價" id="Us7-Y7-d1g"/>
+                    <navigationItem key="navigationItem" title="今日油價" id="Us7-Y7-d1g"/>
                     <connections>
                         <outlet property="reloadBtn" destination="hK2-xb-ggo" id="rz2-ey-8Un"/>
                         <outlet property="tableView" destination="dRB-D4-4mF" id="kmE-Lf-8WB"/>
@@ -64,7 +64,7 @@
         <!--油耗紀錄-->
         <scene sceneID="cmj-Af-vF5">
             <objects>
-                <viewController id="Yaj-oT-6tw" customClass="ConsumptionViewController" customModule="MotorHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yaj-oT-6tw" customClass="ConsumptionViewController" customModule="OilDragonInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="luf-lX-FFl"/>
                         <viewControllerLayoutGuide type="bottom" id="vti-R3-a9o"/>
@@ -93,7 +93,7 @@
                     <navigationItem key="navigationItem" title="油耗紀錄" id="tWO-KS-dQe">
                         <barButtonItem key="backBarButtonItem" title="取消" id="HoK-Gp-ccX"/>
                         <barButtonItem key="rightBarButtonItem" image="Add-icon" id="oe4-SS-TWd">
-                            <color key="tintColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addRecord:" destination="Yaj-oT-6tw" id="gZ0-OB-19b"/>
                             </connections>
@@ -110,7 +110,7 @@
         <!--新增油耗紀錄-->
         <scene sceneID="xjo-un-J24">
             <objects>
-                <viewController storyboardIdentifier="AddOilRecordViewController" title="新增油耗紀錄" hidesBottomBarWhenPushed="YES" id="5QR-IU-hSn" customClass="AddConsumptionRecordViewController" customModule="MotorHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddOilRecordViewController" title="新增油耗紀錄" hidesBottomBarWhenPushed="YES" id="5QR-IU-hSn" customClass="AddConsumptionRecordViewController" customModule="OilDragonInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="96Y-kl-jQL"/>
                         <viewControllerLayoutGuide type="bottom" id="Mbg-qv-GC2"/>
@@ -130,13 +130,13 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXA-5b-djl">
                                 <rect key="frame" x="0.0" y="613.5" width="375" height="53.5"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.18232471450000001" green="0.18232471450000001" blue="0.18232471450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KXA-5b-djl" secondAttribute="height" multiplier="7:1" id="pao-nD-rgD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="新增紀錄">
-                                    <color key="titleColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Rh-hC-J1q"/>
@@ -170,9 +170,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="UzL-an-HJe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="0.80392156862745101" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="0.80392156862745101" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.18232471446700504" green="0.18232471446700504" blue="0.18232471446700504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.70477287598167337" blue="0.036021084512219192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Iu0-QJ-lAa" kind="relationship" relationship="viewControllers" id="kdD-QM-UOy"/>
@@ -193,9 +193,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="aLl-Qn-GyC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.18232471450000001" green="0.18232471450000001" blue="0.18232471450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -210,7 +210,7 @@
         <!--新增車行-->
         <scene sceneID="5Qj-G2-3MH">
             <objects>
-                <viewController storyboardIdentifier="AddStoreViewController" title="新增車行" hidesBottomBarWhenPushed="YES" id="tgh-R1-e16" customClass="AddShopViewController" customModule="MotorHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddStoreViewController" title="新增車行" hidesBottomBarWhenPushed="YES" id="tgh-R1-e16" customClass="AddShopViewController" customModule="OilDragonInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0WI-vs-LXb"/>
                         <viewControllerLayoutGuide type="bottom" id="UwK-VC-01B"/>
@@ -266,12 +266,12 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Us-Za-wZH">
                                 <rect key="frame" x="16" y="608" width="343" height="49"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.18232471450000001" green="0.18232471450000001" blue="0.18232471450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Us-Za-wZH" secondAttribute="height" multiplier="7:1" id="yKS-W3-BA5"/>
                                 </constraints>
                                 <state key="normal" title="送出">
-                                    <color key="titleColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="submitBtn:" destination="tgh-R1-e16" eventType="touchUpInside" id="lbQ-2d-avo"/>
@@ -330,7 +330,6 @@
                             <constraint firstItem="Xb0-2T-KKp" firstAttribute="leading" secondItem="Xjq-tz-Poc" secondAttribute="leading" constant="20" id="jHW-St-k67"/>
                             <constraint firstAttribute="trailing" secondItem="7wE-KI-pAA" secondAttribute="trailing" constant="10" id="ouU-lI-Zx5"/>
                             <constraint firstAttribute="trailing" secondItem="7Gx-Uw-nhF" secondAttribute="trailing" constant="10" id="vIc-cm-mfQ"/>
-                            <constraint firstItem="Tp5-xU-1lH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G9o-bU-wbV" secondAttribute="trailing" constant="16" id="yKP-Bl-93C"/>
                             <constraint firstItem="c0g-1D-Qsu" firstAttribute="leading" secondItem="Xjq-tz-Poc" secondAttribute="leading" constant="20" id="zA8-82-hFC"/>
                         </constraints>
                     </view>
@@ -350,7 +349,7 @@
         <!--車行列表-->
         <scene sceneID="9Od-KG-BRA">
             <objects>
-                <tableViewController storyboardIdentifier="MotorStoreTableViewController" id="zRr-ET-LwX" customClass="ShopTableViewController" customModule="MotorHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MotorStoreTableViewController" id="zRr-ET-LwX" customClass="ShopTableViewController" customModule="OilDragonInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Evq-q1-xFN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,7 +361,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="車行列表" id="eAI-Wt-NAd">
                         <barButtonItem key="rightBarButtonItem" image="Add-icon" id="guV-ao-iQK">
-                            <color key="tintColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addStore:" destination="zRr-ET-LwX" id="cv7-fd-7GL"/>
                             </connections>
@@ -376,7 +375,7 @@
         <!--Detail-->
         <scene sceneID="KU2-mq-bIU">
             <objects>
-                <viewController storyboardIdentifier="CommentViewController" hidesBottomBarWhenPushed="YES" id="86q-PP-MGJ" customClass="CommentViewController" customModule="MotorHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentViewController" hidesBottomBarWhenPushed="YES" id="86q-PP-MGJ" customClass="CommentViewController" customModule="OilDragonInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TAx-ZZ-wNd"/>
                         <viewControllerLayoutGuide type="bottom" id="tlK-zl-rJ9"/>
@@ -424,7 +423,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.18232471450000001" green="0.18232471450000001" blue="0.18232471450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="yaq-uq-IFt" secondAttribute="trailing" constant="16" id="35r-Tn-Wsv"/>
                                     <constraint firstItem="zS0-pj-QIW" firstAttribute="top" secondItem="cPR-Do-oe7" secondAttribute="bottom" constant="16" id="7IZ-eC-jJO"/>
@@ -456,9 +455,9 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2es-nD-mdE">
                                         <rect key="frame" x="300" y="5" width="70" height="70"/>
-                                        <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.18232471450000001" green="0.18232471450000001" blue="0.18232471450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="送出">
-                                            <color key="titleColor" red="1" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="submitBtn:" destination="86q-PP-MGJ" eventType="touchUpInside" id="urs-RC-Lg2"/>
@@ -517,10 +516,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="cWA-kY-ZjM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.98564296959999997" green="0.77198106050000004" blue="0.43364000320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.18232471450000001" green="0.18232471450000001" blue="0.18232471450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="0.80392156862745101" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -541,10 +540,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="jB2-F5-qlC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="0.80392156862745101" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.18232471450000001" green="0.18232471450000001" blue="0.18232471450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="0.80392156862745101" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
