@@ -122,11 +122,6 @@ class ConsumptionViewController: UIViewController, UITableViewDelegate, UITableV
 
     private func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            print("\(userID!) --- \(records[indexPath.row].autoID)")
-//            FIRDatabase.database().reference().child("\(userID!)").child("\(records[indexPath.row].autoID)").removeValue(completionBlock: { ( _, _) in
-//                self.records.remove(at: indexPath.row)
-//                self.tableView.deleteRows(at: [indexPath], with: .fade)
-//            })
             self.tableView.reloadData()
         }
     }

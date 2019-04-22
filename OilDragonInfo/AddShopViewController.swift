@@ -10,8 +10,6 @@ protocol buttonIsClick: class {
 class AddShopViewController: UIViewController {
 
     weak var delegate: buttonIsClick?
-    let userID = ""
-    let userMail = ""
 
     @IBOutlet weak var storePhoneNumber: UITextField!
     @IBOutlet weak var storeAddressTextfield: UITextField!
