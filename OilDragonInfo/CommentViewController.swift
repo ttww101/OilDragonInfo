@@ -23,7 +23,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         storeName.text = shop?.name ?? "name"
         phone.text = shop?.phone ?? "phone"
         address.text = shop?.address ?? "address"
-        ratingView.rating = Double(shop?.rate ?? "") ?? 0
+        ratingView.rating = Double(shop?.rate?[UserDefaultKeys.uuid] ?? "") ?? 0
         commentsTextfield.placeholder = "請留下您的評論"
         submitBtn.layer.cornerRadius = 10
 
@@ -118,7 +118,11 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private func didTouchCosmos(_ rating: Double) {
         
-        self.shop?.rate = "\(rating)"
+        if let shop = self.shop, var _ = shop.rate {
+            self.shop?.rate?[UserDefaults.standard.value(forKey:UserDefaultKeys.uuid) as! String] = "\(rating)"
+        } else {
+            self.shop?.rate = [UserDefaults.standard.value(forKey:UserDefaultKeys.uuid) as! String : "\(rating)"]
+        }
         
         guard let store = shop else { return }
         

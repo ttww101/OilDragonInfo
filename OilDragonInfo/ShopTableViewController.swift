@@ -124,11 +124,11 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
                     let phone = avObject["phone"] as! String
                     let address = avObject["address"] as! String
                     let objectID = avObject["objectId"] as! String
-                    let rate = avObject["rate"] as! String
-                    let comments = avObject["comments"]
-                    let store = Shop(name: name, address: address, phone: phone, objectID: objectID, rate: rate, comments: comments as? [String])
+                    let rate = avObject["rate"] as? [String : String]?
+                    let comments = avObject["comments"] as! [String]
+                    let store = Shop(name: name, address: address, phone: phone, objectID: objectID, rate: rate ?? nil, comments: comments )
                     remoteStores.append(store)
-                    self.scores[objectID] = Double(rate)
+                    self.scores[objectID] = Double(rate??[UserDefaults.standard.value(forKey:UserDefaultKeys.uuid) as! String] ?? "")
                 }
                 self.stores = remoteStores
                 self.tableView.reloadData()

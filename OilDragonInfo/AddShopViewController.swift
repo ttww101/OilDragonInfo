@@ -41,8 +41,8 @@ class AddShopViewController: UIViewController {
             object.setObject(storeAddressTextfield.text, forKey: "address")
             object.setObject(storePhoneNumber.text, forKey: "phone")
             object.setObject(storeNameTextfield.text, forKey: "name")
-            object.setObject("\(storeRate.rating)", forKey: "rate")
             object.setObject([storeComments.text], forKey: "comments")
+            object.setObject([UserDefaults.standard.value(forKey:UserDefaultKeys.uuid) as! String : "\(storeRate.rating)"], forKey: "rate")
             
             _ = object.save()
             

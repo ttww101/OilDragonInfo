@@ -167,6 +167,15 @@
 			path = "UIView+Constraint";
 			sourceTree = "<group>";
 		};
+		948BEC63226F4B9900CD88C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B124A6B1E7FC77400393658 /* Assets.xcassets */,
+				9B124A6D1E7FC77400393658 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9B000F241E84FE92002BB4EC /* AddConsumptionRecord */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,8 +226,7 @@
 				9B000F241E84FE92002BB4EC /* AddConsumptionRecord */,
 				9B124A611E7FC77400393658 /* AppDelegate.swift */,
 				9B124A651E7FC77400393658 /* Main.storyboard */,
-				9B124A6B1E7FC77400393658 /* Assets.xcassets */,
-				9B124A6D1E7FC77400393658 /* LaunchScreen.storyboard */,
+				948BEC63226F4B9900CD88C3 /* Supporting Files */,
 				9B124A701E7FC77400393658 /* Info.plist */,
 				946ECAD022688EA700539B41 /* OilDragonInfo-Bridging-Header.h */,
 				9B124A681E7FC77400393658 /* OilDragonInfo.xcdatamodeld */,

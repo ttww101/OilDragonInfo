@@ -27,7 +27,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hK2-xb-ggo" secondAttribute="height" multiplier="7:1" id="rwS-3T-CNJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <state key="normal" title="重新整理">
                                     <color key="titleColor" red="1" green="0.70477287600000005" blue="0.036021084510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>

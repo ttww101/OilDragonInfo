@@ -4,10 +4,10 @@ class Shop {
     let address: String
     let phone: String
     let objectID: String
-    var rate: String?
+    var rate: [String : String]?
     var comments: [String]?
 
-    init(name: String, address: String, phone: String, objectID: String, rate: String? = nil, comments: [String]? = nil) {
+    init(name: String, address: String, phone: String, objectID: String, rate: [String : String]? = nil, comments: [String]? = nil) {
         self.objectID = objectID
         self.name = name
         self.address = address
