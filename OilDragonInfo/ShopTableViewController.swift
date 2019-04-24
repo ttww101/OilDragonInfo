@@ -33,6 +33,8 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 77
+        tableView.rowHeight = UITableView.automaticDimension
 
         setupSearchBar(true)
     }
@@ -89,9 +91,6 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
             cell.cosmosRatingView.settings.updateOnTouch = false
             return cell
         }
-    }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ShopListInfoTableViewCell.height
     }
 
     //MARK: Private
@@ -195,12 +194,3 @@ extension ShopTableViewController {
         searchController.dismiss(animated: true, completion: nil)
     }
 }
-//
-//extension ShopTableViewController: buttonIsClick {
-//    func detectIsClick() {
-//        self.shops.removeAll()
-//        self.scores.removeAll()
-//        self.requestStoreData()
-//        print("Click")
-//    }
-//}

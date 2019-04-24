@@ -3,7 +3,7 @@ import UIKit
 import Cosmos
 import AVOSCloud
 
-class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     weak var delegate: buttonIsClick?
     
     var shop: Shop?
@@ -25,6 +25,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         address.text = shop?.address ?? "address"
         ratingView.rating = Double(self.shop?.rate?[UserDefaults.standard.value(forKey:UserDefaultKeys.uuid) as! String] ?? "") ?? 0
         commentsTextfield.placeholder = "請留下您的評論"
+        commentsTextfield.delegate = self
         submitBtn.layer.cornerRadius = 10
 
         ratingView.didTouchCosmos = didTouchCosmos
@@ -137,4 +138,14 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
+}
+
+extension CommentViewController {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "\n" {
+            self.view.endEditing(true)
+        }
+        return true
+    }
 }

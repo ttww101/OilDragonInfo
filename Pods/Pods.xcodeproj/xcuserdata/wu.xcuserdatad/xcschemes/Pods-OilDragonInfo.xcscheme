@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "055C4C5287C0D718D68E161C01593DE5"
+               BlueprintIdentifier = "B6250B7F246B977155CD01DD72E98C88"
                BuildableName = "Pods_OilDragonInfo.framework"
                BlueprintName = "Pods-OilDragonInfo"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "055C4C5287C0D718D68E161C01593DE5"
+            BlueprintIdentifier = "B6250B7F246B977155CD01DD72E98C88"
             BuildableName = "Pods_OilDragonInfo.framework"
             BlueprintName = "Pods-OilDragonInfo"
             ReferencedContainer = "container:Pods.xcodeproj">

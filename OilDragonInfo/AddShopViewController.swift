@@ -7,7 +7,7 @@ protocol buttonIsClick: class {
     func detectIsClick()
 }
 
-class AddShopViewController: UIViewController {
+class AddShopViewController: UIViewController, UITextViewDelegate {
 
     weak var delegate: buttonIsClick?
 
@@ -17,6 +17,7 @@ class AddShopViewController: UIViewController {
     @IBOutlet weak var storeRate: CosmosView!
     @IBOutlet weak var storeComments: UITextView!
     @IBOutlet weak var submitStore: UIButton!
+    var navigationRightButton: UIBarButtonItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,14 @@ class AddShopViewController: UIViewController {
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        storeComments.delegate = self
+        navigationRightButton = UIBarButtonItem(title: "完成", style: .done, target: self, action: #selector(doneButtonTapped))
+    }
+    
+    @objc func doneButtonTapped() {
+        self.view.endEditing(true)
+        self.navigationItem.rightBarButtonItem = nil
     }
     
     @IBAction func submitBtn(_ sender: Any) {
@@ -41,7 +50,11 @@ class AddShopViewController: UIViewController {
             object.setObject(storeAddressTextfield.text, forKey: "address")
             object.setObject(storePhoneNumber.text, forKey: "phone")
             object.setObject(storeNameTextfield.text, forKey: "name")
-            object.setObject([storeComments.text], forKey: "comments")
+            if storeComments.text == "" {
+                object.setObject([], forKey: "comments")
+            } else {
+                object.setObject([storeComments.text], forKey: "comments")
+            }
             object.setObject([UserDefaults.standard.value(forKey:UserDefaultKeys.uuid) as! String : "\(storeRate.rating)"], forKey: "rate")
             
             _ = object.save()
@@ -68,5 +81,11 @@ class AddShopViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension AddShopViewController {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        self.navigationItem.rightBarButtonItem = self.navigationRightButton
     }
 }

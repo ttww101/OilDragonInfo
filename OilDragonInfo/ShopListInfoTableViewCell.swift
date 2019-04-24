@@ -10,7 +10,5 @@ class ShopListInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var cosmosRatingView: CosmosView!
     @IBOutlet weak var address: UILabel!
 
-
     static let identifier = "ShopListInfoTableViewCell"
-    static let height: CGFloat = 110.0
 }

@@ -18,5 +18,4 @@ target 'OilDragonInfo' do
   #for loading
   pod 'NVActivityIndicatorView'
   # Pods for OilDragonInfo
-
 end
