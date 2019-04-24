@@ -35,7 +35,6 @@ class AddShopViewController: UIViewController, UITextViewDelegate {
         storeComments.delegate = self
         navigationRightButton = UIBarButtonItem(title: "完成", style: .done, target: self, action: #selector(doneButtonTapped))
         
-        self.view.backgroundColor = .black
     }
     
     @objc func doneButtonTapped() {
