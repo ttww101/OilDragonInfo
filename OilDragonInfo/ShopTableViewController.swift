@@ -5,7 +5,7 @@ import AVOSCloud
 
 class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
 
-    var stores: [Shop] = []
+    var shops: [Shop] = []
     var scores = [String: Double]()
 
     let searchController = UISearchController(searchResultsController: nil)
@@ -21,19 +21,20 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        tableView.reloadData()
+        requestStoreData()
+        self.searchController.searchBar.text = ""
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        requestStoreData()
-        setUp()
+
+        let storeDetailNib = UINib(nibName: ShopListInfoTableViewCell.identifier, bundle: nil)
+        tableView.register(storeDetailNib, forCellReuseIdentifier: ShopListInfoTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
 
-        searchBarSetup()
+        setupSearchBar(true)
     }
     
     // MARK: - Table view data source
@@ -46,7 +47,7 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
         if searchController.isActive {
             return filteredStores.count
         } else {
-            return stores.count
+            return shops.count
         }
     }
 
@@ -75,10 +76,10 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
                 else { return UITableViewCell()}
             cell.view.layer.cornerRadius = 15
 
-            cell.storeName.text = "\(stores[indexPath.row].name)"
-            cell.address.text = "\(stores[indexPath.row].address)"
-            cell.phone.text = "\(stores[indexPath.row].phone)"
-            let id = stores[indexPath.row].objectID
+            cell.storeName.text = "\(shops[indexPath.row].name)"
+            cell.address.text = "\(shops[indexPath.row].address)"
+            cell.phone.text = "\(shops[indexPath.row].phone)"
+            let id = shops[indexPath.row].objectID
             cell.cosmosRatingView.settings.fillMode = .precise
             if scores[id] == nil {
                 cell.cosmosRatingView.rating = 0
@@ -94,16 +95,10 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
     }
 
     //MARK: Private
-    
-    func setUp() {
-        let storeDetailNib = UINib(nibName: ShopListInfoTableViewCell.identifier, bundle: nil)
-        tableView.register(storeDetailNib, forCellReuseIdentifier: ShopListInfoTableViewCell.identifier)
-    }
 
     func requestStoreData() {
         let activityData = ActivityData()
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData, nil)
-        
         
         let query = AVQuery(className: AVOSKey.storeClassName)
         
@@ -128,9 +123,19 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
                     let comments = avObject["comments"] as! [String]
                     let store = Shop(name: name, address: address, phone: phone, objectID: objectID, rate: rate ?? nil, comments: comments )
                     remoteStores.append(store)
-                    self.scores[objectID] = Double(rate??[UserDefaults.standard.value(forKey:UserDefaultKeys.uuid) as! String] ?? "")
+                    
+                    var averageScore = 0.0
+                    if let rates = rate, let realRate = rates {
+                        var allScore = 0.0
+                        let values = realRate.values
+                        for value in values {
+                            allScore += Double(value) ?? 0
+                        }
+                        averageScore = allScore/Double(values.count)
+                    }
+                    self.scores[objectID] = averageScore
                 }
-                self.stores = remoteStores
+                self.shops = remoteStores
                 self.tableView.reloadData()
             }
         }
@@ -140,7 +145,6 @@ class ShopTableViewController: UITableViewController, UISearchBarDelegate, UISea
         searchController.dismiss(animated: true, completion: nil)
             guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddStoreViewController") as? AddShopViewController
                 else { return }
-            vc.delegate = self
             self.show(vc, sender: nil)
     }
 }
@@ -149,21 +153,19 @@ extension ShopTableViewController {
     //選到那個欄位
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if searchController.isActive {
-            print("\(stores[indexPath.row].objectID)")
+            print("\(shops[indexPath.row].objectID)")
             guard
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as? CommentViewController
                 else { return }
             vc.shop = filteredStores[indexPath.row]
-            vc.delegate = self
             self.show(vc, sender: nil)
             searchController.dismiss(animated: true, completion: nil)
         } else {
-            print("\(stores[indexPath.row].objectID)")
+            print("\(shops[indexPath.row].objectID)")
             guard
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as? CommentViewController
                 else { return }
-            vc.shop = stores[indexPath.row]
-            vc.delegate = self
+            vc.shop = shops[indexPath.row]
             self.show(vc, sender: nil)
         }
     }
@@ -175,11 +177,12 @@ extension ShopTableViewController {
         guard
             let searchText = searchController.searchBar.text
             else { return }
-        filteredStores = stores.filter({ (store) -> Bool in
+        filteredStores = shops.filter({ (store) -> Bool in
             return store.name.contains(searchText) || store.address.contains(searchText)
         })
     }
-    func searchBarSetup() {
+    func setupSearchBar(_ ff: Bool) {
+        let _ = ff
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
@@ -192,12 +195,12 @@ extension ShopTableViewController {
         searchController.dismiss(animated: true, completion: nil)
     }
 }
-
-extension ShopTableViewController: buttonIsClick {
-    func detectIsClick() {
-        self.stores.removeAll()
-        self.scores.removeAll()
-        self.requestStoreData()
-        print("Click")
-    }
-}
+//
+//extension ShopTableViewController: buttonIsClick {
+//    func detectIsClick() {
+//        self.shops.removeAll()
+//        self.scores.removeAll()
+//        self.requestStoreData()
+//        print("Click")
+//    }
+//}

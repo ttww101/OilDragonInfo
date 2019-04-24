@@ -23,7 +23,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         storeName.text = shop?.name ?? "name"
         phone.text = shop?.phone ?? "phone"
         address.text = shop?.address ?? "address"
-        ratingView.rating = Double(shop?.rate?[UserDefaultKeys.uuid] ?? "") ?? 0
+        ratingView.rating = Double(self.shop?.rate?[UserDefaults.standard.value(forKey:UserDefaultKeys.uuid) as! String] ?? "") ?? 0
         commentsTextfield.placeholder = "請留下您的評論"
         submitBtn.layer.cornerRadius = 10
 
