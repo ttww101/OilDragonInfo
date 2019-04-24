@@ -35,7 +35,7 @@ class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = .black
         addConsumption.delegate = self
         addConsumption.dataSource = self
 
