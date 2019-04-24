@@ -44,7 +44,6 @@
 		9BB08BCA1E8228E000982CF1 /* Petroleum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB08BC91E8228E000982CF1 /* Petroleum.swift */; };
 		9BFA1FF11E8A634B0045CA0F /* ConsumptionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA1FF01E8A634B0045CA0F /* ConsumptionRecord.swift */; };
 		C4CDE3707C15AC15D6FA5471 /* Pods_OilDragonInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C18B563156647DE9620B684 /* Pods_OilDragonInfo.framework */; };
-		F3EFFCCABF44524A429C2F26 /* Pods_MotorHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10784B478B41B20BB8F2B279 /* Pods_MotorHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,7 +101,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8AF5FF1EB86F8E00AEE0A8 /* MessageUI.framework in Frameworks */,
-				F3EFFCCABF44524A429C2F26 /* Pods_MotorHelper.framework in Frameworks */,
 				C4CDE3707C15AC15D6FA5471 /* Pods_OilDragonInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +314,7 @@
 				TargetAttributes = {
 					9B124A5D1E7FC77300393658 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 45HXTPS3WE;
+						DevelopmentTeam = 9R7H28LYQM;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -566,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 45HXTPS3WE;
+				DEVELOPMENT_TEAM = 9R7H28LYQM;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = OilDragonInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -585,7 +583,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 45HXTPS3WE;
+				DEVELOPMENT_TEAM = 9R7H28LYQM;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = OilDragonInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

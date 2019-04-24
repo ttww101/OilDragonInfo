@@ -25,7 +25,6 @@
 		0810AB5DF08C8568A4745649B30B0D71 /* AVIMRuntimeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EB85573A0DC42672F58D0B5AA23D3793 /* AVIMRuntimeHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		082D3FCD34223CA5F7312D5E993BF848 /* LCKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3A6513B379D3C702B8F58F10AC42E5 /* LCKeyValueStore.m */; };
 		08531B91CF6AA911C4B85F8878B27469 /* AVPush_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8475F745A563537887AB2FB628427F2C /* AVPush_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0C65B3D0F7839162EF350A2707758580 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3676E7FF7C271B9B06FE33BE5F9446 /* Alamofire.framework */; };
 		0D2A2CD0C8080EE93E8A1C53D6F467BB /* LCIMProtocolBuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = 65540DB3DE3719A994C1E648627BED00 /* LCIMProtocolBuffers.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0DBBF9E83EAA93BCE02FE09DC699546B /* AVIMTypedMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0551CF23C826CB1F0D084775A39F3639 /* AVIMTypedMessageObject.m */; };
 		0E045A47EAC8C5F0013DCFA1BAAA95D0 /* LCKeyValueStore.h in Headers */ = {isa = PBXBuildFile; fileRef = B7DC37F6BF41A20A1244407E297C3D85 /* LCKeyValueStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -60,7 +59,6 @@
 		1810528D5CB40160E48C325F5900DD77 /* LCSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB474080A5DA0463318C965B40D1C2E8 /* LCSecurityPolicy.m */; };
 		181ABF93E5628DC7E841B0BB7EA1DE6B /* LCIMArray_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBD362B2153F8A9E40868DF05C5E6A5 /* LCIMArray_PackagePrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1898AD5764060CA90852011C490C35C4 /* AVIMErrorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B53D9FCEECCAE238C4925866249635D4 /* AVIMErrorUtil.m */; };
-		18A089FBFA58111CA31A9FCB3B0D4594 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D49D07D04299882FF863C8BDA9CFB67 /* QuartzCore.framework */; };
 		1A507ABBB020F0730DDD20FE76A9BA0E /* AVSubclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA5D3C48E9A9DAA1F4E1D5E571196D0 /* AVSubclassing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A77D39E17B0576B193BBFAFCD769D25 /* avmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A13548B76793F75C65572EA8265792F /* avmp.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1B5D2D5C4183C2795E6E44A966750F76 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB83F570327F75A38D3D78E712AF9A /* Logger.swift */; };
@@ -83,7 +81,6 @@
 		217C9914C8BFCE4D0B0963E074BC41C3 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C80A3561A338F117A9D66DC0F26EF9 /* EXTScope.m */; };
 		2476369FEA86DF078949AA4E949A48A8 /* AVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8A6AFDAB53CA27EFD5735138E18BF /* AVLogger.m */; };
 		25343A70DF57492B8A55DBEDE8C21557 /* FileUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391C351526FD5A6450BDEEC4C9A6C4D /* FileUploader.swift */; };
-		25A195CFCA17BD56D98B207C3F709513 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D8D30A734A18B1C77D98154CCE423F /* UIKit.framework */; };
 		25DFA72039CBA011EBA738AA73084A8E /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CAC6DE2E8B0BA7314CE3A9B6C35BA3 /* CosmosSize.swift */; };
 		270104AB3125DEB72B548958BE92670A /* AVIMConversation_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = BD861374C30F85F6E0143066C1D7F3CC /* AVIMConversation_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2747F7F6A3959FD4CEF6A0C7A18F2D96 /* AVDynamicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816B2357E5B8A177215725C97C6CAB /* AVDynamicObject.m */; };
@@ -94,10 +91,8 @@
 		2A2FE216328BFC23AF9D30EAEFAA2303 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 791D7EA63E4EBC3EE3DE5614FDB7478A /* IQKeyboardManager.bundle */; };
 		2A80CC6AEB2AF436C00D2CDBA76167DA /* Lazyload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838CC8B3783203EEB33E553388730DF8 /* Lazyload.swift */; };
 		2BAAE23AC8BA5AD288B6CE08EA7CDA1E /* AVIMMessageOption.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DAF30321CFC24C1558C8EABA0EBE48 /* AVIMMessageOption.m */; };
-		2BC189615E270322A71487D062D491E7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC773E07577C1A9BE0F8596D46EF095 /* MobileCoreServices.framework */; };
 		2C19D681D8C734243C328180206F572F /* StorageContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68259F9C8397A3BC1884DB01463865 /* StorageContextCache.swift */; };
 		2C50DEABCBE509819C00A336D1F5C3BD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223BB756A7DF35BADF4E823C9B478930 /* Response.swift */; };
-		2D8CBB0AD2B7A450DA7D80D80EDF11B3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC650BE346B7A56B46EBDC38160B31BB /* CFNetwork.framework */; };
 		2F06C9CE477F66945C5108AB8C096D62 /* LCIMCodedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D9127FE2E0843169FB28FE112FACB4E2 /* LCIMCodedOutputStream.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		2F47A346D194C51E409A98C1FBBBB322 /* LCKeyValueSQL.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B9BF32BB4864AC29B36906ED4402E5 /* LCKeyValueSQL.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2FC45E0144243690B3AD50C7E219BA72 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A8F00909AB9AAC00C74BCCF8350D82 /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
@@ -126,7 +121,6 @@
 		3BD74381F1574346EB874A551212B53F /* LCIMWrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ACF86D63B10ADBFE2B9F2ADBCFC16B /* LCIMWrappers.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3C86577E5CBCED91DB93D3A23D58A37D /* AVIMConversationMemberInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A08A0B348F558B8DF67AB17308B0634C /* AVIMConversationMemberInfo.m */; };
 		3CD1D684E753A25258164454CBD8DFBD /* AVFile_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AE03891240D691B1369EE3140627D826 /* AVFile_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3D1474C367C73546A9258C4A1BFC9293 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */; };
 		3D77B7DC6449E6CC41C0FF73714B6BE9 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3663DEC3C91173212728C41726A008F /* IQNSArray+Sort.swift */; };
 		3D929FBCC643CAA6141FABE9B9A903C8 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A322A39ACB442F4B415E45E5E3CF2A /* NVActivityIndicatorAnimationBallBeat.swift */; };
 		3DF1044EC36DAAD0DFF2DF5C4F4F634A /* AVIMKeyedConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E2775A5BF580E44771980F03CCB3CC /* AVIMKeyedConversation.m */; };
@@ -158,7 +152,6 @@
 		4DC6EBBB211B87A88B2EBBBC8F368453 /* AVMPMessagePackReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AC4DA213803FCD14EFF88A3A574F77 /* AVMPMessagePackReader.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4EB3DB45B8BF8C33EE9FD395FD993A66 /* AVIMFileMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A35538EE0B5C3A29367AB6F9BB9C2C6A /* AVIMFileMessage.m */; };
 		4F40A9CBB316E7100828F0C6F5714946 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70717C2916932AF7667A6B967438996D /* CosmosTouch.swift */; };
-		50E3FCD60E40A6D598225FDFF65E95D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D8D30A734A18B1C77D98154CCE423F /* UIKit.framework */; };
 		519F648114DA7B82AF486D847D89557B /* AVIMRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7854E411CACC46838ECA20DDDD39E55 /* AVIMRuntimeHelper.m */; };
 		520CD91BA088BE9D4706C4317BDFC687 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89165A6623BE38367728540C7675F5 /* GeoPoint.swift */; };
 		5276AEF542E0A365FAAE983C3F0ABFC0 /* AVRelation.h in Headers */ = {isa = PBXBuildFile; fileRef = CC240D087197A1BFAC91D73F3E5ACA9C /* AVRelation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -166,7 +159,6 @@
 		52A506A218B214507C4BC17C71346C82 /* MessagesProtoOrig.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F710133C8F97729C7EE4E903321E96 /* MessagesProtoOrig.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		531B467C180443865857CA66B69B9C76 /* LCIMWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C9B374DE9F8BAF2E5A4AB9A1AAD4D /* LCIMWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D10589B61411080513AEE737F4586 /* Request.swift */; };
-		53E0A72846668C4BDCBAEF9C879987ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D49D07D04299882FF863C8BDA9CFB67 /* QuartzCore.framework */; };
 		54ABF9D92342D262E7C95831CA568E11 /* AVGeoPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A30DFB0ADA2F9274995DACD0A581A3A3 /* AVGeoPoint.m */; };
 		559BF8803EBC9F6BA601A306C6C200C1 /* LCRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 090AA360CE55909CCD4A349DC7C63800 /* LCRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56EBAA5C16DDBC9782106C317F5DF5A0 /* LCIMDuration.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 236A707E2D712BA02AD35ABCB83199EF /* LCIMDuration.pbobjc.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -207,7 +199,6 @@
 		66F8667FF4F7DE87C9564F30F7949FFB /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885B4B15FCC26FAEBC3962808B0F851 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */; };
 		67186EA93D2C4A027F3FC7FF8F456472 /* AVIMDirectCommand+DirectCommandAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE661706303011A108B22A3C2C18AB5F /* AVIMDirectCommand+DirectCommandAdditions.m */; };
 		6738F32EEDA2C248EC90B11DF80221BF /* LCIMEmpty.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A05F0FF23E9E108BA1767D2D4F887C /* LCIMEmpty.pbobjc.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		683DB524F7B65040A436E7B027981BE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66426B729793062DA15FDB3CFA740763 /* CoreGraphics.framework */; };
 		68498D7FEE4C131B812D917370511087 /* AVFileQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 08BF0FA8FCBE5BEC26C308A0DC655E81 /* AVFileQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		687B592FB6C56941190781154E084606 /* AVIMClientPushManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B10143EC9744F6E95709C447804DFD9E /* AVIMClientPushManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		68D0E31649763E10E526E3BAD8823A31 /* LCIMWireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 79FF18583967A79C1EE2A3D2B0016874 /* LCIMWireFormat.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -219,7 +210,6 @@
 		6DE14CDFA3320E49E85BD1E7A77002F0 /* AVIMClientInternalConversationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 85822EDD6644132D08D4072440D62D6E /* AVIMClientInternalConversationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E8821576FCC06F17272AFAC072472CB /* AVRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A940151662432EFB955283115A28E2 /* AVRole.m */; };
 		6E91126E76B66DBC513E6A9D2884258E /* LCIMRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 977966852362286202E08A41837D35BF /* LCIMRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6EED1B24E86196444779ABC3A6C11CBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */; };
 		6F35671BC17166EE90E15A99DB0A50E2 /* LCIMBootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 93BE7D9AE63DAD01446BB1997DE7CF03 /* LCIMBootstrap.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6F5C957B3D816A44D829AB8B8C5F9E6D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCD0A665B4EC37209CFB5EB68DD89E /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */; };
 		716B936C9927729130FC1D11AA0B7A36 /* AVSaveOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 9808F051566B5CE6D788EB3A62AD4778 /* AVSaveOption.m */; };
@@ -236,7 +226,6 @@
 		7476FD72ED007DE82FA5E8131CCD5A89 /* Relation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A5DB92424E654F63F26F9CA6AAFAE1 /* Relation.swift */; };
 		74ED15E55B9B2D47D506711595CC6A1D /* AVIMBlockHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F2AE0EAD86B74AC7340860FED02D /* AVIMBlockHelper.m */; };
 		74F497A85D333B37B24F59C47BDCDA2F /* LCIMFieldMask.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = D1304C624A92F277EBF0A282F84770FE /* LCIMFieldMask.pbobjc.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		750450133C747EC7026F44EA97B379AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D49D07D04299882FF863C8BDA9CFB67 /* QuartzCore.framework */; };
 		761B63B4C6EB6FA91343ACD07BF0136E /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1570E548945F50F2140B4898CF1CDDE9 /* JRSwizzle.m */; };
 		761E50823F7C7C752C59AA6FDAEFD63F /* AVIMConversation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5A355081E6ECC788A24C6B905F1F3B /* AVIMConversation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76BA4FF16C1C16D967EE37F0624A3CCE /* AVRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D8645F2D68BCE28DB74F2723840B88C4 /* AVRequestManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -267,12 +256,10 @@
 		81E49A983B568E05FAD79BC97C752166 /* AVReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 467A003D7EB34E09AEAB59BC227730F0 /* AVReachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8215940C363B2010679610893FE67119 /* AVFileQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDEC0B1FC4D387D9A800A0C7F6CD9EE /* AVFileQuery.m */; };
 		82B3A796CCEB4BD1F1060584BC724F5C /* LCIMConversationCacheStoreSQL.h in Headers */ = {isa = PBXBuildFile; fileRef = 0444F063282ED69C3727692BEC35B432 /* LCIMConversationCacheStoreSQL.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		834F4D9819C6010E611A7E151B8899C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */; };
 		836F1196D361D3A86E80BD57B581D08E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBFC326B1BF7D65F5D9CE7F1997EB7 /* Data.swift */; };
 		83B0E4A33786C45550CBAA86DD9E400B /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CA002675792B8C58EA81C2161552B1 /* IQToolbar.swift */; };
 		8443EE2E0C925FD757DD53AABC4E72D8 /* AVIMClient_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C47DEED7AC8A5421FDE32092FA1A5480 /* AVIMClient_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8523B49306017FEA4273FB30DD9574EB /* LCIMDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D1E63A9FADCEBB60D27EE9F46A05C /* LCIMDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		85728BCCA0E1A0D8EE44CAFB039A9FBE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A532098CD6FB3E76B19939B9CFA31A28 /* SystemConfiguration.framework */; };
 		857E58B0C3A16724F33592D2FB0FCEA9 /* AVSaveOption_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AD905AEE3C7A3BEBC7AF420AC0CD3F5 /* AVSaveOption_internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		85FDDF037829BC8F26FCAEFF23D4AC82 /* AVSaveOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 57CFD66F71B2DE2800AD22EA752C0750 /* AVSaveOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8641353E32043031F879D52E1A279D5A /* LCIMWellKnownTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FBEBC41E651614AA550D9524F86DE28F /* LCIMWellKnownTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -295,16 +282,13 @@
 		8B16CB7DC61EA5F2ABEBF0D674993AFD /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696D4EB4C950AB1C088A9550370AF02 /* NVActivityIndicatorAnimationBallPulseRise.swift */; };
 		8B9A051E58FC9A4748298248EB529DF1 /* AVUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 147D8E028F627124BF5553EED3796F66 /* AVUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C0B9A20DFDBAAA0DC364153B3EB4E3D /* AVPaasClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 937EE6DC37A844F6EA27F25131C0A0CF /* AVPaasClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8C24D10078B6686E6A81E92E81EED4D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66426B729793062DA15FDB3CFA740763 /* CoreGraphics.framework */; };
 		8C4A8AA09CBB4E2B3768A889D75009AF /* JRSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D0EBDE5964E98BC9DABCC10EC61211 /* JRSwizzle.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8C65357C508E7329A4BC7526FB00D1EA /* StorageContext.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62FBA3D6642C7BBE6E95FCE2C9CDE4E5 /* StorageContext.xcdatamodeld */; };
 		8D0CB0CD5395B374274285C1CD06CAA8 /* AVIMConversationMemberInfo_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 66B04C1CCE39B9F721F67748AFC439C6 /* AVIMConversationMemberInfo_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8D1B16A3B31E95ED3CA104DC5CAB49BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */; };
 		8D7BC12AD2F355DDE9F2BF595EA19E6A /* AVIMMessageObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7372BBD68ABC4E9C8EB27B98689D27 /* AVIMMessageObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8E2385F09E897609E758F8781ACA58A6 /* AVIMConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 264CC36A08FD275BAAB9BA7F5F9EE7DB /* AVIMConversation.m */; };
 		8FBAB95CE610472538F04283B153AFD4 /* AVACL_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F44F3703A5E5F79F567A3EF951F77BF /* AVACL_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8FD6E3143AFFAC0C35FF1745DD52D313 /* NSDictionary+LCHash.h in Headers */ = {isa = PBXBuildFile; fileRef = 102FF2BA8CC7E343CF729759ED5FD15F /* NSDictionary+LCHash.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		90BA41482F21E211811F6E3200E9A658 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD89202908593A92646EA3DF86D778A /* Security.framework */; };
 		90C796CC20A1DC85AB468788EE29DE7B /* LCIMDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = EE1ECFB1D3E35DE57F0FBE99DD872BC6 /* LCIMDictionary.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		92157D38F8C2EDAD490CCC774683A071 /* LCDatabaseCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = E563BB2C136B8CB2B506DA84CF16BD2A /* LCDatabaseCoordinator.m */; };
 		9251F8E82EDDE527AC7582CFF030C830 /* LCIMUnknownField.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E1CC8094CEF893D997D0B09AE3D8A8 /* LCIMUnknownField.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -349,7 +333,6 @@
 		A72D103D5382D304427DD4A79844C3C4 /* AVMPOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 685E6B1EC87EB3B8CA8561DBA8884A78 /* AVMPOrderedDictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A7E3C3CF4C74EB089888658F7E79B087 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C31EFDC02C530E66EB7410AE86C238 /* NVActivityIndicatorAnimationDelegate.swift */; };
 		A87885766919FDA0935E672D803EB932 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148B8EF3C0BD92C1B7668E1BC98E72E /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
-		A91935584F0D182DBA6D08031260FA21 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC8202BA159611DA3B8B666780628D8 /* AVOSCloud.framework */; };
 		A9480C68C2BA9E461D675B83BB397B2B /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B4A8B1B1DD9C43F37DF7D1AA1695A /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
 		A963309BE8F5BEB73A7F31E77A4286C9 /* SDMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DA495D35097AF644C5E1749332025081 /* SDMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A9866BFE208EA1E9BA22D69AFBD4D9D4 /* LCURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 127379106CFEB3909E8A9939E67CD7C4 /* LCURLResponseSerialization.m */; };
@@ -360,13 +343,10 @@
 		AAF07F30BAA8018F92CB764953C3CEAC /* LCIMWrappers.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = FE5EB8C426FD2FFFBC455CAF5E201B5A /* LCIMWrappers.pbobjc.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AC65947EF3B91CF4CC86B3B704FF9001 /* LCIMConversationCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B7652904704F8FC8A8302660405A8EA7 /* LCIMConversationCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		ACD33ADC8594E31630EE3BCE5D1C3215 /* AVSMS.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F96A01B83DB37CC0EDB8B0BBE0261A /* AVSMS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACDE12405D14D735D5C9827BF3752791 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F32AE919694C281F7DA211843F52401 /* CoreLocation.framework */; };
 		AD799776A0CF7AACF34953DEB1B16DFD /* LCIMExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D3DB0796880A459B54C394AE426437 /* LCIMExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ADE5B665EB24D6BA9D3143DB65D672B3 /* LCIMDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 60BEBCED48720508452F78517F27BB3C /* LCIMDescriptor.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AE017BA009AB85F0B04511CF37ADAABE /* AVOSCloudIM.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B846838D8CB21C47924F7C800811 /* AVOSCloudIM.m */; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67C7DDD835D4EB23FE37596ABDE689F /* SessionManager.swift */; };
-		AE6BB9544AD99914A08293351DE15AF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */; };
-		AE74A216717B4D85DDEB42E79C739B21 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332ABD6154E915F85862DE1C934398D7 /* CoreTelephony.framework */; };
 		AEB8CB2E06A065218D1E1EA81EB70339 /* LCFileTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE6DFF6AA1012DC7C9412D0BD268B50 /* LCFileTaskManager.m */; };
 		AEBEB96B1C89175CB5510989ED892DCD /* AVIMImageMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52146381837D07D99CDD61AA2B378A32 /* AVIMImageMessage.m */; };
 		AEE8C9E1C425BF8B6EF135F0E762A453 /* NVActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADBAD2AD11BFD016AC0D3633C12C7B7 /* NVActivityIndicatorView-dummy.m */; };
@@ -411,7 +391,6 @@
 		BEE8CBE8C012ECFC909B3A0092E39599 /* NSDictionary+LCHash.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E5B3E0BE073F04CD0251D3E6AEA8D1 /* NSDictionary+LCHash.m */; };
 		C15598E58B702FDF0D90B71ACD36D896 /* PersistentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CF5C0B071AA0335A066506D6B937FC /* PersistentController.swift */; };
 		C17C708441D8A817CCABF788DACEABC5 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550EFE90B78AC422B2A688A21EAB1F9C /* NVActivityIndicatorViewable.swift */; };
-		C238D2F0C3BF8C1654D032FFB88F0E1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */; };
 		C2F8D9192A8814E2094A405F447020EE /* AVPersistenceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A5C283F5B06D95AF0B3926026A259E /* AVPersistenceUtils.m */; };
 		C4E0DDEAB0CBEFD3424E4A022617E5C5 /* ACL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC58DC761D637E17C47B958A4EC66D8 /* ACL.swift */; };
 		C5978DA9E6E5BDF9BC1A0420040F19B6 /* AVObjectUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = CD45B7AD2283C3526C7601C32FD3A017 /* AVObjectUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -435,7 +414,6 @@
 		D0E7FAB14CF745ED6113C9B1FE8F7C2E /* AVCaptcha.h in Headers */ = {isa = PBXBuildFile; fileRef = CFA27AA4FB9909E8766F5BB1DAA319A1 /* AVCaptcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4A55F9FF841685CCE1DE779CEB52D93 /* AVCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 7350D5B5856731F0C96B137BA81DA08D /* AVCloud.m */; };
 		D4BC358CA755E0A00CDB508943A5F8D2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C49A8679EAD3FB39D34B05F48387E /* Result.swift */; };
-		D54AD2E7B275B428B100E19DCC357DED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */; };
 		D56D73729C8DE0CE2083034469C297B9 /* AVInstallation.m in Sources */ = {isa = PBXBuildFile; fileRef = C379CE03B3121CBD6EA440F6B9CCEEF5 /* AVInstallation.m */; };
 		D6D226480D67C28C4FC624DC9183995F /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74952D962E9E0B44573A488DF93021 /* NVActivityIndicatorAnimationAudioEqualizer.swift */; };
 		D8309B8CEE08C528DE1BF2F825E02DAC /* AVRelation_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F5905ECC253DDEDA9E3F24304CAF354 /* AVRelation_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -490,7 +468,6 @@
 		F32E9647447D5B35EF5F95057655B83F /* AVObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9608A0F5468737A657E380AFC878508E /* AVObject.m */; };
 		F38DE8C951664C35D5F99C3BF3CD3723 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB193555CFD44883A080D7DA61B7613 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
 		F4FF57017D14225433F5199330B675C7 /* AVLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B799FC55F7356A135063273F105DD8FB /* AVLocationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F616C45EC1C5B270E82E8E1C5A3B3562 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */; };
 		F65DC8BA2788A1CDE3E03ADCEA93CB01 /* LCNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B92FCA81FFAD4248986BC85CC4322F /* LCNetworkReachabilityManager.m */; };
 		F66DE3EF01408C42C115587B201CB541 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B6B8D24A2D64B1F62B60D5C1AB18DC /* CosmosLayerHelper.swift */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B11DFC12E2B7744DD9DE5124C2C17 /* ResponseSerialization.swift */; };
@@ -653,7 +630,6 @@
 		1CFADE6CBB3FD9C23B921F69FCB12B19 /* LCDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCDatabaseQueue.h; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabaseQueue.h; sourceTree = "<group>"; };
 		1D45D79F1799D388C8E432E8E16E9DAE /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Sources/Storage/Utility.swift; sourceTree = "<group>"; };
 		1EB193555CFD44883A080D7DA61B7613 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleMultiple.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
-		1F32AE919694C281F7DA211843F52401 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		21C84ABC358B2F13267847F2967673A2 /* AVACL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVACL.m; path = AVOS/AVOSCloud/ACL/AVACL.m; sourceTree = "<group>"; };
 		223BB756A7DF35BADF4E823C9B478930 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Sources/Storage/Response.swift; sourceTree = "<group>"; };
 		236A707E2D712BA02AD35ABCB83199EF /* LCIMDuration.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMDuration.pbobjc.h; path = AVOS/AVOSCloudIM/Protobuf/google/protobuf/LCIMDuration.pbobjc.h; sourceTree = "<group>"; };
@@ -672,7 +648,7 @@
 		2899BF4B25DD23C6ABC859C3B9DD8027 /* LCIMCacheStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMCacheStore.m; path = AVOS/AVOSCloudIM/MessageCache/CacheStore/LCIMCacheStore.m; sourceTree = "<group>"; };
 		28CF5C0B071AA0335A066506D6B937FC /* PersistentController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PersistentController.swift; path = Sources/LocalStorage/PersistentController.swift; sourceTree = "<group>"; };
 		28F5E06D603F6147E9A8DB2204CF1D78 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
-		2956DB03EB4344CC92AC3C5E80AF52CC /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2956DB03EB4344CC92AC3C5E80AF52CC /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C6962ED490B8C316CF2A7233071209 /* AVIMClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMClient.m; path = AVOS/AVOSCloudIM/Client/AVIMClient.m; sourceTree = "<group>"; };
 		2AD7A65DFBA1D0341E4137B11B867CE2 /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Sources/Storage/Extension.swift; sourceTree = "<group>"; };
 		2B4F04DFFBC0C1BFBA1D025479B88241 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
@@ -682,12 +658,10 @@
 		2C6BB951AAF1933CC7C867581EDA622A /* LCIMConversationCacheStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMConversationCacheStore.h; path = AVOS/AVOSCloudIM/MessageCache/CacheStore/LCIMConversationCacheStore.h; sourceTree = "<group>"; };
 		2CA090BA736BA6BFD256AF63B6348BCF /* Application.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Application.swift; path = Sources/Foundation/Application.swift; sourceTree = "<group>"; };
 		2D46C6FF6901CAED3DE89911FF717876 /* LCSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCSecurityPolicy.h; path = AVOS/AVOSCloud/ThirdParty/LCNetworking/LCSecurityPolicy.h; sourceTree = "<group>"; };
-		2D49D07D04299882FF863C8BDA9CFB67 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		2D91AD10E131E4B116446285DDEA3519 /* Pods-OilDragonInfo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OilDragonInfo-frameworks.sh"; sourceTree = "<group>"; };
 		2DD263A0070A4637F84A4123251A0A02 /* AVIMClientInternalConversationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMClientInternalConversationManager.m; path = AVOS/AVOSCloudIM/Client/AVIMClientInternalConversationManager.m; sourceTree = "<group>"; };
-		2E3676E7FF7C271B9B06FE33BE5F9446 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E57B3B1BCC12E0B6AE3927D2C783CFE /* AVIMTextMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMTextMessage.m; path = AVOS/AVOSCloudIM/TypedMessages/AVIMTextMessage.m; sourceTree = "<group>"; };
-		2EA7FA78516CB2358F496C71D3D2C6B9 /* Pods_OilDragonInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OilDragonInfo.framework; path = "Pods-OilDragonInfo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA7FA78516CB2358F496C71D3D2C6B9 /* Pods_OilDragonInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OilDragonInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F21C2F36B0C6934AB26CB78F688176D /* AVIMDirectCommand+DirectCommandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AVIMDirectCommand+DirectCommandAdditions.h"; path = "AVOS/AVOSCloudIM/Commands/AVIMDirectCommand+DirectCommandAdditions.h"; sourceTree = "<group>"; };
 		2F2EF3D6840ACF58C5A03621F3C7F40D /* AVOSCloud_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVOSCloud_Internal.h; path = AVOS/AVOSCloud/AVOSCloud_Internal.h; sourceTree = "<group>"; };
 		2F6C0BA488976479783B4EDA7904576B /* AVIMConversationOutCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVIMConversationOutCommand.h; path = AVOS/AVOSCloudIM/Commands/AVIMConversationOutCommand.h; sourceTree = "<group>"; };
@@ -699,7 +673,6 @@
 		31883ED8EE268FED47492547E2180DCD /* LCIMRuntimeTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMRuntimeTypes.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMRuntimeTypes.h; sourceTree = "<group>"; };
 		31E133E91865F84035DC0007F129B90F /* LCIMConversationQueryCacheStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMConversationQueryCacheStore.m; path = AVOS/AVOSCloudIM/MessageCache/CacheStore/LCIMConversationQueryCacheStore.m; sourceTree = "<group>"; };
 		327A5EB063ACF3091DFC9EAA37654D6B /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		332ABD6154E915F85862DE1C934398D7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		336670C623FF6821A33646AA5B4A6CBF /* AVIMWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVIMWebSocket.h; path = AVOS/AVOSCloudIM/Vendor/SocketRocket/AVIMWebSocket.h; sourceTree = "<group>"; };
 		33CC420B7D852E0AE5505851F5251C2E /* AVSearchSortBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVSearchSortBuilder.m; path = AVOS/AVOSCloud/Search/AVSearchSortBuilder.m; sourceTree = "<group>"; };
 		3455F313C4564F49A9B3A4AFCF2724FB /* MessagesProtoOrig.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessagesProtoOrig.pbobjc.h; path = AVOS/AVOSCloudIM/Commands/MessagesProtoOrig.pbobjc.h; sourceTree = "<group>"; };
@@ -719,14 +692,13 @@
 		3ADBAD2AD11BFD016AC0D3633C12C7B7 /* NVActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NVActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
 		3C52053BA7D186994BB35BC17E88EBD6 /* LCDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCDB.h; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDB.h; sourceTree = "<group>"; };
 		3C61E447D4F9EE96AA3D9472997F2629 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		3CD89202908593A92646EA3DF86D778A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		3CECD3798A5E5CE266830372FC2E25DB /* AVCloud_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVCloud_Internal.h; path = AVOS/AVOSCloud/CloudCode/AVCloud_Internal.h; sourceTree = "<group>"; };
 		3CED58765F890452AB48C9F739BAD5A8 /* AVPaasClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVPaasClient.m; path = AVOS/AVOSCloud/Request/AVPaasClient.m; sourceTree = "<group>"; };
 		3E2942EEBECCA2DEDB3CF59DA93DBAA7 /* Engine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Engine.swift; path = Sources/Storage/Engine.swift; sourceTree = "<group>"; };
 		3ECBF06888098E11370BD7579A4A4DCE /* AVIMTypedMessageObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVIMTypedMessageObject.h; path = AVOS/AVOSCloudIM/InternalObjects/AVIMTypedMessageObject.h; sourceTree = "<group>"; };
 		3FFFBE0E34FD65DBB57E556DDA56E34E /* AVIMGenericCommand+AVIMMessagesAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AVIMGenericCommand+AVIMMessagesAdditions.h"; path = "AVOS/AVOSCloudIM/Commands/AVIMGenericCommand+AVIMMessagesAdditions.h"; sourceTree = "<group>"; };
 		40BB9CA55EED9261AB09529F3B2B8EE8 /* AVAnonymousUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAnonymousUtils.h; path = AVOS/AVOSCloud/User/AVAnonymousUtils.h; sourceTree = "<group>"; };
-		4236187FB47E5CC908F429057B7FFF08 /* avmp.c */ = {isa = PBXFileReference; includeInIndex = 1; name = avmp.c; path = AVOS/AVOSCloudIM/AVMPMessagePack/avmp.c; sourceTree = "<group>"; };
+		4236187FB47E5CC908F429057B7FFF08 /* avmp.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = avmp.c; path = AVOS/AVOSCloudIM/AVMPMessagePack/avmp.c; sourceTree = "<group>"; };
 		438CCCED2D473A2ADF3EB67EBB9B8520 /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = File.swift; path = Sources/Storage/DataType/File.swift; sourceTree = "<group>"; };
 		43B04BA5728418701CEC18600A5511C1 /* AVSearchSortBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVSearchSortBuilder.h; path = AVOS/AVOSCloud/Search/AVSearchSortBuilder.h; sourceTree = "<group>"; };
 		45074CE38F4FBA33B5FE08BC98113C89 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
@@ -758,7 +730,6 @@
 		4EB9C71ADDD236B84E2A5B082F391932 /* AVIMTypedMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMTypedMessage.m; path = AVOS/AVOSCloudIM/TypedMessages/AVIMTypedMessage.m; sourceTree = "<group>"; };
 		4F8DEF5EF506D3944FA7EBAB3D00B5D2 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		4FA6DF2C733F95F147698AB3B52062C1 /* LCDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCDatabase.h; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabase.h; sourceTree = "<group>"; };
-		4FC773E07577C1A9BE0F8596D46EF095 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		5049908B2FDABE706CEB76529DBFA8A4 /* AVAnalytics_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAnalytics_Internal.h; path = AVOS/AVOSCloud/Analytics/AVAnalytics_Internal.h; sourceTree = "<group>"; };
 		506088FC0FBC6BF221FCC94EEFFF231C /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		52146381837D07D99CDD61AA2B378A32 /* AVIMImageMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMImageMessage.m; path = AVOS/AVOSCloudIM/TypedMessages/AVIMImageMessage.m; sourceTree = "<group>"; };
@@ -799,7 +770,6 @@
 		64D6C4330C08909D83C05DA29D6D1A53 /* LCIMUnknownFieldSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMUnknownFieldSet.m; path = AVOS/AVOSCloudIM/Protobuf/LCIMUnknownFieldSet.m; sourceTree = "<group>"; };
 		65540DB3DE3719A994C1E648627BED00 /* LCIMProtocolBuffers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMProtocolBuffers.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMProtocolBuffers.h; sourceTree = "<group>"; };
 		656E0B91ACAAF643A10C0501FB8D2C8B /* LCIMUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMUtilities.m; path = AVOS/AVOSCloudIM/Protobuf/LCIMUtilities.m; sourceTree = "<group>"; };
-		66426B729793062DA15FDB3CFA740763 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		665972AA5F678A25ADDEDE5DD1F44A62 /* AVAnonymousUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVAnonymousUtils.m; path = AVOS/AVOSCloud/User/AVAnonymousUtils.m; sourceTree = "<group>"; };
 		66B04C1CCE39B9F721F67748AFC439C6 /* AVIMConversationMemberInfo_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVIMConversationMemberInfo_Internal.h; path = AVOS/AVOSCloudIM/Conversation/AVIMConversationMemberInfo_Internal.h; sourceTree = "<group>"; };
 		67A8F00909AB9AAC00C74BCCF8350D82 /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallTrianglePath.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
@@ -826,7 +796,7 @@
 		70717C2916932AF7667A6B967438996D /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
 		707402A0E707D5666A046D83E5F6819D /* LCIMMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMMessage.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMMessage.h; sourceTree = "<group>"; };
 		70F66BE2860A3F246518F54DC4539BDD /* Pods-OilDragonInfo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OilDragonInfo-acknowledgements.plist"; sourceTree = "<group>"; };
-		7125194F89F08B8FC9C5FA687CFB0AD3 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NVActivityIndicatorView.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7125194F89F08B8FC9C5FA687CFB0AD3 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		726C793910EEA98B29A41353C891F94B /* LCIMStruct.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMStruct.pbobjc.h; path = AVOS/AVOSCloudIM/Protobuf/google/protobuf/LCIMStruct.pbobjc.h; sourceTree = "<group>"; };
 		72AC4DA213803FCD14EFF88A3A574F77 /* AVMPMessagePackReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVMPMessagePackReader.h; path = AVOS/AVOSCloudIM/AVMPMessagePack/AVMPMessagePackReader.h; sourceTree = "<group>"; };
 		7350D5B5856731F0C96B137BA81DA08D /* AVCloud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVCloud.m; path = AVOS/AVOSCloud/CloudCode/AVCloud.m; sourceTree = "<group>"; };
@@ -842,7 +812,7 @@
 		791D7EA63E4EBC3EE3DE5614FDB7478A /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		7964DC964035CFE70CF8A2D17DDE12BC /* LCIMCodedOutputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMCodedOutputStream.m; path = AVOS/AVOSCloudIM/Protobuf/LCIMCodedOutputStream.m; sourceTree = "<group>"; };
 		79939BE3C7FCD9F34C2668E23B7E7AB0 /* AVFriendQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVFriendQuery.m; path = AVOS/AVOSCloud/Query/AVFriendQuery.m; sourceTree = "<group>"; };
-		79EC2B44341BDF3AF463327F6BBB8AF2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79EC2B44341BDF3AF463327F6BBB8AF2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FF18583967A79C1EE2A3D2B0016874 /* LCIMWireFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMWireFormat.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMWireFormat.h; sourceTree = "<group>"; };
 		7B13DC32ADC64AC5246797D9AC3B0858 /* AVIMCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVIMCommon.h; path = AVOS/AVOSCloudIM/AVIMCommon.h; sourceTree = "<group>"; };
 		7B23127E1243C2F2FA3957088ACFAAA3 /* AVSearchQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVSearchQuery.m; path = AVOS/AVOSCloud/Search/AVSearchQuery.m; sourceTree = "<group>"; };
@@ -897,7 +867,7 @@
 		935F6C0DB74E49945999F1D43E914364 /* AVIMRecalledMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMRecalledMessage.m; path = AVOS/AVOSCloudIM/TypedMessages/AVIMRecalledMessage.m; sourceTree = "<group>"; };
 		9368D62FE9F5F55654708C47E7B31481 /* LCNetworkStatistics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCNetworkStatistics.h; path = AVOS/AVOSCloud/Statistics/LCNetworkStatistics.h; sourceTree = "<group>"; };
 		937EE6DC37A844F6EA27F25131C0A0CF /* AVPaasClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVPaasClient.h; path = AVOS/AVOSCloud/Request/AVPaasClient.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93BE7D9AE63DAD01446BB1997DE7CF03 /* LCIMBootstrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMBootstrap.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMBootstrap.h; sourceTree = "<group>"; };
 		950E9041D62E3A1E7D6A23AF42B56E69 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
 		9540785D08E655E79E0F4F52095CA044 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Sources/Foundation/MD5.swift; sourceTree = "<group>"; };
@@ -916,7 +886,7 @@
 		9D1E5E48673B53D7FA023D8A64106B6D /* NVActivityIndicatorAnimationBallZigZag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZag.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZag.swift; sourceTree = "<group>"; };
 		9D8EAE2F84C30B9777FFC652E117F681 /* AVIMMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMMessage.m; path = AVOS/AVOSCloudIM/Message/AVIMMessage.m; sourceTree = "<group>"; };
 		9D982A64FE2A3D94CCE4EB060EC2EF4E /* NSDictionary+LeanCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+LeanCloud.h"; path = "AVOS/AVOSCloud/Utils/NSDictionary+LeanCloud.h"; sourceTree = "<group>"; };
-		9E2B3EB37BD2952E00E3B5275CF7EB3E /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E2B3EB37BD2952E00E3B5275CF7EB3E /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECDB2DE7DF777B7A4FFB4C7BD7E4219 /* AVAnalyticsActivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAnalyticsActivity.h; path = AVOS/AVOSCloud/Analytics/AVAnalyticsActivity.h; sourceTree = "<group>"; };
 		9EDF32315662E89C5D7B45B1063C6906 /* AVOSCloudIM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVOSCloudIM.h; path = AVOS/AVOSCloudIM/AVOSCloudIM.h; sourceTree = "<group>"; };
 		9EF0B3BF55E793467DBE8F3E93D5EA6E /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
@@ -937,7 +907,6 @@
 		A46C2E3525FD885D21A6ECFAE392AA3B /* AVCaptcha.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVCaptcha.m; path = AVOS/AVOSCloud/Captcha/AVCaptcha.m; sourceTree = "<group>"; };
 		A4E5B3E0BE073F04CD0251D3E6AEA8D1 /* NSDictionary+LCHash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+LCHash.m"; path = "AVOS/AVOSCloud/Utils/NSDictionary+LCHash.m"; sourceTree = "<group>"; };
 		A50F5A65D9D8DE149A6E4455CF114E65 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
-		A532098CD6FB3E76B19939B9CFA31A28 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		A5CDDA1E691959C2384E587520546EA0 /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulse.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
 		A66CE776CDFCCC992CC477708C298D72 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationTriangleSkewSpin.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationTriangleSkewSpin.swift; sourceTree = "<group>"; };
 		A79E3CE8DC3321C0EEDEA610FFFB8F5B /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorPresenter.swift; path = Source/NVActivityIndicatorView/Presenter/NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
@@ -946,7 +915,7 @@
 		A8D3DB0796880A459B54C394AE426437 /* LCIMExtensionInternals.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMExtensionInternals.m; path = AVOS/AVOSCloudIM/Protobuf/LCIMExtensionInternals.m; sourceTree = "<group>"; };
 		A8DAF30321CFC24C1558C8EABA0EBE48 /* AVIMMessageOption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMMessageOption.m; path = AVOS/AVOSCloudIM/Message/AVIMMessageOption.m; sourceTree = "<group>"; };
 		A90A6309AF2EF20454D4D2D68A6BF722 /* LCDatabaseMigrator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCDatabaseMigrator.m; path = AVOS/AVOSCloud/Utils/LCDatabaseMigrator.m; sourceTree = "<group>"; };
-		AA3705B9B54DDDDEF435997925B5A1CC /* AVOSCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AVOSCloud.framework; path = AVOSCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3705B9B54DDDDEF435997925B5A1CC /* AVOSCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AVOSCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA95151E5B58C3266D5CC21D46A18B75 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorShape.swift; path = Source/NVActivityIndicatorView/NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		AB474080A5DA0463318C965B40D1C2E8 /* LCSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCSecurityPolicy.m; path = AVOS/AVOSCloud/ThirdParty/LCNetworking/LCSecurityPolicy.m; sourceTree = "<group>"; };
 		ABA3DF31C741DD8E4B6204C145751649 /* AVIMConversationOutCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMConversationOutCommand.m; path = AVOS/AVOSCloudIM/Commands/AVIMConversationOutCommand.m; sourceTree = "<group>"; };
@@ -966,7 +935,6 @@
 		B10143EC9744F6E95709C447804DFD9E /* AVIMClientPushManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVIMClientPushManager.h; path = AVOS/AVOSCloudIM/Client/AVIMClientPushManager.h; sourceTree = "<group>"; };
 		B11519DC2B87CE12A8743889500174F6 /* AVIMAudioMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMAudioMessage.m; path = AVOS/AVOSCloudIM/TypedMessages/AVIMAudioMessage.m; sourceTree = "<group>"; };
 		B203A0CCBE69D67DEFC9FF32AC75483A /* AVIMGeneralObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMGeneralObject.m; path = AVOS/AVOSCloudIM/InternalObjects/AVIMGeneralObject.m; sourceTree = "<group>"; };
-		B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B310CC8668165A3A062372C9B09F8E3E /* LCIMWellKnownTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMWellKnownTypes.m; path = AVOS/AVOSCloudIM/Protobuf/LCIMWellKnownTypes.m; sourceTree = "<group>"; };
 		B3C459838ABE48AB9F49BE46E43F1B5A /* LeanCloud-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LeanCloud-prefix.pch"; sourceTree = "<group>"; };
 		B3FF402E68606741FFC6FF820A8D02CC /* AVRole_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVRole_Internal.h; path = AVOS/AVOSCloud/ACL/AVRole_Internal.h; sourceTree = "<group>"; };
@@ -1018,7 +986,6 @@
 		CC048DA44D8044E480613E7A5DBD96FC /* AVOSCloudIM.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AVOSCloudIM.xcconfig; sourceTree = "<group>"; };
 		CC240D087197A1BFAC91D73F3E5ACA9C /* AVRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVRelation.h; path = AVOS/AVOSCloud/Object/AVRelation.h; sourceTree = "<group>"; };
 		CC6D26D92E2946D127157D25C85C274B /* LCIMUnknownFieldSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMUnknownFieldSet.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMUnknownFieldSet.h; sourceTree = "<group>"; };
-		CCC8202BA159611DA3B8B666780628D8 /* AVOSCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AVOSCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD45B7AD2283C3526C7601C32FD3A017 /* AVObjectUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVObjectUtils.h; path = AVOS/AVOSCloud/Object/AVObjectUtils.h; sourceTree = "<group>"; };
 		CDFEA0AE61CFBEB68372DE988546E7AD /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
 		CE816B2357E5B8A177215725C97C6CAB /* AVDynamicObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVDynamicObject.m; path = AVOS/AVOSCloud/Utils/AVDynamicObject.m; sourceTree = "<group>"; };
@@ -1056,7 +1023,7 @@
 		DBB0843A4905C498B5EB433149ACF640 /* AVFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVFile.h; path = AVOS/AVOSCloud/File/AVFile.h; sourceTree = "<group>"; };
 		DBEFF3CA12C98EA6311C1020817FBB72 /* AVMPMessagePackReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVMPMessagePackReader.m; path = AVOS/AVOSCloudIM/AVMPMessagePack/AVMPMessagePackReader.m; sourceTree = "<group>"; };
 		DC14BFA27E3AA5730849B7B94BD8990E /* AVConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVConstants.h; path = AVOS/AVOSCloud/AVConstants.h; sourceTree = "<group>"; };
-		DC52E1B87DA6DD6CFE6609F77D915E19 /* LeanCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LeanCloud.framework; path = LeanCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC52E1B87DA6DD6CFE6609F77D915E19 /* LeanCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC811FE17025EBED1A51CDC0CC01EC16 /* libjanalytics-ios-1.2.1.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = "libjanalytics-ios-1.2.1.a"; sourceTree = "<group>"; };
 		DD46A1BEAE9BEABD3855133247F4014A /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
 		DEDEC0B1FC4D387D9A800A0C7F6CD9EE /* AVFileQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVFileQuery.m; path = AVOS/AVOSCloud/File/AVFileQuery.m; sourceTree = "<group>"; };
@@ -1064,7 +1031,6 @@
 		E0B4D2BA50B34E8DFDBC382B80B165F0 /* LCIMUnknownField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMUnknownField.m; path = AVOS/AVOSCloudIM/Protobuf/LCIMUnknownField.m; sourceTree = "<group>"; };
 		E0CA71DA6F913EEF51A26E40D2E97597 /* AVQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVQuery.h; path = AVOS/AVOSCloud/Query/AVQuery.h; sourceTree = "<group>"; };
 		E1AF886E249FDE08F9BC97E9DE2EB32B /* AVFriendQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVFriendQuery.h; path = AVOS/AVOSCloud/Query/AVFriendQuery.h; sourceTree = "<group>"; };
-		E1D8D30A734A18B1C77D98154CCE423F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E254262EA651103CB26D579CDD34CB4F /* AVAnalyticsSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAnalyticsSession.h; path = AVOS/AVOSCloud/Analytics/AVAnalyticsSession.h; sourceTree = "<group>"; };
 		E3663DEC3C91173212728C41726A008F /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		E4635CC928E7078017488CEB335B7DB2 /* LCIMMessage_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMMessage_PackagePrivate.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMMessage_PackagePrivate.h; sourceTree = "<group>"; };
@@ -1082,7 +1048,6 @@
 		EB4831DC21EB46ED34001F28DAC6E535 /* NVActivityIndicatorAnimationLineScaleParty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScaleParty.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScaleParty.swift; sourceTree = "<group>"; };
 		EB85573A0DC42672F58D0B5AA23D3793 /* AVIMRuntimeHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVIMRuntimeHelper.h; path = AVOS/AVOSCloudIM/Utilities/AVIMRuntimeHelper.h; sourceTree = "<group>"; };
 		EC6251969E7E406057CED535877C2E4F /* HTTPRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPRouter.swift; path = Sources/Storage/HTTPRouter.swift; sourceTree = "<group>"; };
-		EC650BE346B7A56B46EBDC38160B31BB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		ECEFE36BAD6C5210493CAA2884918F74 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
 		ED1841900A5E894F5A27B956FAE6C433 /* AVCloudQueryResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVCloudQueryResult.h; path = AVOS/AVOSCloud/Query/AVCloudQueryResult.h; sourceTree = "<group>"; };
 		EE1ECFB1D3E35DE57F0FBE99DD872BC6 /* LCIMDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMDictionary.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMDictionary.h; sourceTree = "<group>"; };
@@ -1097,7 +1062,7 @@
 		F2FA6E6656EF9A970638CE74FB53BD53 /* Pods-OilDragonInfo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OilDragonInfo-umbrella.h"; sourceTree = "<group>"; };
 		F2FC04A1E646312E654C1D32A2EA9E10 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		F3748157888348B3491BDE4ACD450DDB /* LCIMType.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCIMType.pbobjc.m; path = AVOS/AVOSCloudIM/Protobuf/google/protobuf/LCIMType.pbobjc.m; sourceTree = "<group>"; };
-		F386DE0D071D93C892BF9B4F77E42DD0 /* AVOSCloud_Art.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = AVOSCloud_Art.inc; path = AVOS/AVOSCloud/AVOSCloud_Art.inc; sourceTree = "<group>"; };
+		F386DE0D071D93C892BF9B4F77E42DD0 /* AVOSCloud_Art.inc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.pascal; name = AVOSCloud_Art.inc; path = AVOS/AVOSCloud/AVOSCloud_Art.inc; sourceTree = "<group>"; };
 		F3E0FF9A646A6EA306EB03845836BD86 /* AVExceptionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVExceptionHandler.m; path = AVOS/AVOSCloud/Analytics/AVExceptionHandler.m; sourceTree = "<group>"; };
 		F4EB272D1789FFF5F36359F1701F56CB /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		F5174F68B3B15E42FBE53DD5E2F13105 /* AVRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVRole.h; path = AVOS/AVOSCloud/ACL/AVRole.h; sourceTree = "<group>"; };
@@ -1119,7 +1084,7 @@
 		FBEBC41E651614AA550D9524F86DE28F /* LCIMWellKnownTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCIMWellKnownTypes.h; path = AVOS/AVOSCloudIM/Protobuf/LCIMWellKnownTypes.h; sourceTree = "<group>"; };
 		FC0A2FFC834892CE82218047E8D07E81 /* JRSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = AVOS/AVOSCloud/ThirdParty/JRSwizzle/JRSwizzle.m; sourceTree = "<group>"; };
 		FC53F1A312D493FBE731B231BBFE5D35 /* AVCloudQueryResult_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVCloudQueryResult_Internal.h; path = AVOS/AVOSCloud/Query/AVCloudQueryResult_Internal.h; sourceTree = "<group>"; };
-		FCC7F48C50493924EE4B0386ABB58928 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AVOSCloudIM.framework; path = AVOSCloudIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC7F48C50493924EE4B0386ABB58928 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AVOSCloudIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCAFECEF305F98EECBA476DB77D70E6 /* AVCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVCacheManager.m; path = AVOS/AVOSCloud/Cache/AVCacheManager.m; sourceTree = "<group>"; };
 		FCD97EFAE89A54619647B3B8DE59CC01 /* AVIMCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVIMCommon.m; path = AVOS/AVOSCloudIM/AVIMCommon.m; sourceTree = "<group>"; };
 		FD2D90730AB5AAF3C0E6887F51B8A44A /* AVAvailability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAvailability.h; path = AVOS/AVOSCloud/AVAvailability.h; sourceTree = "<group>"; };
@@ -1137,8 +1102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91935584F0D182DBA6D08031260FA21 /* AVOSCloud.framework in Frameworks */,
-				F616C45EC1C5B270E82E8E1C5A3B3562 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1146,15 +1109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D8CBB0AD2B7A450DA7D80D80EDF11B3 /* CFNetwork.framework in Frameworks */,
-				683DB524F7B65040A436E7B027981BE7 /* CoreGraphics.framework in Frameworks */,
-				ACDE12405D14D735D5C9827BF3752791 /* CoreLocation.framework in Frameworks */,
-				AE74A216717B4D85DDEB42E79C739B21 /* CoreTelephony.framework in Frameworks */,
-				AE6BB9544AD99914A08293351DE15AF0 /* Foundation.framework in Frameworks */,
-				2BC189615E270322A71487D062D491E7 /* MobileCoreServices.framework in Frameworks */,
-				18A089FBFA58111CA31A9FCB3B0D4594 /* QuartzCore.framework in Frameworks */,
-				90BA41482F21E211811F6E3200E9A658 /* Security.framework in Frameworks */,
-				85728BCCA0E1A0D8EE44CAFB039A9FBE /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1162,7 +1116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D54AD2E7B275B428B100E19DCC357DED /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1170,7 +1123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C238D2F0C3BF8C1654D032FFB88F0E1D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1178,9 +1130,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1B16A3B31E95ED3CA104DC5CAB49BA /* Foundation.framework in Frameworks */,
-				750450133C747EC7026F44EA97B379AC /* QuartzCore.framework in Frameworks */,
-				50E3FCD60E40A6D598225FDFF65E95D1 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1188,10 +1137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C24D10078B6686E6A81E92E81EED4D8 /* CoreGraphics.framework in Frameworks */,
-				3D1474C367C73546A9258C4A1BFC9293 /* Foundation.framework in Frameworks */,
-				53E0A72846668C4BDCBAEF9C879987ED /* QuartzCore.framework in Frameworks */,
-				25A195CFCA17BD56D98B207C3F709513 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1199,7 +1144,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				834F4D9819C6010E611A7E151B8899C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,8 +1151,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C65B3D0F7839162EF350A2707758580 /* Alamofire.framework in Frameworks */,
-				6EED1B24E86196444779ABC3A6C11CBA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,7 +1328,6 @@
 				95BB27517D9F832D005BA9BAA3E0B455 /* Resources */,
 				EC00315DD95F6800B4F5CF59C93F2E67 /* Support Files */,
 			);
-			name = AVOSCloud;
 			path = AVOSCloud;
 			sourceTree = "<group>";
 		};
@@ -1395,7 +1336,6 @@
 			children = (
 				B6E4C45F66C6287D73834AD8F3389377 /* Frameworks */,
 			);
-			name = JCore;
 			path = JCore;
 			sourceTree = "<group>";
 		};
@@ -1405,7 +1345,6 @@
 				8AD80871583D4E91996527934C838160 /* JPUSHService.h */,
 				E5285FD60E0B5D054A45DA12867CA006 /* Frameworks */,
 			);
-			name = JPush;
 			path = JPush;
 			sourceTree = "<group>";
 		};
@@ -1429,7 +1368,6 @@
 				B844BC5568E8F1EEEF5EDDDD65703C14 /* StarLayer.swift */,
 				B6C796B08FC4A42209405769A2D9EA1D /* Support Files */,
 			);
-			name = Cosmos;
 			path = Cosmos;
 			sourceTree = "<group>";
 		};
@@ -1500,7 +1438,6 @@
 				12FF90FC439A4A7BE9AFA161054235C8 /* Storage */,
 				5E3A6DD7E0F3D7048DD40A4764EB4766 /* Support Files */,
 			);
-			name = LeanCloud;
 			path = LeanCloud;
 			sourceTree = "<group>";
 		};
@@ -1627,7 +1564,6 @@
 				AA47476ACB1B65817F488EC93096CD3B /* Presenter */,
 				518265AC1449B5FB52560181F5819176 /* Support Files */,
 			);
-			name = NVActivityIndicatorView;
 			path = NVActivityIndicatorView;
 			sourceTree = "<group>";
 		};
@@ -1643,23 +1579,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/NVActivityIndicatorView";
-			sourceTree = "<group>";
-		};
-		5495079D0165745D8D975B18A7A79A25 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EC650BE346B7A56B46EBDC38160B31BB /* CFNetwork.framework */,
-				66426B729793062DA15FDB3CFA740763 /* CoreGraphics.framework */,
-				1F32AE919694C281F7DA211843F52401 /* CoreLocation.framework */,
-				332ABD6154E915F85862DE1C934398D7 /* CoreTelephony.framework */,
-				B28E58ACFC06C832F8A5EF5C371C7629 /* Foundation.framework */,
-				4FC773E07577C1A9BE0F8596D46EF095 /* MobileCoreServices.framework */,
-				2D49D07D04299882FF863C8BDA9CFB67 /* QuartzCore.framework */,
-				3CD89202908593A92646EA3DF86D778A /* Security.framework */,
-				A532098CD6FB3E76B19939B9CFA31A28 /* SystemConfiguration.framework */,
-				E1D8D30A734A18B1C77D98154CCE423F /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		5E3A6DD7E0F3D7048DD40A4764EB4766 /* Support Files */ = {
@@ -1738,7 +1657,6 @@
 				3646786FCFDB361DD201D3E0ADA6E4AD /* Resources */,
 				BA16FEC57A4C207100A7D9FBB0ED1CA5 /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -1746,7 +1664,6 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				F68FF599B7CCDC84233743364BF37356 /* Frameworks */,
 				68AB7957DA766F0FA8AF3E7AC51C754E /* Pods */,
 				A27309A5D7F53D515C0BA7FC08C53524 /* Products */,
 				F2189F676B2774F2CD723330A3BE22C0 /* Targets Support Files */,
@@ -1760,7 +1677,6 @@
 				FA25FC20C972932C49EF45F7F1B0B29A /* _NOARC */,
 				A487A89F8941D7DD6FBB5D6B141F9474 /* Support Files */,
 			);
-			name = AVOSCloudIM;
 			path = AVOSCloudIM;
 			sourceTree = "<group>";
 		};
@@ -1786,7 +1702,6 @@
 				F4EB272D1789FFF5F36359F1701F56CB /* Validation.swift */,
 				5E476AF7EAF05C02519FAF0622BD4D27 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1951,7 +1866,6 @@
 				B9A3DDC2E55F501B7F23A530AE1CB001 /* JANALYTICSService.h */,
 				D2720B298F0EF592805A115C62D9B61B /* Frameworks */,
 			);
-			name = JAnalytics;
 			path = JAnalytics;
 			sourceTree = "<group>";
 		};
@@ -1983,16 +1897,6 @@
 				99BD7243BE37D2382FBA785562271C16 /* Pods-OilDragonInfo */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F68FF599B7CCDC84233743364BF37356 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2E3676E7FF7C271B9B06FE33BE5F9446 /* Alamofire.framework */,
-				CCC8202BA159611DA3B8B666780628D8 /* AVOSCloud.framework */,
-				5495079D0165745D8D975B18A7A79A25 /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FA25FC20C972932C49EF45F7F1B0B29A /* _NOARC */ = {
@@ -3664,6 +3568,7 @@
 			children = (
 				03DA23826FB167A1474717C212D0892D /* StorageContext.xcdatamodel */,
 			);
+			currentVersion = 03DA23826FB167A1474717C212D0892D /* StorageContext.xcdatamodel */;
 			name = StorageContext.xcdatamodeld;
 			path = Sources/Storage/StorageContext.xcdatamodeld;
 			sourceTree = "<group>";
@@ -3674,6 +3579,7 @@
 			children = (
 				EEADE39A9A41E3EF0C55450A3BD366C2 /* AppRouterCache.xcdatamodel */,
 			);
+			currentVersion = EEADE39A9A41E3EF0C55450A3BD366C2 /* AppRouterCache.xcdatamodel */;
 			name = AppRouterCache.xcdatamodeld;
 			path = Sources/Storage/AppRouterCache.xcdatamodeld;
 			sourceTree = "<group>";
