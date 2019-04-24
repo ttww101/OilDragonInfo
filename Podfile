@@ -9,8 +9,6 @@ target 'OilDragonInfo' do
   pod 'LeanCloud'
   pod 'JPush'
   pod 'JAnalytics'
-  #for xml analysis
-  pod 'Alamofire'
   #for keyboard
   pod 'IQKeyboardManagerSwift'
   #for rating

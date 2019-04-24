@@ -152,8 +152,9 @@ class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate,
             let toolbar = UIToolbar()
             toolbar.sizeToFit()
             //bar button item
+            let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
             let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(dismissKeyboard))
-            toolbar.setItems([doneButton], animated: false)
+            toolbar.setItems([space ,doneButton], animated: false)
             cell.contentTextField.inputAccessoryView = toolbar
             cell.contentTextField.inputView = datePicker
             //限制date picker的預設地點，但出現一個bug 就是預設不會印在上面，這個需要再嘗試
@@ -161,7 +162,7 @@ class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate,
 //            record.date = dateFormatter.string(from: datePicker.date)
 //            cell.contentTextField.text = dateFormatter.string(from: datePicker.date)
 
-            record.date = DateFormatter.localizedString(from: datePicker.date, dateStyle: .long, timeStyle: .none)
+            record.date = DateFormatter.localizedString(from: datePicker.date, dateStyle: .short, timeStyle: .none)
             cell.contentTextField.text = DateFormatter.localizedString(from: datePicker.date, dateStyle: .short, timeStyle: .none)
 
             cell.index = TextFieldType.date
@@ -190,7 +191,7 @@ class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate,
             let dateSection = components.index(of: Component.date) {
 
                 let indexPath = IndexPath(row: 0, section: dateSection)
-                dateFormatter.dateStyle = .long //formatter樣式
+                dateFormatter.dateStyle = .short //formatter樣式
                 dateFormatter.timeStyle = .none //不要時間
 
                 let cell = addConsumption.cellForRow(at: indexPath) as? ConsumptionTextTableViewCell
