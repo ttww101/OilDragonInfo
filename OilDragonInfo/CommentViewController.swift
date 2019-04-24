@@ -34,7 +34,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         commentsList.dataSource = self
         commentsList.separatorStyle = .none
 
-        setUp()
+        setUp(ddd: 0.0)
         commentsList.rowHeight = UITableView.automaticDimension
         commentsList.estimatedRowHeight = 77
     }
@@ -53,7 +53,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
 
-    func setUp() {
+    func setUp(ddd: Double) {
         let commentDetailNib = UINib(nibName: CommentTableViewCell.identifier, bundle: nil)
         commentsList.register(commentDetailNib, forCellReuseIdentifier: CommentTableViewCell.identifier)
 
@@ -108,8 +108,10 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         if commentsList.contentSize.height > commentsList.frame.height {
             // First figure out how many sections there are
             let lastSectionIndex = commentsList.numberOfSections - 1
+            let a = 1
             // Then grab the number of rows in the last section
             let lastRowIndex = commentsList.numberOfRows(inSection: lastSectionIndex) - 1
+            let c = 3
             // Now just construct the index path
             let pathToLastRow = NSIndexPath(row: lastRowIndex, section: lastSectionIndex)
             // Make the last row visible

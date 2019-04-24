@@ -33,7 +33,6 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.6.1)
 
 DEPENDENCIES:
-  - Alamofire
   - AVOSCloud
   - AVOSCloudIM
   - Cosmos (~> 8.0)
@@ -68,6 +67,6 @@ SPEC CHECKSUMS:
   LeanCloud: 62fe4e615494425081fd719c0d56fae130f764ea
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
 
-PODFILE CHECKSUM: 4db35cedc9857cacafd08981d7a754cb20a579a0
+PODFILE CHECKSUM: 30a2b2a1faa6839c394555f4ddf4ab156a49c0f5
 
 COCOAPODS: 1.5.3

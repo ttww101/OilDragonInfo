@@ -27,11 +27,13 @@ class ConsumptionViewController: UIViewController, UITableViewDelegate, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let detailNib = UINib(nibName: ConcumptionRecordTableViewCell.identifier, bundle: nil)
+        tableView.register(detailNib, forCellReuseIdentifier: ConcumptionRecordTableViewCell.identifier)
+        self.tableView.allowsSelection = false
+        requestRecord()
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.separatorStyle = .none
-        setUp()
-        requestRecord()
     }
     
     func requestRecord() {
@@ -78,12 +80,6 @@ class ConsumptionViewController: UIViewController, UITableViewDelegate, UITableV
             }
         }
 
-    }
-    
-    func setUp() {
-        let detailNib = UINib(nibName: ConcumptionRecordTableViewCell.identifier, bundle: nil)
-        tableView.register(detailNib, forCellReuseIdentifier: ConcumptionRecordTableViewCell.identifier)
-        self.tableView.allowsSelection = false
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

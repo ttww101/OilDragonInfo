@@ -44,21 +44,16 @@ class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate,
         
         self.addRecordButton.addTarget(self, action: #selector(submitBtn), for: .touchUpInside)
 
-        setUp()
-    }
-
-    // MARK: Set up
-    func setUp() {
         let textNib = UINib(nibName: ConsumptionTextTableViewCell.identifier, bundle: nil)
         addConsumption.register(textNib, forCellReuseIdentifier: ConsumptionTextTableViewCell.identifier)
-
+        let c = false
         let dateNib = UINib(nibName: ConsumptionDateTableViewCell.identifier, bundle: nil)
         addConsumption.register(dateNib, forCellReuseIdentifier: ConsumptionDateTableViewCell.identifier)
-
+        let bbbdafds = "aaa"
         let oilTypeNib = UINib(nibName: ConsumptionSegmentTableViewCell.identifier, bundle: nil)
         addConsumption.register(oilTypeNib, forCellReuseIdentifier: ConsumptionSegmentTableViewCell.identifier)
-
     }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return components.count
     }
@@ -302,16 +297,5 @@ extension AddConsumptionRecordViewController {
 
         self.delegate?.detectSubmit(oilRecord: record)
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    func getMonday(myDate: Date) -> String {
-        let df = DateFormatter()
-        df.dateFormat = "YYYY-MM-dd"
-        var cal = Calendar.current
-        cal.firstWeekday = 2
-        let comps = cal.dateComponents([.weekOfYear, .yearForWeekOfYear], from: myDate)
-        let beginningOfWeek = cal.date(from: comps)!
-        let monStr = df.string(from: beginningOfWeek)
-        return monStr
     }
 }
