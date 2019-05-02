@@ -1,0 +1,6 @@
+framework module Pods_OilRecTool {
+  umbrella header "Pods-OilRecTool-umbrella.h"
+
+  export *
+  module * { export * }
+}

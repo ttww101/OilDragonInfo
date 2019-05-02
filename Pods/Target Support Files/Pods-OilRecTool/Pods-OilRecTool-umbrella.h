@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_OilDragonInfoVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_OilDragonInfoVersionString[];
+FOUNDATION_EXPORT double Pods_OilRecToolVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_OilRecToolVersionString[];
 

@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '10.0'
 
-target 'OilDragonInfo' do
+target 'OilRecTool' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'AVOSCloud'
@@ -15,5 +15,5 @@ target 'OilDragonInfo' do
   pod 'Cosmos', '~> 8.0'
   #for loading
   pod 'NVActivityIndicatorView'
-  # Pods for OilDragonInfo
+  # Pods for OilRecTool
 end

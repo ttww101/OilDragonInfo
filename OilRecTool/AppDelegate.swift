@@ -103,7 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         //swiftlint:disable unused_closure_parameter
-        let container = NSPersistentContainer(name: "OilDragonInfo")
+        let container = NSPersistentContainer(name: "OilRecTool")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

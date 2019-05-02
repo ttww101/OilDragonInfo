@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B6250B7F246B977155CD01DD72E98C88"
-               BuildableName = "Pods_OilDragonInfo.framework"
-               BlueprintName = "Pods-OilDragonInfo"
+               BlueprintIdentifier = "7648E61AA8C9A468997E9FF42F3D72D5"
+               BuildableName = "Pods_OilRecTool.framework"
+               BlueprintName = "Pods-OilRecTool"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B6250B7F246B977155CD01DD72E98C88"
-            BuildableName = "Pods_OilDragonInfo.framework"
-            BlueprintName = "Pods-OilDragonInfo"
+            BlueprintIdentifier = "7648E61AA8C9A468997E9FF42F3D72D5"
+            BuildableName = "Pods_OilRecTool.framework"
+            BlueprintName = "Pods-OilRecTool"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
