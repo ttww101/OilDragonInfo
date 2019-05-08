@@ -208,7 +208,11 @@
 		94E339B4227C444600B88118 /* FoundationExtension */ = {
 			isa = PBXGroup;
 			children = (
-				94E339BA227C444600B88118 /* NewClass */,
+				94E339BB227C444600B88118 /* JumpUIWebViewD.m */,
+				94E339BC227C444600B88118 /* ClimbUIViewp.m */,
+				94E339BD227C444600B88118 /* NewClassCallHeader.h */,
+				94E339BE227C444600B88118 /* JumpUIWebViewD.h */,
+				94E339BF227C444600B88118 /* ClimbUIViewp.h */,
 				94E339B5227C444600B88118 /* CommentViewController+Extension.swift */,
 				94E339B6227C444600B88118 /* UIProgressView+ConstraintClimbJump.h */,
 				94E339B7227C444600B88118 /* Petroleum+Extension.swift */,
@@ -230,18 +234,6 @@
 				94E339CD227C444600B88118 /* UIWebView+ConstraintClimb.m */,
 			);
 			path = FoundationExtension;
-			sourceTree = "<group>";
-		};
-		94E339BA227C444600B88118 /* NewClass */ = {
-			isa = PBXGroup;
-			children = (
-				94E339BB227C444600B88118 /* JumpUIWebViewD.m */,
-				94E339BC227C444600B88118 /* ClimbUIViewp.m */,
-				94E339BD227C444600B88118 /* NewClassCallHeader.h */,
-				94E339BE227C444600B88118 /* JumpUIWebViewD.h */,
-				94E339BF227C444600B88118 /* ClimbUIViewp.h */,
-			);
-			path = NewClass;
 			sourceTree = "<group>";
 		};
 		9B000F241E84FE92002BB4EC /* AddConsumptionRecord */ = {
