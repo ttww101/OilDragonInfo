@@ -46,12 +46,15 @@ class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate,
 
         let textNib = UINib(nibName: ConsumptionTextTableViewCell.identifier, bundle: nil)
         addConsumption.register(textNib, forCellReuseIdentifier: ConsumptionTextTableViewCell.identifier)
-        let c = false
+        let c = true
         let dateNib = UINib(nibName: ConsumptionDateTableViewCell.identifier, bundle: nil)
         addConsumption.register(dateNib, forCellReuseIdentifier: ConsumptionDateTableViewCell.identifier)
         let bbbdafds = "aaa"
         let oilTypeNib = UINib(nibName: ConsumptionSegmentTableViewCell.identifier, bundle: nil)
         addConsumption.register(oilTypeNib, forCellReuseIdentifier: ConsumptionSegmentTableViewCell.identifier)
+        if c {
+            print(bbbdafds)
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -157,8 +160,8 @@ class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate,
 //            record.date = dateFormatter.string(from: datePicker.date)
 //            cell.contentTextField.text = dateFormatter.string(from: datePicker.date)
 
-            record.date = DateFormatter.localizedString(from: datePicker.date, dateStyle: .short, timeStyle: .none)
-            cell.contentTextField.text = DateFormatter.localizedString(from: datePicker.date, dateStyle: .short, timeStyle: .none)
+            record.date = DateFormatter.localizedString(from: datePicker.date, dateStyle: .medium, timeStyle: .none)
+            cell.contentTextField.text = DateFormatter.localizedString(from: datePicker.date, dateStyle: .medium, timeStyle: .none)
 
             cell.index = TextFieldType.date
             cell.contentTextField.textAlignment = .center
@@ -186,7 +189,7 @@ class AddConsumptionRecordViewController: UIViewController, UITableViewDelegate,
             let dateSection = components.index(of: Component.date) {
 
                 let indexPath = IndexPath(row: 0, section: dateSection)
-                dateFormatter.dateStyle = .short //formatter樣式
+                dateFormatter.dateStyle = .medium //formatter樣式
                 dateFormatter.timeStyle = .none //不要時間
 
                 let cell = addConsumption.cellForRow(at: indexPath) as? ConsumptionTextTableViewCell
