@@ -361,7 +361,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="車行列表" id="eAI-Wt-NAd">
                         <barButtonItem key="rightBarButtonItem" image="Add-icon" id="guV-ao-iQK">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addStore:" destination="zRr-ET-LwX" id="cv7-fd-7GL"/>
                             </connections>
